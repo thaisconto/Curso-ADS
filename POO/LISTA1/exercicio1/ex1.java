@@ -1,9 +1,8 @@
 package POO.LISTA1.exercicio1;
-
 import javax.swing.JOptionPane;
 
 public class ex1 {
-           
+          
     public static void main(String[] args) {
       String CPF, nome, item;
       int sexo; //deveria ser char
@@ -11,10 +10,9 @@ public class ex1 {
       Pessoa pessoa = null;
 
         do{
-            item = JOptionPane.showInputDialog("1- Cadastrar\n2- Consultar\n3- Sair");
+            item = JOptionPane.showInputDialog("1- Criar pessoa\n2- Mostrar pessoa\n3- Sair");
             if (item == null) {
-                System.exit(0);
-    
+                System.exit(0);    
         }
 
         switch(item){
@@ -31,7 +29,7 @@ public class ex1 {
                //pessoa.setsexo(sexo);
                //pessoa.setidade(idade);
 
-                break;
+            break;
 
             case "2":
             //visualizar
@@ -41,11 +39,11 @@ public class ex1 {
                                 "Precisa cadastrar uma pessoa",
                                 "Alerta",
                                 JOptionPane.ERROR_MESSAGE);
-                        break;
-                    }
+            break;
+                }
             
             JOptionPane.showMessageDialog(null, pessoa.imprimir());
-                break;
+            break;
 
             case "3":
             //sair
@@ -54,7 +52,6 @@ public class ex1 {
             default:
         }
         
-
     }while(!item.equals("3"));
 }}
 
