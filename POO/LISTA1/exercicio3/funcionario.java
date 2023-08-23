@@ -68,8 +68,8 @@ public class Funcionario {
         }
 
         public float calcularSalario(){
-           valorReceber = valorHora * qntdHora;
-            return valorReceber;
+           salario = valorHora * qntdHora;
+            return salario;
         }
 
         public float calcularValorReceber(){

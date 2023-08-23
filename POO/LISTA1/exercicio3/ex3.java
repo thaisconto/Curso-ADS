@@ -31,7 +31,7 @@ public class ex3 {
                 qntdHora = Float.parseFloat(JOptionPane.showInputDialog("Quantidade hora:"));
                 funcionario.setvalorHora(valorHora);
                 funcionario.setqntdHora(qntdHora);
-                funcionario.setsalario(qntdHora*valorHora);
+                //funcionario.setsalario( como chamar o método?);
             }
             else if (tipoVinculo == 'N' || tipoVinculo == 'n'){
                 //IF normal entra apenas com salário
@@ -43,9 +43,8 @@ public class ex3 {
                     "Erro: Favor inserir H ou N para tipo de vínculo",
                     "Erro",
                     JOptionPane.ERROR_MESSAGE);
-            }
-                                             
-            
+            }                                             
+            funcionario = new Funcionario();
             funcionario.setcracha(cracha);
             funcionario.setnome(nome);
             funcionario.settipoVinculo(tipoVinculo);                             
@@ -74,7 +73,7 @@ public class ex3 {
                 qntdHora = Float.parseFloat(JOptionPane.showInputDialog("Quantidade hora:"));
                 funcionario.setvalorHora(valorHora);
                 funcionario.setqntdHora(qntdHora);
-                funcionario.setsalario(qntdHora*valorHora);
+                //funcionario.setsalario( como chamar o método? );
             }
             else if (tipoVinculo == 'N' || tipoVinculo == 'n'){
                 //IF normal entra apenas com salário

@@ -7,11 +7,11 @@ public class ex2 {
     float AC1, AC2, AG, AF;
     Aluno aluno = null;
 
-        do{
+    do{
             item = JOptionPane.showInputDialog("1- Criar aluno\n2- Mostrar aluno\n3- Sair");
             if (item == null) {
                 System.exit(0);    
-        }
+            }
 
         switch(item){
             case "1":
@@ -34,18 +34,16 @@ public class ex2 {
             break;
 
             case "2":
-            //visualizar
-            //se estiver vazio dar aviso
+            //visualizar se estiver vazio dar aviso
                 if(aluno == null){
-                    JOptionPane.showMessageDialog(null, 
-                                "Precisa cadastrar um aluno",
-                                "Alerta",
-                                JOptionPane.ERROR_MESSAGE);
+                JOptionPane.showMessageDialog(null, 
+                "Precisa cadastrar um aluno",
+                "Alerta",
+                JOptionPane.ERROR_MESSAGE);
             break;
-                }
-            
+            }            
             JOptionPane.showMessageDialog(null, aluno.imprimir());
-                break;
+            break;
 
             case "3":
             //sair

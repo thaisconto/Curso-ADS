@@ -63,7 +63,7 @@ public class Aluno {
                 +"\nAG: "+getAG()
                 +"\nAF: "+getAF()
                 +"\nMédia: "+ getmedia()
-                +"\nSituação: "+getsituacao()
+                //+"\nSituação: "+getsituacao()
                 ;
         
         return msg;    
