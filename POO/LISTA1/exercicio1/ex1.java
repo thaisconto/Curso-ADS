@@ -46,10 +46,12 @@ public class ex1 {
 
             case "3":
             //sair, inserir volte sempre
+            JOptionPane.showMessageDialog(null, "Volte sempre");
             break;
             
             default:
             //opção inválida
+            JOptionPane.showMessageDialog(null, "Favor selecionar uma opção!");
         }
         
     }while(!item.equals("3"));
