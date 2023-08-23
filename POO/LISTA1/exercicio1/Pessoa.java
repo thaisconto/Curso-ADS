@@ -2,7 +2,7 @@ package POO.LISTA1.exercicio1;
 
 public class Pessoa {
     private String CPF, nome;
-    private int sexo; //deveria ser char
+    private char sexo; 
     private int idade;
 
         public String getCPF(){
@@ -17,10 +17,10 @@ public class Pessoa {
         public void setnome(String value){
             this.nome = value;
         }
-        public int getsexo(){
+        public char getsexo(){
             return sexo;
         }
-        public void setsexo(int value){
+        public void setsexo(char value){
             this.sexo = value;
         }
         public int getidade(){

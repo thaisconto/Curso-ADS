@@ -42,13 +42,13 @@ public class Aluno {
         }
 
         public float getmedia(){
-            return media;
+            return calcularMedia();
         }
         public void setmedia(float value){
             this.media = value;
         }     
         public String getsituacao(){
-            return situacao;
+            return verificarAprovacao();
         }
         public void setsitucao(String value){
             this.situacao = value;
@@ -62,7 +62,7 @@ public class Aluno {
                 +"\nAC2: "+getAC2()
                 +"\nAG: "+getAG()
                 +"\nAF: "+getAF()
-                +"\nMédia: "+getmedia()
+                +"\nMédia: "+ getmedia()
                 +"\nSituação: "+getsituacao()
                 ;
         
@@ -70,13 +70,16 @@ public class Aluno {
         }
 
         public float calcularMedia(){
-            media = (AC1 * 0.15) + (AC2 * 0.30) + (AG * 0.10) + (AF * 0.45);
+            media = (AC1 * 0.15f) + (AC2 * 0.30f) + (AG * 0.10f) + (AF * 0.45f);
             return media;
+
         }
 
         public String verificarAprovacao(){
-            if (calcularMedia() <= 5){
+            if (getmedia() <= 5){
                 situacao = "Reprovado";
-            }else {situacao = "Aprovado"};
+            }else {situacao = "Aprovado";};
+
         }
+
 }

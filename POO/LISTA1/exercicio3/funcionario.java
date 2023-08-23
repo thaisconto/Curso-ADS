@@ -4,7 +4,7 @@ public class Funcionario {
     private String nome;
     private float valorHora, qntdHora, salario, valorDesconto, valorReceber;
     int cracha;
-    int tipoVinculo; //deveria ser char H ou N
+    char tipoVinculo;
 
         public String getnome(){
             return nome;
@@ -42,10 +42,10 @@ public class Funcionario {
         public void setcracha(int value){
             this.cracha = value;
         }
-        public int gettipoVinculo(){
+        public char gettipoVinculo(){
             return tipoVinculo;
         }
-        public void settipoVinculo(int value){
+        public void settipoVinculo(char value){
             this.tipoVinculo = value;
         }     
         public float getvalorReceber(){

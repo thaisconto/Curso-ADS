@@ -1,48 +1,56 @@
 package POO.LISTA1.exercicio3;
 import javax.swing.JOptionPane;
 
-import POO.LISTA1.exericio2.Aluno;
 
 public class ex3 {
      public static void main(String[] args) {
     String nome, item;
-    float valorHora, qntdHora, salario, valorDesconto, valorReceber;
+    float valorHora, qntdHora, salario, valorDesconto;
     int cracha;
-    int tipoVinculo; //deveria ser char H ou N
+    char tipoVinculo;
     Funcionario funcionario = null;
 
         do{
             item = JOptionPane.showInputDialog("1- Criar funcionário\n2- Mostrar folha de pagamento\n3- Alterar remuneração\n4- Sair");
             if (item == null) {
                 System.exit(0);    
-        }
+            }
 
         switch(item){
             case "1":
             //cadastrar funcionário
-               cracha = JOptionPane.showInputDialog("Cracha:");
+               cracha = Integer.parseInt(JOptionPane.showInputDialog("Cracha:"));
                nome = JOptionPane.showInputDialog("Nome:");
-               valorDesconto = JOptionPane.showInputDialog("Valor desconto:");
+               valorDesconto = Float.parseFloat(JOptionPane.showInputDialog("Valor desconto:"));
                
                //VÍNCULO pode ser H ou N
-               tipoVinculo = JOptionPane.showInputDialog("Tipo vínculo:");
-               
-               //IF - H – horista (entra com horas trabalhadas e valor hora para calcular o salário)
-               valorHora = JOptionPane.showInputDialog("Valor hora:");
-               qntdHora = JOptionPane.showInputDialog("Quantidade hora:");
-               //IF - N – normal (entra apenas com salário
-               salario = JOptionPane.showInputDialog("Salário:");
-               
-
+               tipoVinculo = JOptionPane.showInputDialog("Tipo vínculo - H: horista ou N: normal").charAt(0);
+       
+               if (tipoVinculo == 'H' || tipoVinculo == 'h'){
+               //IF horista entra com horas trabalhadas e valor hora para calcular o salário
+               valorHora = Float.parseFloat(JOptionPane.showInputDialog("Valor hora:"));
+               qntdHora = Float.parseFloat(JOptionPane.showInputDialog("Quantidade hora:"));
+               funcionario.setvalorHora(valorHora);
+               funcionario.setqntdHora(qntdHora);
+               funcionario.setsalario(qntdHora*valorHora);
+               }
+               else if (tipoVinculo == 'N' || tipoVinculo == 'n'){
+                //IF normal entra apenas com salário
+               salario = Float.parseFloat(JOptionPane.showInputDialog("Salário:"));
+               funcionario.setsalario(salario);               
+               } else{
+                JOptionPane.showMessageDialog(null, 
+                                "Erro: Favor inserir H ou N para tipo de vínculo",
+                                "Erro",
+                                JOptionPane.ERROR_MESSAGE);
+               }
+                                             
                funcionario = new Funcionario();
                funcionario.setcracha(cracha);
                funcionario.setnome(nome);
-               funcionario.settipoVinculo(tipoVinculo);
-               funcionario.setvalorHora(valorHora);
-               funcionario.setqntdHora(qntdHora);
-               funcionario.setsalario(salario);
+               funcionario.settipoVinculo(tipoVinculo);                             
                funcionario.setvalorDesconto(valorDesconto);
-               
+            
             break;
 
             case "2":
@@ -71,8 +79,5 @@ public class ex3 {
             default:
         }        
 
-    }while(!item.equals("3"));
+    }while(!item.equals("4"));
 }}
-
-
-}

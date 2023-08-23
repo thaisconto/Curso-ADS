@@ -3,8 +3,8 @@ import javax.swing.JOptionPane;
 
 public class ex2 {
      public static void main(String[] args) {
-    String RA, nome, situacao, item;
-    float AC1, AC2, AG, AF, media;
+    String RA, nome, item;
+    float AC1, AC2, AG, AF;
     Aluno aluno = null;
 
         do{
@@ -18,18 +18,18 @@ public class ex2 {
                 //cadastrar aluno
                RA = JOptionPane.showInputDialog("RA:");
                nome = JOptionPane.showInputDialog("Nome:");
-               //AC1 = JOptionPane.showInputDialog("AC1:");
-               //AC2 = JOptionPane.showInputDialog("AC2:");
-               //AG = JOptionPane.showInputDialog("AG:");
-               //AF = JOptionPane.showInputDialog("AF:");
+               AC1 = Float.parseFloat(JOptionPane.showInputDialog("AC1:"));
+               AC2 = Float.parseFloat(JOptionPane.showInputDialog("AC2:"));
+               AG = Float.parseFloat(JOptionPane.showInputDialog("AG:"));
+               AF = Float.parseFloat(JOptionPane.showInputDialog("AF:"));
 
                aluno = new Aluno();
                aluno.setRA(RA);
                aluno.setnome(nome);
-               //aluno.setAC1(AC1);
-               //aluno.setAC2(AC2);
-               //aluno.setAG(AG);
-               //aluno.setAF(AF);
+               aluno.setAC1(AC1);
+               aluno.setAC2(AC2);
+               aluno.setAG(AG);
+               aluno.setAF(AF);
                
             break;
 

@@ -5,7 +5,7 @@ public class ex1 {
           
     public static void main(String[] args) {
       String CPF, nome, item;
-      int sexo; //deveria ser char
+      char sexo; //deveria ser char
       int idade;
       Pessoa pessoa = null;
 
@@ -20,14 +20,14 @@ public class ex1 {
                 //cadastrar pessoa
                CPF = JOptionPane.showInputDialog("CPF:");
                nome = JOptionPane.showInputDialog("Nome:");
-               //sexo = JOptionPane.showInputDialog("Sexo:");
-               //idade = JOptionPane.showInputDialog("Idade:");
+               sexo = JOptionPane.showInputDialog("Sexo:").charAt(0);
+               idade = Integer.parseInt(JOptionPane.showInputDialog("Idade:"));
 
                pessoa = new Pessoa();
                pessoa.setCPF(CPF);
                pessoa.setnome(nome);
-               //pessoa.setsexo(sexo);
-               //pessoa.setidade(idade);
+               pessoa.setsexo(sexo);
+               pessoa.setidade(idade);
 
             break;
 
