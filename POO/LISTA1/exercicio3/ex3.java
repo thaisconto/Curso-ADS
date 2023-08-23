@@ -45,7 +45,7 @@ public class ex3 {
                     JOptionPane.ERROR_MESSAGE);
             }
                                              
-            funcionario = new Funcionario();
+            
             funcionario.setcracha(cracha);
             funcionario.setnome(nome);
             funcionario.settipoVinculo(tipoVinculo);                             
