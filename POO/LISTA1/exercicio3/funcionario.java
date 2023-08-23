@@ -3,8 +3,8 @@ package POO.LISTA1.exercicio3;
 public class Funcionario {
     private String nome;
     private float valorHora, qntdHora, salario, valorDesconto, valorReceber;
-    int cracha;
-    char tipoVinculo;
+    private int cracha;
+    private char tipoVinculo;
 
         public String getnome(){
             return nome;

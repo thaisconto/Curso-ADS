@@ -21,22 +21,26 @@ public class ex3 {
             //cadastrar funcionário
             cracha = Integer.parseInt(JOptionPane.showInputDialog("Cracha:"));
             nome = JOptionPane.showInputDialog("Nome:");
-            valorDesconto = Float.parseFloat(JOptionPane.showInputDialog("Valor desconto:"));
-               
-            //VÍNCULO pode ser H ou N
+            valorDesconto = Float.parseFloat(JOptionPane.showInputDialog("Valor desconto:"));              
             tipoVinculo = JOptionPane.showInputDialog("Tipo vínculo - H: horista ou N: normal").charAt(0);
+            
+            funcionario = new Funcionario();
+            funcionario.setcracha(cracha);
+            funcionario.setnome(nome);
+            funcionario.settipoVinculo(tipoVinculo);                             
+            funcionario.setvalorDesconto(valorDesconto);
+            
             if (tipoVinculo == 'H' || tipoVinculo == 'h'){
                 //IF horista entra com horas trabalhadas e valor hora para calcular o salário
                 valorHora = Float.parseFloat(JOptionPane.showInputDialog("Valor hora:"));
                 qntdHora = Float.parseFloat(JOptionPane.showInputDialog("Quantidade hora:"));
                 funcionario.setvalorHora(valorHora);
                 funcionario.setqntdHora(qntdHora);
-                //funcionario.setsalario( como chamar o método?);
+                salario = funcionario.calcularSalario();
             }
             else if (tipoVinculo == 'N' || tipoVinculo == 'n'){
                 //IF normal entra apenas com salário
-                salario = Float.parseFloat(JOptionPane.showInputDialog("Salário:"));
-                funcionario.setsalario(salario);               
+                salario = Float.parseFloat(JOptionPane.showInputDialog("Salário:"));                             
             }
             else{
                 JOptionPane.showMessageDialog(null, 
@@ -44,11 +48,8 @@ public class ex3 {
                     "Erro",
                     JOptionPane.ERROR_MESSAGE);
             }                                             
-            funcionario = new Funcionario();
-            funcionario.setcracha(cracha);
-            funcionario.setnome(nome);
-            funcionario.settipoVinculo(tipoVinculo);                             
-            funcionario.setvalorDesconto(valorDesconto);
+            
+            funcionario.setsalario(salario);
             
             break;
 
