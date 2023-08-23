@@ -91,9 +91,11 @@ public class ex3 {
             
             case "4":
             //sair
+            JOptionPane.showMessageDialog(null, "Volte sempre!");
             break;
 
             default:
+            JOptionPane.showMessageDialog(null, "Favor selecionar uma das opções!");
         }    
     }while(!item.equals("4"));
 }}
