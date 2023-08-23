@@ -5,7 +5,7 @@ public class ex1 {
           
     public static void main(String[] args) {
       String CPF, nome, item;
-      char sexo; //deveria ser char
+      char sexo;
       int idade;
       Pessoa pessoa = null;
 
@@ -32,24 +32,24 @@ public class ex1 {
             break;
 
             case "2":
-            //visualizar
-            //se estiver vazio dar aviso
+            //visualizar, se estiver vazio dar aviso
                 if(pessoa == null){
                     JOptionPane.showMessageDialog(null, 
                                 "Precisa cadastrar uma pessoa",
                                 "Alerta",
                                 JOptionPane.ERROR_MESSAGE);
-            break;
+                break;
                 }
             
             JOptionPane.showMessageDialog(null, pessoa.imprimir());
             break;
 
             case "3":
-            //sair
+            //sair, inserir volte sempre
             break;
             
             default:
+            //opção inválida
         }
         
     }while(!item.equals("3"));

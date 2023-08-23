@@ -63,7 +63,7 @@ public class Aluno {
                 +"\nAG: "+getAG()
                 +"\nAF: "+getAF()
                 +"\nMédia: "+ getmedia()
-                //+"\nSituação: "+getsituacao()
+                +"\nSituação: "+getsituacao()
                 ;
         
         return msg;    
@@ -72,13 +72,16 @@ public class Aluno {
         public float calcularMedia(){
             media = (AC1 * 0.15f) + (AC2 * 0.30f) + (AG * 0.10f) + (AF * 0.45f);
             return media;
-
         }
 
         public String verificarAprovacao(){
             if (getmedia() <= 5){
                 situacao = "Reprovado";
-            }else {situacao = "Aprovado";};
+                return situacao;
+            }else {
+                situacao = "Aprovado";
+                return situacao;
+            }
 
         }
 
