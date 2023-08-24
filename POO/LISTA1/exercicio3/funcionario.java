@@ -49,7 +49,7 @@ public class Funcionario {
             this.tipoVinculo = value;
         }     
         public float getvalorReceber(){
-            return valorReceber;
+            return calcularValorReceber();
         }
         public void setvalorReceber(float value){
             this.valorReceber = value;
@@ -62,7 +62,7 @@ public class Funcionario {
                 +"\nTipo Vínculo: "+gettipoVinculo()
                 +"\nSalário: "+getsalario()
                 +"\nDesconto: "+getvalorDesconto()
-                +"\nValor a receber: "+getvalorReceber();
+                +"\nValor a receber: "+ getvalorReceber();
         
         return msg;    
         }
