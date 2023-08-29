@@ -5,7 +5,7 @@ public class Main2 {
     public static void main (String[] args){
     int codigo;
     String nome, item;
-    double percentualComissao, valorVenda, valorDesconto;
+    double percentualComissao, valorVenda=0, valorDesconto=0;
     Vendedor vendedor = null;
 
     do{
@@ -36,7 +36,7 @@ public class Main2 {
                     JOptionPane.ERROR_MESSAGE);
                 break;
                 }            
-                JOptionPane.showMessageDialog(null, vendedor.imprimir());
+                JOptionPane.showMessageDialog(null, vendedor.imprimir(valorVenda, valorDesconto));
                 break;
            
 

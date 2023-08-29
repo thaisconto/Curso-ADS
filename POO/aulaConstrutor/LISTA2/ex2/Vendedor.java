@@ -24,7 +24,7 @@ public class Vendedor {
 
     }
 
-    public String imprimir(){
+    public String imprimir(double valorVenda, double valorDesconto){
         return "Codigo: " + getCodigo()
                 +"\nNome: " + getNome()
                 +"\nValor venda: " + getValorVenda()
