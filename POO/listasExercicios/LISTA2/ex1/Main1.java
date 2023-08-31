@@ -21,7 +21,7 @@ public class Main1 {
                 nome = (JOptionPane.showInputDialog("Nome: "));
                 numero = Integer.parseInt(JOptionPane.showInputDialog("Número: "));
                 idade = Integer.parseInt(JOptionPane.showInputDialog("Idade: "));
-                sexo = (JOptionPane.showInputDialog("Sexo: ").charAt(0));
+                sexo = (JOptionPane.showInputDialog("Sexo (F/M): ").charAt(0));
                 valorAutomovel = Double.parseDouble(JOptionPane.showInputDialog("Valor automóvel: "));
                 
                 apolice = new Apolice(numero, nome, idade, sexo, valorAutomovel);
