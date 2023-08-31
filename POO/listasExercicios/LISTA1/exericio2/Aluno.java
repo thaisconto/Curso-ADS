@@ -1,4 +1,4 @@
-package POO.LISTA1.exericio2;
+package POO.listasExercicios.LISTA1.exericio2;
 
 public class Aluno {
     private String RA, nome, situacao;

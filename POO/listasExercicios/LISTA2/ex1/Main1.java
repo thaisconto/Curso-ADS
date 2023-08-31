@@ -1,4 +1,4 @@
-package POO.aulaConstrutor.LISTA2.ex1;
+package POO.listasExercicios.LISTA2.ex1;
 import javax.swing.JOptionPane;
 
 public class Main1 {

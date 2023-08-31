@@ -1,4 +1,4 @@
-package POO.aulaConstrutor.LISTA2.ex1;
+package POO.listasExercicios.LISTA2.ex1;
 
 public class Apolice {
     private int numero, idade;

@@ -1,0 +1,32 @@
+Esse exercício foi realizado pelo netBeans
+
+Passo 1:
+criar arquivo com botao direito e importar java class JFrame Form
+na parte principal tem source, design e history
+no lado direito tem as abas pallete (onde escolho as coisas que vão ter no meu código) e propriedades
+
+
+Passo 2:
+em pallet seleciono panel, button e text fild
+na aba propriedades 
+com o botao selecionado eu entro em propriedade-propriedades e altero o nome para cadastrar 
+com o bitao selecionado eu entro em propriedades-code e altero o nome da variável para btncadastrar
+seleciono a caixa de texto e em propriedade-code altero o nome da variável para txtNome
+
+Passo 3:
+vou para o código (source)
+ na linha 132 apagar o comentario e inserior:
+JOptionPane.showMessageDialog(rootPane, txtNome.getText());
+
+
+Passo 4:
+vou no pallete e adiciono o label
+em propriedades altero o nome para Nome:
+
+Passo 5:
+criar para RA e Curso igual anterior para Nome
+no código inserir
+JOptionPane.showMessageDialog(rootPane, "Nome: " + txtNome.getText() + "\nRA: " + txtRA.getText() +  "\nCurso: " + txtCurso.getText());
+
+Passo 6:
+criar outro main igual a esse para praticar: nome, codigo, %percentualComissao

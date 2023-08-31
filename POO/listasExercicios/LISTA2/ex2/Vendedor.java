@@ -1,4 +1,4 @@
-package POO.aulaConstrutor.LISTA2.ex2;
+package POO.listasExercicios.LISTA2.ex2;
 
 public class Vendedor {
     private int codigo;
