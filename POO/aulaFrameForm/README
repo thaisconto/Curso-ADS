@@ -29,4 +29,16 @@ no código inserir
 JOptionPane.showMessageDialog(rootPane, "Nome: " + txtNome.getText() + "\nRA: " + txtRA.getText() +  "\nCurso: " + txtCurso.getText());
 
 Passo 6:
-criar outro main igual a esse para praticar: nome, codigo, %percentualComissao
+criar outro main igual a esse para praticar: Vendedor: nome, codigo, %percentualComissao
+
+Passo 7:
+criar objeto no exercicio de aluno
+logo depois da classe linha 15
+Aluno aluno = null;
+intancio meu aluno quando clico no botao, linha 140
+aluno = new Aluno();
+aluno.setNome(txtNome.getText());
+Criar a classe aluno também, igual nas aulas anteriores
+
+Passo 8:
+Criar botão mostrar
