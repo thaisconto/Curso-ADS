@@ -45,8 +45,9 @@ Uma videoteca precisa cadastrar o título, duração, idioma original e preço d
 <h2><b> 7 - Alunos </h2></b> 
 
 Crie um banco de dados para armazenar dados de alunos. Um aluno deve ter RA, nome, data de nascimento, endereço e e-mail;
+[SQL](https://github.com/thaisconto/Curso-ADS/blob/main/Bando_Dados/Lista1/alunos_SQL.txt)
 
 <h2><b> 8 - Colaboradores-Empresa </h2></b>
   
 Crie um banco de dados para armazenar dados de colaboradores de uma empresa. Um colaborador deve ter um código de identificação, nome, CPF, cargo e salário;
-
+[SQL](https://github.com/thaisconto/Curso-ADS/blob/main/Bando_Dados/Lista1/colaboradores_SQL.txt)
