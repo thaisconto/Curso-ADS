@@ -1,0 +1,29 @@
+CREATE TABLE automovel(
+placa varchar(10),
+ano varchar(4),
+modelo varchar(30)
+);
+
+
+INSERT INTO automovel VALUES ('xxxxxx','2000','completo');
+INSERT INTO automovel VALUES ('aaaaaa','2020','sem vidro eletrico');
+INSERT INTO automovel VALUES ('bbbbbb','2023','completo');
+INSERT INTO automovel VALUES ('cccccc','2000','sem ar condicionado');
+INSERT INTO automovel VALUES ('dddddd','2009','completo');
+
+
+CREATE TABLE montadora(
+nome varchar(30),
+logotipo varchar(30),
+site varchar(30)
+);
+
+INSERT INTO montadora VALUES ('MontaCar', 'aaaaa','www.montacar.com');
+INSERT INTO montadora VALUES ('CarrosRapidos', 'aaaaa','www.carrosrapidos.com');
+INSERT INTO montadora VALUES ('Montadores', 'aaaaa','www.montadores.com');
+INSERT INTO montadora VALUES ('LogCar', 'aaaaa','www.logcar.com');
+INSERT INTO montadora VALUES ('TurboCarros', 'aaaaa','www.turbocarros.com');
+
+
+SELECT * FROM automovel;
+SELECT * FROM montadora;

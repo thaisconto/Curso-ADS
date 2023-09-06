@@ -1,0 +1,51 @@
+CREATE TABLE elenco(
+ID int,
+nome varchar(10),
+idade int(2),
+data_nascimento date,
+nacionalidade varchar(30)
+);
+
+
+INSERT INTO elenco VALUES (1, 'Roger', 46, 'xxxx-xx-xx', 'inglês');
+INSERT INTO elenco VALUES (2, 'Nami', 26, 'xxxx-xx-xx', 'suéca');
+INSERT INTO elenco VALUES (3, 'Zoro', 30, 'xxxx-xx-xx', 'japonês');
+INSERT INTO elenco VALUES (4, 'Marcos', 34, 'xxxx-xx-xx', 'brasileiro');
+INSERT INTO elenco VALUES (5, 'Mihail', 17, 'xxxx-xx-xx', 'marroquino');
+
+
+
+CREATE TABLE filme(
+ID int,
+preço decimal (4,2),
+titulo varchar(30),
+idioma varchar(30),
+duração varchar(30)
+);
+
+INSERT INTO filme VALUES (1, 15.90, 'Onde os fracos não tem vez', 'inglês', '135min');
+INSERT INTO filme VALUES (2, 13.95, 'Donni e Darko', 'inglês', '180min');
+INSERT INTO filme VALUES (3, 20.45, 'Titanic', 'alemão', '125min');
+INSERT INTO filme VALUES (4, 12.63, 'Cabelos ao vento', 'francês', '80min');
+INSERT INTO filme VALUES (5, 17.99, 'Kokoro', 'japonês', '121min');
+
+
+CREATE TABLE diretor(
+ID int,
+nome varchar (30),
+filmes_anteriores varchar(200),
+data_nascimento date,
+idade int(2),
+nacionalidade varchar(30)
+);
+
+INSERT INTO diretor VALUES (1, 'John', 'aaaaaaaaa', 'XXXX-XX-XX', 45, 'francês');
+INSERT INTO diretor VALUES (2, 'Paulie', 'bbbbbbb', 'XXXX-XX-XX', 51, 'belga');
+INSERT INTO diretor VALUES (3, 'Markie', 'ccccccc', 'XXXX-XX-XX', 39, 'alemão');
+INSERT INTO diretor VALUES (4, 'Tanjiro', 'ddddddd', 'XXXX-XX-XX', 42, 'japonês');
+INSERT INTO diretor VALUES (5, 'JBene', 'eeeeeeee', 'XXXX-XX-XX', 49, 'italiano');
+
+
+SELECT * FROM elenco;
+SELECT * FROM filme;
+SELECT * FROM diretor;

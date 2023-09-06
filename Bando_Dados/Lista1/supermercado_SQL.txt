@@ -1,0 +1,30 @@
+CREATE TABLE produto(
+ID int,
+nome varchar(10),
+qntd_estoque int(4),
+preco decimal(5,2)
+);
+
+
+INSERT INTO produto VALUES (1, 'batata chips', 300, 20.60);
+INSERT INTO produto VALUES (2, 'barra de ceral', 237, 4.30);
+INSERT INTO produto VALUES (3, 'ovo', 200, 17.50);
+INSERT INTO produto VALUES (4, 'leite integral', 1000, 3.79);
+INSERT INTO produto VALUES (5, 'açucar refinado', 100, 2.75);
+
+
+CREATE TABLE marca(
+nome varchar(30),
+SAC varchar(30),
+nacionalidade varchar(30)
+);
+
+INSERT INTO marca VALUES ('OvosLegais', '0800 000 000','brasileira');
+INSERT INTO marca VALUES ('Salgados da vovó', '0800 000 000','americana');
+INSERT INTO marca VALUES ('Sextou doce', '0800 000 000','brasileira');
+INSERT INTO marca VALUES ('Maike', '0800 000 000','canadense');
+INSERT INTO marca VALUES ('Tarapacá', '0800 000 000','chilena');
+
+
+SELECT * FROM produto;
+SELECT * FROM marca;
