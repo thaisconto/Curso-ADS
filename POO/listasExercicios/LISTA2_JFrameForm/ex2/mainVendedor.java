@@ -1,4 +1,4 @@
-package POO.listasExercicios.LISTA3.ex2;
+package POO.listasExercicios.LISTA2_JFrameForm.ex2;
 
 import javax.swing.JOptionPane;
 

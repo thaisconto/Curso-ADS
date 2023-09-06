@@ -1,11 +1,11 @@
-package POO.listasExercicios.LISTA3.ex2;
+package POO.listasExercicios.LISTA2_JFrameForm.ex2;
 
 public class Vendedor {
     private int codigo;
     private String nome;
     private double percentualComissao, valorVenda, valorDesconto;
 
-        public Vendedor(int codigo, String nome, double percentualComissao){
+        public Vendedor(int codigo, String nome, double percentualComissao, double valorVenda){
         this.codigo = codigo;
         this.nome = nome;
         this.percentualComissao = percentualComissao;

@@ -1,4 +1,4 @@
-package POO.listasExercicios.LISTA3.ex1;
+package POO.listasExercicios.LISTA2_JFrameForm.ex1;
 
 public class Apolice {
     private int numero, idade;
