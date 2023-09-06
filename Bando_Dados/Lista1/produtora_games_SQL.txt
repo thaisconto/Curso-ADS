@@ -1,0 +1,29 @@
+CREATE TABLE desenvolvedor(
+Nome varchar(30),
+idade int(2),
+CPF int(11),
+data_nascimento date
+);
+
+
+INSERT INTO desenvolvedor VALUES ('Thais', 28, 11111111111, 'xxxx-xx-xx');
+INSERT INTO desenvolvedor VALUES ('Maria', 21, 2222222222, 'xxxx-xx-xx');
+INSERT INTO desenvolvedor VALUES ('João', 37, 33333333333, 'xxxx-xx-xx');
+INSERT INTO desenvolvedor VALUES ('José', 52, 44444444444, 'xxxx-xx-xx');
+INSERT INTO desenvolvedor VALUES ('Robson', 18, 55555555555, 'xxxx-xx-xx');
+
+CREATE TABLE projeto(
+nome varchar(30),
+genero varchar(30),
+faixa_etaria int(2),
+data_lancamento date
+);
+
+INSERT INTO projeto VALUES ('Trovão', 'ficção', 16, '2021-08-22');
+INSERT INTO projeto VALUES ('Sou demais', 'comédia', 10, '2022-08-27');
+INSERT INTO projeto VALUES ('O pente do careca', 'drama', 18, '2017-04-22');
+INSERT INTO projeto VALUES ('A volta dos que não foram', 'romance', 12, '2007-03-17');
+INSERT INTO projeto VALUES ('Chovendo canivete', 'terror', 18, '2018-07-09');
+
+SELECT * FROM desenvolvedor;
+SELECT * FROM projeto;

@@ -1,0 +1,29 @@
+CREATE TABLE cliente(
+Nome varchar(30),
+email varchar(30),
+CPF int(11),
+telefone varchar(15)
+);
+
+
+INSERT INTO cliente VALUES ('Thais', 'xxx@xxx.x', 11111111111, 'xx x xxxx-xxxx');
+INSERT INTO cliente VALUES ('Maria', 'aaaa@xxx.x', 2222222222, 'xx x xxxx-xxxx');
+INSERT INTO cliente VALUES ('João', 'bbbb@xxx.x', 33333333333, 'xx x xxxx-xxxx');
+INSERT INTO cliente VALUES ('José', 'cccc@xxx.x', 44444444444, 'xx x xxxx-xxxx');
+INSERT INTO cliente VALUES ('Robson', 'dddd@xxx.x', 55555555555, 'xx x xxxx-xxxx');
+
+CREATE TABLE pet(
+nome varchar(30),
+especie varchar(30),
+idade int(2),
+data_nascimento date
+);
+
+INSERT INTO pet VALUES ('Trovão', 'cachorro', 2, '2021-08-22');
+INSERT INTO pet VALUES ('Bibi', 'cachorro', 1, '2022-08-27');
+INSERT INTO pet VALUES ('Lince', 'gato', 6, '2017-04-22');
+INSERT INTO pet VALUES ('Jake', 'passáro', 16, '2007-03-17');
+INSERT INTO pet VALUES ('Ciça', 'cachorro', 5, '2018-07-09');
+
+SELECT * FROM cliente;
+SELECT * FROM pet;

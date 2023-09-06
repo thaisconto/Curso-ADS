@@ -1,0 +1,33 @@
+CREATE TABLE autor(
+ID int(2),
+Nome varchar(30),
+email varchar(30),
+nacionalidade varchar(3),
+idade int(2),
+data_nascimento date
+);
+
+
+INSERT INTO autor VALUES (1,'Thais','aaaa@aaa.aa','BR', 28, 'xxxx-xx-xx');
+INSERT INTO autor VALUES (1,'José','aaaa@aaa.aa','EAU', 39, 'xxxx-xx-xx');
+INSERT INTO autor VALUES (1,'Marcos','aaaa@aaa.aa','BR', 17, 'xxxx-xx-xx');
+INSERT INTO autor VALUES (1,'Maria','aaaa@aaa.aa','CH', 52, 'xxxx-xx-xx');
+INSERT INTO autor VALUES (1,'Rose','aaaa@aaa.aa','BR', 35, 'xxxx-xx-xx');
+
+
+CREATE TABLE livro(
+titulo varchar(30),
+editora varchar(30),
+qntd_paginas int(4),
+acabamento varchar(30)
+);
+
+INSERT INTO livro VALUES ('Trovão sem chuva', 'livros', 37, 'comum');
+INSERT INTO livro VALUES ('Além do horizonte', 'estudio', 308, 'comum');
+INSERT INTO livro VALUES ('Banco de dados', 'facens', 457, 'comum');
+INSERT INTO livro VALUES ('Carros', 'brasil', 123, 'comum');
+INSERT INTO livro VALUES ('Trovão', 'livros', 37, 'comum');
+
+
+SELECT * FROM autor;
+SELECT * FROM livro;
