@@ -152,13 +152,15 @@ public class mainVendedor extends javax.swing.JFrame {
     }// </editor-fold>                        
 
     private void btnCadastrarVendaActionPerformed(java.awt.event.ActionEvent evt) {                                                  
-        vendedor = new Vendedor();
         
-         vendedor.setNome(nome.getText());
-         vendedor.setCodigo(Integer.parseInt(codigo.getText()));
-         vendedor.setValorDesconto(Double.parseDouble(valorDesconto.getText()));
-         vendedor.setValorVenda(Integer.parseInt(valorVenda.getText()));
-         vendedor.setPercentualComissao(Double.parseDouble(percentualComissao.getText()));
+        
+        String Nome = (nome.getText());
+         int Codigo = (Integer.parseInt(codigo.getText()));
+         double ValorDesconto = (Double.parseDouble(valorDesconto.getText()));
+         int ValorVenda = (Integer.parseInt(valorVenda.getText()));
+         double PercentualComissao =(Double.parseDouble(percentualComissao.getText()));
+         
+         vendedor = new Vendedor(Codigo, Nome, PercentualComissao, ValorVenda);
          
          JOptionPane.showMessageDialog(rootPane, "Cadastro efetuado");
                 
@@ -223,4 +225,3 @@ public class mainVendedor extends javax.swing.JFrame {
     private javax.swing.JTextField valorVenda;
     // End of variables declaration                   
 }
-

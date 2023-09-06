@@ -154,15 +154,14 @@ Apolice apolice = null;
     }// </editor-fold>                        
 
     private void btnCriarApoliceActionPerformed(java.awt.event.ActionEvent evt) {                                                
-         apolice = new Apolice();
-         
-         apolice.setNome(nome.getText());
-         apolice.setIdade(Integer.parseInt(idade.getText()));
-         apolice.setSexo(sexo.getText().charAt(0));
-         apolice.setNumero(Integer.parseInt(numero.getText()));
-         apolice.setValorAutomovel(Double.parseDouble(valorAutomovel.getText()));
+         String Nome = nome.getText();
+         int Idade = Integer.parseInt(idade.getText());
+         char Sexo = (sexo.getText().charAt(0));
+         int Numero = (Integer.parseInt(numero.getText()));
+         double ValorAutomovel =(Double.parseDouble(valorAutomovel.getText()));
                 
-         
+         apolice = new Apolice(Numero, Nome, Idade, Sexo, ValorAutomovel);
+          
          JOptionPane.showMessageDialog(rootPane, "Cadastro efetuado");
     }                                               
 

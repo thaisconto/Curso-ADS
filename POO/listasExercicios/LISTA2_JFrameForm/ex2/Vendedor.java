@@ -5,11 +5,7 @@ public class Vendedor {
     private String nome;
     private double percentualComissao, valorVenda, valorDesconto;
 
-    public Vendedor(){
-
-    }
-
-    public Vendedor(int codigo, String nome, double percentualComissao){
+        public Vendedor(int codigo, String nome, double percentualComissao){
         this.codigo = codigo;
         this.nome = nome;
         this.percentualComissao = percentualComissao;

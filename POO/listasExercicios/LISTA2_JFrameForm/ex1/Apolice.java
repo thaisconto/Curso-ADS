@@ -7,11 +7,7 @@ public class Apolice {
     private char sexo;
     
 
-    public Apolice(){
-
-    }
-
-    public Apolice(int numero, String nome, int idade, char sexo, double valorAutomovel){
+        public Apolice(int numero, String nome, int idade, char sexo, double valorAutomovel){
         this.numero = numero;
         this.nome = nome;
         this.idade = idade;
