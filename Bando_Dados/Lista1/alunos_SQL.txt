@@ -1,0 +1,17 @@
+CREATE TABLE alunos (
+ID INT,
+RA int(6),
+nome varchar(60),
+data_nascimento DATE,
+endereco varchar(30),
+email varchar(30)
+);
+
+
+INSERT INTO alunos VALUES (1, 123456, 'Thais', '1994-09-13', 'rua', 'xxxx');
+INSERT INTO alunos VALUES(2, 654321, 'Marcos', '1988-10-21','rua2', 'xxxx1');
+INSERT INTO alunos VALUES(3,159876, 'Gustavo', '2017-09-09','rua3', 'xxxx2');
+INSERT INTO alunos VALUES(4, 167945, 'Rose', '1967-05-22','rua4', 'xxxx3');
+INSERT INTO alunos VALUES(5, 164597, 'Lucas', '1958-01-12','rua5', 'xxxx4');
+
+SELECT * FROM alunos;

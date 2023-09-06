@@ -1,0 +1,16 @@
+CREATE TABLE colaboradores (
+ID INT,
+nome varchar(30),
+cpf INT(11),
+cargo varchar(10),
+salario decimal(5,2)
+);
+
+INSERT INTO colaboradores VALUES(1, 'Ana', '12345678915', 'analista', 10000.00);
+INSERT INTO colaboradores VALUES(2, 'Joao', '15678945254', 'vendedor', 2000.00);
+INSERT INTO colaboradores VALUES(3, 'Maria', '15715679664', 'gerente', 15000.00);
+INSERT INTO colaboradores VALUES(4, 'Isabel', '15684354876', 'faxineira', 3000.00);
+INSERT INTO colaboradores VALUES(5, 'Murilo', '15497864538', 'coordenador', 18000.00);
+
+
+SELECT * FROM colaboradores;
