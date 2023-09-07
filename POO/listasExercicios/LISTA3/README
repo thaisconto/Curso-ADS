@@ -1,0 +1,35 @@
+Usando Jframe e ArrayList
+Cadastrar e mostrar uma lista
+
+Criar um cadastro de Pessoas
+Pessoa
+CPF:String
+Nome:String
+Sexo: char
+Idade: int
+
+Cria um cadastro de Carro
+Carro
+Modelo: String
+Marca: String
+Ano de fabricacao: int
+Cor: String
+
+
+_______________________
+Passos:
+criar o array list com o tipo aluno dentro da classe (linha 17)
+no botão cadastrar add o aluno na lista
+no botão mostrar crir o for para percorrer a lista
+for (int i = 0; i < listAlunos.size(); i++){
+        JOptionPane.showMessageDialog(rootPane, listAlunos.get(i).imprimir());
+        }
+_______________________
+
+agora vou imprimir tudo em uma janela só:
+String str = "";
+        for (int i = 0; i < listAlunos.size(); i++){
+            str += "\n--------\n";
+            str += listAlunos.get(i).imprimir();
+        }
+        JOptionPane.showMessageDialog(rootPane, str);

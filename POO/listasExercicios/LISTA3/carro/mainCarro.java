@@ -155,25 +155,43 @@ ArrayList<Carro> listCarros = new ArrayList<>();
 
     private void btnCadastrarActionPerformed(java.awt.event.ActionEvent evt) {                                             
        carro = new Carro();
+       if (txtModelo.getText().equals("") ||
+           txtMarca.getText().equals("") ||
+           txtCor.getText().equals("") ||
+           txtAnoFabricacao.getText().equals("")
+           ){
+           JOptionPane.showMessageDialog(rootPane, "Favor cadastrar os dados corretamente");
+       }
+       else{       
+            carro.settxtModelo(txtModelo.getText());
+            carro.settxtMarca(txtMarca.getText());
+            carro.settxtCor(txtCor.getText());
+            carro.settxtAnoFabricacao(Integer.parseInt(txtAnoFabricacao.getText()));
        
-       carro.settxtModelo(txtModelo.getText());
-       carro.settxtMarca(txtMarca.getText());
-       carro.settxtCor(txtCor.getText());
-       carro.settxtAnoFabricacao(Integer.parseInt(txtAnoFabricacao.getText()));
-       
-       listCarros.add(carro);
+            listCarros.add(carro);
               
-       JOptionPane.showMessageDialog(rootPane, "Cadastro efetuado");
+            JOptionPane.showMessageDialog(rootPane, "Cadastro efetuado");
+            txtModelo.setText("");
+            txtMarca.setText("");
+            txtCor.setText("");
+            txtAnoFabricacao.setText("");
+       }
     }                                            
 
     private void btnMostrarActionPerformed(java.awt.event.ActionEvent evt) {                                           
-        String str = "";
-        for (int i = 0; i < listCarros.size(); i++){
-            str += "\n--------\n";
-            str += listCarros.get(i).imprimir();
-        }
+       if (listCarros.isEmpty())
+           {JOptionPane.showMessageDialog(rootPane, "Nenhum dado cadastrado");
+       }
+       else{
+            String str = "";
+            for (int i = 0; i < listCarros.size(); i++){
+                str += "\n--------\n";
+                str += listCarros.get(i).imprimir();
+            }
+            JOptionPane.showMessageDialog(rootPane, str);
+       }
         
-        JOptionPane.showMessageDialog(rootPane, str);
+        
     }                                          
 
     private void btnSairActionPerformed(java.awt.event.ActionEvent evt) {                                        
