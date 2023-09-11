@@ -2,16 +2,16 @@
 Foram propostos alguns exercícios para desenvolver o diagrama MER de diferentes situações, cada diagrama deve levar em consideração:
 
 - Modelagem de dados;
-- Atributos (simples, composto, derivado, multivalorado, identificadores);
+- Atributos (simples, composto, derivado, multivalorado, identificador);
 - Entidades;
 - Relacionamentos;
 - Cardinalidade;
 
 Após a conclusão dos MER's foi proposto a criação da base de dados utilizando SQL, levando em consideração:
-- Insira pelo menos 5 registros em cada tabela;
-- Ao final, faça o comando para selecionar e visualizar os dados;
+- Insirir pelo menos 5 registros em cada tabela;
+- Insirir o comando para selecionar e visualizar todos os dados;
 
-Obs: Os diagramas foram elaborados pela plataforma gratuira [Miro](https://miro.com/pt/) Já para o SQL foi utilizada a ferramenta gratuita [SQLite](https://sqliteonline.com/)
+Obs: Os diagramas foram elaborados pela plataforma gratuita [Miro](https://miro.com/pt/) Já para o SQL foi utilizada a ferramenta gratuita [SQLite](https://sqliteonline.com/)
 
 _________________________________________________________________________________________________________________________________________
 <h1>Exercícios:</h1>
