@@ -1,10 +1,11 @@
 <h1>Proposta:</h1>
 Foram propostos alguns exercícios para desenvolver o diagrama MER de diferentes situações, cada diagrama deve levar em consideração:
--Modelagem de dados;
--Atributos (simples, composto, derivado, multivalorado, identificadores);
--Entidades;
--Relacionamentos;
--Cardinalidade;
+
+- Modelagem de dados;
+- Atributos (simples, composto, derivado, multivalorado, identificadores);
+- Entidades;
+- Relacionamentos;
+- Cardinalidade;
 
 Após a conclusão dos MER's foi proposto a criação da base de dados utilizando SQL, levando em consideração:
 - Insira pelo menos 5 registros em cada tabela;
