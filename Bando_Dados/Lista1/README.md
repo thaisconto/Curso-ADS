@@ -74,7 +74,7 @@ Base de dados [SQL](https://github.com/thaisconto/Curso-ADS/blob/main/Bando_Dado
 
 Crie um banco de dados para armazenar dados de alunos. Um aluno deve ter RA, nome, data de nascimento, endereço e e-mail;
 
-Resulução [aqui](https://github.com/thaisconto/Curso-ADS/blob/main/Bando_Dados/Lista1/alunos_SQL.txt)
+Resolução [aqui](https://github.com/thaisconto/Curso-ADS/blob/main/Bando_Dados/Lista1/alunos_SQL.txt)
 
 <b>_________________________________________________________________________________________________________________________________________</b>
 <h2><b> 8 - Colaboradores-Empresa </h2></b>
