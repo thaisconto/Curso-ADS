@@ -1,7 +1,7 @@
 package POO.listasExercicios.LISTA3.pessoa;
 
 public class Pessoa {
-    private String txtCpf, txtNome;
+     private String txtCpf, txtNome;
     private char txtSexo;
     private int txtIdade;
 
@@ -45,3 +45,4 @@ public class Pessoa {
     }
     
 }
+
