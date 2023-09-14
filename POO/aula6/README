@@ -1,0 +1,29 @@
+aumentar o painel
+inserir pallette>tabbed pane
+coloca tudo dentro desse painel
+botão direito no tab1 e edit text - cadastrar aluno
+para criar novas abas é só pallete>panel e arrastar ao lado da primeira aba
+
+na aba pesquisar criei o campo para pesquisar por RA
+na ação do botão vou colocar:
+for (int i=0; i < lstAlunos.size(); i++) {
+            if (lstAlunos.get(i).getRa().equals(txtPesquisarRa.getText())) {
+                JOptionPane.showMessageDialog(rootPane, lstAlunos.get(i).imprimir());
+            }
+        }
+
+também posso deixar o for mais simples:
+for (Aluno aluno : lstAlunos) {
+            if (aluno.getRa().equals(txtPesquisarRa.getText())) {
+                JOptionPane.showMessageDialog(rootPane, aluno.imprimir());
+            }
+        }
+
+
+Agora vamos fazer o botão de apagar:
+ for (int i = 0; i < lstAlunos.size(); i++) {
+            if (lstAlunos.get(i).getRa().equals(txtPesquisarRa.getText())) {
+                lstAlunos.remove(i);
+                JOptionPane.showMessageDialog(rootPane, "Deletado");        
+            }
+        }
