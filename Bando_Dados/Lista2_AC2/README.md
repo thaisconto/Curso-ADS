@@ -1,51 +1,42 @@
 <h1>Proposta:</h1>
-Foi proposto a criação de uma tabela Produtos, onde:
-
-- Possua os itens: id_produto, nome, preço, estoque, perecível, marca e nacionalidade;
-- Atribua a cada campo seu respectivo tipo;
-- Os itens: nome, preço, estoque e perecível não poderão receber valores nulos;
-- O id_produto deve ser utilizado como chave-primaria;
-- Insira cinco produtos.
-
-O execício foi elaborado através do [SQL Server da Oracle](https://dev.mysql.com/doc/) e [WAMP](https://sourceforge.net/projects/wampserver/).
-
-O <b>código SQL completo</b> desenvolvido para a resolução do exercício está disponibilizado [aqui](https://github.com/thaisconto/Curso-ADS/blob/main/Bando_Dados/Lista2/sql.sql).
-
-Após a criação da tabela, foi lançado o desafio de criar uma sequência de relatórios que serão apresentados a seguir:
-
-- Verifique se todos os dados foram inseridos;
-<img src = select1.png>
-
  
-- Gere um relatório informando quantos produtos estão cadastrados;
-<img src = select2.png>
-
-
-- Gere um relatório informando o preço médio dos produtos;
-<img src = select3.png>
+ <h2>Exercício Animais</h2>
  
-  
-- Selecione a média dos preços dos produtos em 2 grupos: perecíveis e não
-perecíveis;
-<img src = select4.png>
+ Crie a tabela animais com nome, nascimento, peso e cor. Após inserir os dados, gere os seguintes relatórios: 
 
+- Selecione todos os animais
+- Selecione todos os animais que pesam menos que 13.1
+- Selecione todos nasceram entre fevereiro e dezembro de 2015
+- Selecione todos os animais brancos que pesam menos que 15.0
+- Selecione nome, cor e peso de todos cujo nome comece com ’B’
+- Selecione nome, cor e peso de todos com cor vermelha, amarela, marrom e laranja
+- Selecione nome, cor, data de nascimento e peso de todos ordenados pelos mais jovens
+- Selecione todos os animais cujo nome comece com 'C' e não sejam brancos
+- Selecione todos os animais cujo nome contenha 'ba'
+- Selecione todos os animais com peso entre 13.0 à 15.0
+- Selecione todos os animais que o peso não seja maior que 30, com cor amarelo ou roxo e nascidos depois de 2012
+- (Desafio) Selecione todos os capricornianos
+- (Desafio) Selecione todos os animais com nome formado por mais de uma palavra.
 
-- Selecione a média dos preços dos produtos agrupados pelo nome do produto;
-<img src = select5.png>
+---------------------------------------------------------
 
- 
-- Selecione a média dos preços e total em estoque dos produtos;
-<img src = select6.png>
-  
-  
-- Selecione o nome, marca e quantidade em estoque do produto mais caro;
-<img src = select7.png>
+<h2>Exercício 2</h2>
+1) Crie um banco de dados para armazenar dados de Animais e Espécies. Um animal tem seu nome, data_nasc e peso. Uma espécie tem um nome e uma descrição.
 
-  
-- Selecione os produtos com preço acima da média;
-<img src = select8.png>
- 
-  
-- Selecione a quantidade de produtos de cada nacionalidade
+Faça a modelagem relacional, DER.
+
+Insira pelo menos 8 animais e 3 espécies.
+
+2) Crie um banco de dados para registrar dados de Produtos e Marcas. Um produto deve ter nome, preço de custo, preço de venda, data de validade e marca. Uma marca deve ter, nome, site oficial e telefone.
+
+Faça a modelagem relacional, DER.
+
+Insira pelo menos 8 Produtos e 3 Marcas.
+
+3) Crie um banco de dados para registrar dados de Filmes e Categorias. Um filme tem seu título, sinopse, estudio e categoria. Uma categoria deve ter nome e público alvo.
+
+Faça a modelagem relacional, DER.
+
+Insira pelo menos 8 Filmes e 3 Categorias.
 <img src = select9.png>
 
