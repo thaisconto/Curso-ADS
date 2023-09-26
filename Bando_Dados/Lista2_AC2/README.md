@@ -41,13 +41,13 @@ Faça a modelagem relacional, DER.
 
 Insira pelo menos 8 Filmes e 3 Categorias.
 
--------------------------
+------------------------------------------------------------
 <h2>Exercício aula 6</h2>
 
 
-Código [aqui]()
+Código [aqui](https://github.com/thaisconto/Curso-ADS/blob/main/Bando_Dados/Lista2_AC2/sql_aula6.sql)
 
-1)Reporduza cada um dos três exemplos dados (tabela Carros; Pessoas e
+1)Reproduza cada um dos três exemplos dados (tabela Carros; Pessoas e
 Produtos).
 
 
