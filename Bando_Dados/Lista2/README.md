@@ -1,84 +1,51 @@
 <h1>Proposta:</h1>
-Foram propostos alguns exercícios para desenvolver o diagrama MER de diferentes situações, cada diagrama deve levar em consideração:
+Foi proposto a criação de uma tabela Produtos, onde:
 
-- Modelagem de dados;
-- Atributos (simples, composto, derivado, multivalorado, identificador);
-- Entidades;
-- Relacionamentos;
-- Cardinalidade;
+- Possua os itens: id_produto, nome, preço, estoque, perecível, marca e nacionalidade;
+- Atribua a cada campo seu respectivo tipo;
+- Os itens: nome, preço, estoque e perecível não poderão receber valores nulos;
+- O id_produto deve ser utilizado como chave-primaria;
+- Insira cinco produtos.
 
-Após a conclusão dos MER's foi proposto a criação da base de dados utilizando SQL, levando em consideração:
-- Insirir pelo menos 5 registros em cada tabela;
-- Insirir o comando para selecionar e visualizar todos os dados;
+O execício foi elaborado através do [SQL Server da Oracle](https://dev.mysql.com/doc/) e [WAMP](https://sourceforge.net/projects/wampserver/).
 
-Obs: Os diagramas foram elaborados pela plataforma gratuita [Miro](https://miro.com/pt/) Já para o SQL foi utilizada a ferramenta gratuita [SQLite](https://sqliteonline.com/)
+O <b>código SQL completo</b> desenvolvido para a resolução do exercício está disponibilizado [aqui]().
 
-_________________________________________________________________________________________________________________________________________
-<h1>Exercícios:</h1>
-<h2><b> 1 - Petshop </h2></b>
-Um petshop deseja manter cadastrados seus clientes bem como seus pets.
-Um cliente deve informar seu nome, CPF, e-mail e telefone, além do nome, espécie e data de nascimento de seu pet.
+Após a criação da tabela, foi lançado o desafio de criar uma sequência de relatórios que serão apresentados a seguir:
 
-Base de dados [SQL](https://github.com/thaisconto/Curso-ADS/blob/main/Bando_Dados/Lista1/petshop_SQL.txt)
+- Verifique se todos os dados foram inseridos;
+<img src = select1.png>
+
+ 
+- Gere um relatório informando quantos produtos estão cadastrados;
+<img src = select2.png>
+
+
+- Gere um relatório informando o preço médio dos produtos;
+<img src = select3.png>
+ 
   
-<img src = petshop_diagrama.png>
+- Selecione a média dos preços dos produtos em 2 grupos: perecíveis e não
+perecíveis;
+<img src = select4.png>
 
-<b>_________________________________________________________________________________________________________________________________________</b>
-<h2><b> 2 - Produtora </h2></b>
 
-Em uma produtora de games, há desenvolvedores, que possuem um nome, CPF, data de nascimento.
-Cada projeto tem um nome, data de lançamento, gênero e faixa etária. Segundo o gerente de projetos, “cada desenvolvedor deve estar envolvido em um projeto”.
+- Selecione a média dos preços dos produtos agrupados pelo nome do produto;
+<img src = select5.png>
 
-Base de dados [SQL](https://github.com/thaisconto/Curso-ADS/blob/main/Bando_Dados/Lista1/produtora_games_SQL.txt)
-
-<img src =produtora_games_diagrama.png>
-
-<b>_________________________________________________________________________________________________________________________________________</b>
-<h2><b> 3 - Biblioteca </h2></b>
-
-Uma biblioteca efetua registro de autores e livros. Um autor é cadastrado com seu nome, e-mail, nacionalidade e data de nascimento. Já um livro é registrado com o título, quantidade de páginas, acabamento e editora.
-
-Base de dados [SQL](https://github.com/thaisconto/Curso-ADS/blob/main/Bando_Dados/Lista1/biblioteca_SQL.txt)
-
-<img src = biblioteca_diagrama.png>
-
-<b>_________________________________________________________________________________________________________________________________________</b>
-<h2><b> 4 - Locadora </h2></b>
-
-Uma locadora de automóveis, mantém registro dos automóveis. Um automóvel é cadastrado com placa, modelo, ano, nome da montadora, site da montadora, logotipo da montadora.
-
-Base de dados [SQL](https://github.com/thaisconto/Curso-ADS/blob/main/Bando_Dados/Lista1/locadora_SQL.txt)
-
-<img src = locadora_diagrama.png>
-
-<b>_________________________________________________________________________________________________________________________________________</b>
-<h2><b> 5 - Supermercado </h2></b>
+ 
+- Selecione a média dos preços e total em estoque dos produtos;
+<img src = select6.png>
   
-Um supermercado cadastra seus produtos. Um produto é identificado por seu nome, preço, quantidade em estoque, nome da marca, SAC da marca, nacionalidade da marca.
-
-Base de dados [SQL](https://github.com/thaisconto/Curso-ADS/blob/main/Bando_Dados/Lista1/supermercado_SQL.txt)
-
-<img src = supermercado_diagrama.png>
-
-<b>_________________________________________________________________________________________________________________________________________</b>
-<h2><b> 6 - Videoteca </h2></b>
-
-Uma videoteca precisa cadastrar o título, duração, idioma original e preço de cada filme. É necessário cadastrar também o elenco de cada filme onde se registra o nome, data de nascimento, nacionalidade de cada ator/atriz. Opcionalmente, inclua o cadastro de diretores com atributos que julgar necessários.
-
-Base de dados [SQL](https://github.com/thaisconto/Curso-ADS/blob/main/Bando_Dados/Lista1/videoteca_SQL.txt)
-
-<img src = videoteca_diagrama.png>
-
-<b>_________________________________________________________________________________________________________________________________________</b>
-<h2><b> 7 - Alunos </h2></b> 
-
-Crie um banco de dados para armazenar dados de alunos. Um aluno deve ter RA, nome, data de nascimento, endereço e e-mail;
-
-Resolução [aqui](https://github.com/thaisconto/Curso-ADS/blob/main/Bando_Dados/Lista1/alunos_SQL.txt)
-
-<b>_________________________________________________________________________________________________________________________________________</b>
-<h2><b> 8 - Colaboradores-Empresa </h2></b>
   
-Crie um banco de dados para armazenar dados de colaboradores de uma empresa. Um colaborador deve ter um código de identificação, nome, CPF, cargo e salário;
+- Selecione o nome, marca e quantidade em estoque do produto mais caro;
+<img src = select7.png>
 
-Resolução [aqui](https://github.com/thaisconto/Curso-ADS/blob/main/Bando_Dados/Lista1/colaboradores_SQL.txt)
+  
+- Selecione os produtos com preço acima da média;
+<img src = select8.png>
+ 
+  
+- Selecione a quantidade de produtos de cada nacionalidade
+<img src = select9.png>
+
