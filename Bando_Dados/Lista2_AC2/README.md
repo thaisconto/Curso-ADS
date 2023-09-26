@@ -1,6 +1,8 @@
 <h1>Proposta:</h1>
  
  <h2>Exercício Animais</h2>
+
+ Código [aqui](https://github.com/thaisconto/Curso-ADS/blob/main/Bando_Dados/Lista2_AC2/sql_animais_aula5.sql)
  
  Crie a tabela animais com nome, nascimento, peso e cor. Após inserir os dados, gere os seguintes relatórios: 
 
@@ -20,7 +22,7 @@
 
 ---------------------------------------------------------
 
-<h2>Exercício 2</h2>
+<h2>Exercício </h2>
 1) Crie um banco de dados para armazenar dados de Animais e Espécies. Um animal tem seu nome, data_nasc e peso. Uma espécie tem um nome e uma descrição.
 
 Faça a modelagem relacional, DER.
@@ -38,5 +40,22 @@ Insira pelo menos 8 Produtos e 3 Marcas.
 Faça a modelagem relacional, DER.
 
 Insira pelo menos 8 Filmes e 3 Categorias.
-<img src = select9.png>
+
+-------------------------
+<h2>Exercício aula 6</h2>
+
+
+Código [aqui]()
+
+1)Reporduza cada um dos três exemplos dados (tabela Carros; Pessoas e
+Produtos).
+
+
+2) Na tabela de Produtos crie um campo data_de_vencimento para a
+tabela Produtos que será 1 mês após a data de cadastro.
+
+
+3) Na tabela Carros crie um campo autonomia que será utilizado para
+calcular o volume máximo de combustivel e consumo médio.
+
 
