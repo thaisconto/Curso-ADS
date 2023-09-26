@@ -36,7 +36,7 @@ SELECT SUM(estoque) AS total_estoque, AVG(preco) AS media_preco  FROM Produtos;
 SELECT nome, marca, estoque, MAX(preco) FROM Produtos;
 
 /*Selecione os produtos com preço acima da média;*/
-select nome from Produtos WHERE preco > AVG(preco);
+SELECT nome, preco FROM Produtos HAVING preco > (AVG(preco));
 
 /*Selecione a quantidade de produtos de cada nacionalidade*/
 SELECT nacionalidade, SUM(estoque) AS total_estoque FROM Produtos Group by nacionalidade;
