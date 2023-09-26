@@ -1,6 +1,8 @@
 <h1>Proposta:</h1>
  
  <h2>Exercício Animais</h2>
+
+ Código [aqui](https://github.com/thaisconto/Curso-ADS/blob/main/Bando_Dados/Lista2_AC2/sql_animais_aula5.sql)
  
  Crie a tabela animais com nome, nascimento, peso e cor. Após inserir os dados, gere os seguintes relatórios: 
 
