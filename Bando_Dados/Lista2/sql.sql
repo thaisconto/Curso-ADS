@@ -1,6 +1,6 @@
 CREATE TABLE Produtos(
 id_produto integer NOT NULL PRIMARY KEY AUTO_INCREMENT,
-nome varchar(30),
+nome varchar(30) NOT NULL,
 preco decimal(5,2) NOT NULL,
 estoque int NOT NULL,
 perecivel char(1) NOT NULL,
