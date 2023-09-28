@@ -1,51 +1,35 @@
 <h1>Proposta:</h1>
-Foi proposto a criação de uma tabela Produtos, onde:
+Foi proposto a criação de duas tabelas com relacionamento entre si:
 
-- Possua os itens: id_produto, nome, preço, estoque, perecível, marca e nacionalidade;
-- Atribua a cada campo seu respectivo tipo;
-- Os itens: nome, preço, estoque e perecível não poderão receber valores nulos;
-- O id_produto deve ser utilizado como chave-primaria;
-- Insira cinco produtos.
+- Cidades: id, nome e população.
+- Alunos: id, nome, data de nascimento e cidade.
+
+Depois foram inseridos dados, sendo: 5 cidades e 12 alunos.
+
+Após a criação das tabelas foi lançado o desafio para criar Inner Join e Left-Right Join.
 
 O execício foi elaborado através do [SQL Server da Oracle](https://dev.mysql.com/doc/) e [WAMP](https://sourceforge.net/projects/wampserver/).
 
-O <b>código SQL completo</b> desenvolvido para a resolução do exercício está disponibilizado [aqui](https://github.com/thaisconto/Curso-ADS/blob/main/Bando_Dados/Lista2/sql.sql).
-
-Após a criação da tabela, foi lançado o desafio de criar uma sequência de relatórios que serão apresentados a seguir:
-
-- Verifique se todos os dados foram inseridos;
-<img src = select1.png>
-
- 
-- Gere um relatório informando quantos produtos estão cadastrados;
-<img src = select2.png>
+O <b>código completo</b> desenvolvido para a resolução do exercício está disponibilizado [aqui]().
 
 
-- Gere um relatório informando o preço médio dos produtos;
-<img src = select3.png>
- 
-  
-- Selecione a média dos preços dos produtos em 2 grupos: perecíveis e não
-perecíveis;
-<img src = select4.png>
+------------------------------------------------
+- Fazendo uma consulta juntando as tabelas alunos com suas referentes cidades, de duas formas:
+
+   Inner Join
+<img src = innerjoin.png>
 
 
-- Selecione a média dos preços dos produtos agrupados pelo nome do produto;
-<img src = select5.png>
+Join on
 
- 
-- Selecione a média dos preços e total em estoque dos produtos;
-<img src = select6.png>
-  
-  
-- Selecione o nome, marca e quantidade em estoque do produto mais caro;
-<img src = select7.png>
+<img src = joinon.png>
 
-  
-- Selecione os produtos com preço acima da média;
-<img src = select8.png>
+ -------------------------------------------------------
+- Usando left join para deixar na ordem do id dos alunos;
+<img src = leftjoin.png>
+
+ -------------------------------------------------------
+- Usando right join para deixar na ordem do id das cidades;
+<img src = rightjoin.png>
  
   
-- Selecione a quantidade de produtos de cada nacionalidade
-<img src = select9.png>
-
