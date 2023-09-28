@@ -10,7 +10,7 @@ Após a criação das tabelas foi lançado o desafio para criar Inner Join e Lef
 
 O execício foi elaborado através do [SQL Server da Oracle](https://dev.mysql.com/doc/) e [WAMP](https://sourceforge.net/projects/wampserver/).
 
-O <b>código completo</b> desenvolvido para a resolução do exercício está disponibilizado [aqui]().
+O <b>código completo</b> desenvolvido para a resolução do exercício está disponibilizado [aqui](https://github.com/thaisconto/Curso-ADS/blob/main/Bando_Dados/Lista_InnerJoin/sql_ex2_aula7.sql).
 
 
 ------------------------------------------------
