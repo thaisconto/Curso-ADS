@@ -1,11 +1,3 @@
-/*Crie duas tabelas conforme o modelo apresentado nos slides 61 e 62, deste material;
-Preste atenção aos campos que estão no exemplo; Insira os valores conforme os slides;
-Aplique o exemplo sobre inner join dado no slide 67, deste material;
-Execute essas atividades dentro o Oracle Workbench; Crie um repositório remoto e envie o script em SQL;
-Produza o Readme do repositório remoto e tire um print da tela após o término da atividade;
-Coloque comentários em seu código.
-*/
-
 /* criando tabela cidades*/
 CREATE TABLE Cidades(
 id integer PRIMARY KEY,
@@ -47,4 +39,20 @@ INSERT INTO Alunos VALUES (12, 'Richard Feynan', date'1982-09-12', 1);
 SELECT * 
 FROM Alunos inner
 join Cidades
+on Cidades.id = Alunos.cidade_id;
+
+/*outra forma de fazer a consulta*/
+SELECT *
+FROM Alunos 
+JOIN Cidades 
+ON Cidades.id = Alunos.cidade_id;
+
+/*usando left join para deixar na ordem do id dos alunos*/
+SELECT *
+FROM Alunos left join Cidades
+on Cidades.id = Alunos.cidade_id;
+
+/*right join: deixar na ordem do id das cidades*/
+SELECT *
+FROM Alunos right join Cidades
 on Cidades.id = Alunos.cidade_id;
