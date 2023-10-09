@@ -4,9 +4,34 @@ Foi proposto a criação de duas tabelas com relacionamento entre si:
 - Cidades: id, nome e população.
 - Alunos: id, nome, data de nascimento e cidade.
 
-Depois foram inseridos dados, sendo: 5 cidades e 12 alunos.
+Após a criação das tabelas foi lançado o desafio para elaborar as seguintes ações:
+Após a criação de uma nova base, execute os códigos abaixo:
 
-Após a criação das tabelas foi lançado o desafio para criar Inner Join e Left-Right Join.
+Altere o nome do Pateta para Goofy;
+
+Altere o peso do Garfield para 10 quilogramas;
+
+Altere a cor de todos os gatos para laranja;
+
+Crie um campo altura para os animais;
+
+Crie um campo observação para os animais;
+
+Remova todos os animais que pesam mais que 200 quilogramas.
+
+Remova todos os animais que o nome inicie com a letra ‘C’.
+
+Remova o campo cor dos animais;
+
+Aumente o tamanho do campo nome dos animais para 80 caracteres;
+
+Remova todos os gatos e cachorros.
+
+Remova o campo data de nascimento dos animais.
+
+Remova todos os animais.
+
+Remova a tabela especies.
 
 O execício foi elaborado através do [SQL Server da Oracle](https://dev.mysql.com/doc/) e [WAMP](https://sourceforge.net/projects/wampserver/).
 
