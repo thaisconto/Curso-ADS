@@ -4,11 +4,20 @@
 
 * O <b>código completo</b> desenvolvido para a resolução do exercício está disponibilizado [aqui](https://github.com/thaisconto/Curso-ADS/blob/main/Bando_Dados/Lista_Delete.Alter.Update.Drop/sql_animais.sql).
 
-Foi proposto a criação de duas tabelas: Animais (nome, nascimento, peso e cor) e Epécies. Que após a inserção dos dados ficou confome imagens abaixo: 
+Observe o modelo conceitual no slide anterior e execute as seguintes etapas:
+Transforme o modelo conceitual em modelo lógico;
+Escreva o script SQL que cria o banco de dados;
+Insira dados no banco criado;
+Crie um relatório com todas as pizzas e os pizzaiolos aptos a produzi-las;
+Crie um relatório com todas as pizzas e seus ingredientes;
+Crie um relatório com todos os ingredientes e as pizzas onde são utilizados;
+Crie um relatório com os sabores de todas as pizzas, o nome dos pizzaiolos que
+as fazem e as instruções para produzi-las.
 
 
-<img src = tabela_dados.png>
-<img src = tabela_dados_2.png>
+
+<img src = modelo_conceitual.png>
+
 
 ------------------------------------------------
 
