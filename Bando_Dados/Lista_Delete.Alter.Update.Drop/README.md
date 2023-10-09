@@ -2,7 +2,7 @@
 
 * Obs: O execício foi elaborado através do [SQL Server da Oracle](https://dev.mysql.com/doc/) e [WAMP](https://sourceforge.net/projects/wampserver/).
 
-** O <b>código completo</b> desenvolvido para a resolução do exercício está disponibilizado [aqui]().
+** O <b>código completo</b> desenvolvido para a resolução do exercício está disponibilizado [aqui](https://github.com/thaisconto/Curso-ADS/blob/main/Bando_Dados/Lista_Delete.Alter.Update.Drop/sql_animais.sql).
 
 Foi proposto a criação de duas tabelas: Animais (nome, nascimento, peso e cor) e Epécies. Após a criação das tabelas foi lançado o desafio para elaborar as seguintes ações:
 
