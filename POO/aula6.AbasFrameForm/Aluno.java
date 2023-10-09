@@ -1,4 +1,4 @@
-package POO.aula6;
+package POO.aula6.AbasFrameForm;
 
 public class Aluno {
     // atributos
