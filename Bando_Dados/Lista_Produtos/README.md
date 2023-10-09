@@ -4,19 +4,20 @@
 
 * O <b>código completo</b> desenvolvido para a resolução do exercício está disponibilizado [aqui](https://github.com/thaisconto/Curso-ADS/blob/main/Bando_Dados/Lista_Delete.Alter.Update.Drop/sql_animais.sql).
 
-Observe o modelo conceitual no slide anterior e execute as seguintes etapas:
-Transforme o modelo conceitual em modelo lógico;
-Escreva o script SQL que cria o banco de dados;
-Insira dados no banco criado;
-Crie um relatório com todas as pizzas e os pizzaiolos aptos a produzi-las;
-Crie um relatório com todas as pizzas e seus ingredientes;
-Crie um relatório com todos os ingredientes e as pizzas onde são utilizados;
-Crie um relatório com os sabores de todas as pizzas, o nome dos pizzaiolos que
-as fazem e as instruções para produzi-las.
+Reproduza a base de dados apresentada no slide 21 desta tarefa e execute os
+seguintes itens:
+Crie uma view que mostra todos os produtos e suas respectivas marcas;
+Crie uma view que mostra todos os produtos e seus respectivos fornecedores;
+Crie uma view que mostra todos os produtos e seus respectivos fornecedores e
+marcas;
+Crie uma view que mostra todos os produtos com estoque abaixo do mínimo;
+Adicione o campo data de validade. Insira novos produtos com essa informação;
+Crie uma view que mostra todos os produtos e suas respectivas marcas com
+validade vencida;
+Selecionar os produtos com preço acima da média.
 
 
-
-<img src = modelo_conceitual.png>
+<img src = modelo_lógico.png>
 
 
 ------------------------------------------------
