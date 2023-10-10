@@ -77,15 +77,19 @@ INSERT INTO Pizza_Pizzaiolo values (1,3);
 INSERT INTO Pizza_Pizzaiolo values (2,3);
 INSERT INTO Pizza_Pizzaiolo values (1,4);
 
-/*Crie um relatório com todas as pizzas e os pizzaiolos aptos a produzi-las;*/
+/*1- Crie um relatório com todas as pizzas e os pizzaiolos aptos a produzi-las;*/
+SELECT *
+FROM Pizza left join Pizzaiolo
+on pp_pizza_id = pp_pizzaiolo_id;
+/*
+SELECT * FROM Alunos left join Cidades on Cidades.id = Alunos.cidade_id; */
 
+/*2- Crie um relatório com todas as pizzas e seus ingredientes;*/
+SELECT sabor, ingredientes FROM Pizza;
 
-/*Crie um relatório com todas as pizzas e seus ingredientes;*/
+/*3- Crie um relatório com todos os ingredientes e as pizzas onde são utilizados;*/
+SELECT sabor, ingredientes FROM Pizza;
 
-
-/*Crie um relatório com todos os ingredientes e as pizzas onde são utilizados;*/
-
-
-/*Crie um relatório com os sabores de todas as pizzas, o nome dos pizzaiolos que as fazem e as instruções para produzi-las*/
+/*4- Crie um relatório com os sabores de todas as pizzas, o nome dos pizzaiolos que as fazem e as instruções para produzi-las*/
 
 
