@@ -1,0 +1,81 @@
+Exercício 1
+Implemente a seguinte classe:
+Curso
+- codigo : int
+- nome : String
+- cargaHoraria : int
+- alunos : ArrayList<Aluno>
++ Curso()
++ Curso(codigo : int, nome : String, cargaHoraria :
+int)
++ inserirAluno(aluno : Aluno)
++ removerAluno(index : int)
++ imprimir(): String
++ imprimirCompleto() : String
++ gets...
++ sets...
+1
+0..*
+Aluno
+- ra : String
+- nome : String
++ Aluno()
++ Aluno(ra : String, nome : String)
++ get...
++ set...
++ imprimir():String
+Menu:
+1 – Criar Curso
+2 – Criar Aluno (Perguntar os dados do aluno e escolher o curso do aluno)
+3 – Remover Aluno
+4 – Mostrar Todos os Cursos
+5 – Mostrar alunos do curso
+6 – Sair
+Observações:
+ Curso > imprimir():String
+o Retornar uma String com todos os dados do curso.
+ Curso > imprimirCompleto():String
+o Retornar uma String com todos os dados do curso e os alunos.
+ Aluno > imprimir():String
+o Retornar uma String com os dados do aluno.
+Prof. Dr. Rafael Moreno
+Exercício 2
+Implemente a seguinte classe:
+Pessoa
+- codigo : int
+- nome : String
+- automoveis : ArrayList<Automovel>
++ Pessoa()
++ Pessoa (codigo : int, nome : String)
++ inserirAutomovel(automovel : Automovel)
++ removerAutomovel (index : int)
++ imprimir(): String
++ imprimirCompleto() : String
++ gets...
++ sets...
+1
+0..*
+Automovel
+- marca : String
+- modelo : String
++ Automovel ()
++ Automovel (marca : String, modelo : String)
++ get...
++ set...
++ imprimir():String
+Menu:
+1 – Criar Pessoa
+2 – Criar Automóvel
+3 – Transferir Automóvel (usuário seleciona a pessoa de origem e o seu automóvel e escolhe a
+pessoa de destino. O automóvel é excluído de um e inserido no outro).
+4 – Mostrar Todas as Pessoas
+5 – Mostrar automóvel da pessoa (mostrar as pessoas para ele escolher e listar os automóveis
+dessa)
+6 – Sair
+Observações:
+ Pessoa > imprimir():String
+o Retornar uma String com todos os dados da pessoa.
+ Pessoa > imprimirCompleto():String
+Prof. Dr. Rafael Moreno
+o Retornar uma String com todos os dados da pessoa e os automóveis.
+ Automóvel > imprimir():String
