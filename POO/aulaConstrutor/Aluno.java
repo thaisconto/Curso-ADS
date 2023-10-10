@@ -2,7 +2,7 @@ package POO.aulaConstrutor;
 
 public class Aluno {
     private String nome, RA, curso;
-    private double n1,n2;
+    
 
     //criar construtor, dentro do construtor já posso colocar os parâmetros
     //nesse caso só vou conseguir instaciar o objeto aluno se tiver colocado os parÂmetro obrigatórios
