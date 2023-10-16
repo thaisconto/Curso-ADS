@@ -131,16 +131,30 @@ ON pizzaiolo.id = pp_pizzaiolo_id
 ORDER BY pizzaiolo.nome ;
 
 /*2- Crie um relatório com todas as pizzas e seus ingredientes;*/
-SELECT sabor, ingredientes FROM Pizza;
+SELECT pizza.sabor, ingredientes.descricao
+FROM Pizza
+JOIN Ingredientes_Pizza
+ON ip_pizza_id = pizza.id
+JOIN ingredientes
+ON ingredientes.id = ip_ingredientes_id
+ORDER BY pizza.sabor;
 
 /*3- Crie um relatório com todos os ingredientes e as pizzas onde são utilizados;*/
-SELECT sabor, ingredientes FROM Pizza;
+SELECT pizza.sabor, ingredientes.descricao FROM Pizza
+JOIN Ingredientes_Pizza
+ON ip_pizza_id = pizza.id
+JOIN ingredientes
+ON ingredientes.id = ip_ingredientes_id
+ORDER BY ingredientes.descricao;
 
 /*4- Crie um relatório com os sabores de todas as pizzas, o nome dos pizzaiolos que as fazem e as instruções para produzi-las*/
-select *
-FROM pizza
-inner join pizzaiolo
-ON pizzaiolo.id = pizza.id;
+SELECT pizza.sabor, pizzaiolo.nome, receita.instrucao FROM Pizza
+JOIN Pizza_Pizzaiolo
+ON pp_pizza_id = pizza.id
+JOIN Pizzaiolo
+ON pizzaiolo.id = pp_pizzaiolo_id
+JOIN Receita
+ON receita.id = pizza.id ;
 
 DROP TABLE pizza;
 DROP TABLE pizza_pizzaiolo;
