@@ -121,10 +121,14 @@ INSERT INTO Ingredientes_Pizza values (4,6);
 
 
 /*1- Crie um relatório com todas as pizzas e os pizzaiolos aptos a produzi-las;*/
-select pizza.sabor, pizzaiolo.nome 
-FROM pizza
-inner join pizzaiolo
-ON pizzaiolo.id = pizza.id;
+SELECT 
+pizza.sabor, pizzaiolo.nome
+FROM Pizza
+JOIN Pizza_Pizzaiolo
+ON pp_pizza_id = pizza.id
+JOIN Pizzaiolo
+ON pizzaiolo.id = pp_pizzaiolo_id
+ORDER BY pizzaiolo.nome ;
 
 /*2- Crie um relatório com todas as pizzas e seus ingredientes;*/
 SELECT sabor, ingredientes FROM Pizza;
