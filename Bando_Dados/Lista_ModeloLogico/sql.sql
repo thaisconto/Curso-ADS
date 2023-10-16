@@ -155,16 +155,3 @@ JOIN Pizzaiolo
 ON pizzaiolo.id = pp_pizzaiolo_id
 JOIN Receita
 ON receita.id = pizza.id ;
-
-DROP TABLE pizza;
-DROP TABLE pizza_pizzaiolo;
-DROP TABLE pizzaiolo;
-DROP TABLE Ingredientes;
-DROP TABLE embalagem;
-DROP TABLE ingredientes_pizza;
-DROP TABLE receita;
-
-SELECT * FROM pizzaiolo;
-DESC Pizza;
-DESC pizza_pizzaiolo;
-DESC pizzaiolo;

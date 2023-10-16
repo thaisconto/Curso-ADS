@@ -26,8 +26,8 @@ frn_email varchar(50)
 
 CREATE TABLE Produto_Fornecedor(
 pf_prod_id int references Produto (prd_id),
-pf_frc_id int references Fornecedor (frn_id),
-primary key (pf_prod_id, pf_frc_id)
+pf_frn_id int references Fornecedor (frn_id),
+primary key (pf_prod_id, pf_frn_id)
 );
 
 /*inserir valores de marca: id, nome, nacionalidade*/
@@ -42,12 +42,21 @@ INSERT INTO Produto VALUES (null, 'Guarda roupa', 10, 1, '2020-02-24', 1, 2000.9
 INSERT INTO Produto VALUES (null, 'Chocolate', 130, 50, '2023-06-30', 0, 9.99, 3,2);
 INSERT INTO Produto VALUES (null, 'Camiseta', 7, 3, null, 1, 50.99, 4,3);
 INSERT INTO Produto VALUES (null, 'Copos', 20, 40, null, 1, 3.99, 1,2);
+INSERT INTO Produto VALUES (null, 'Pirulito', 7, 5, '2021-02-20', 0, 2.99, 3,3,'2022-02-20');
 
 /*inserir valores fornecedor:id, nome, email*/
 INSERT INTO Fornecedor VALUES (null, 'Rapido', 'rapido@gmail.com');
 INSERT INTO Fornecedor VALUES (null, 'Lento e sem quebrar', 'lento@inteiro.com');
 INSERT INTO Fornecedor VALUES (null, 'Entregador', 'entregador@eu.com');
-INSERT INTO Produto VALUES (null, 'Pirulito', 7, 5, '2021-02-20', 0, 2.99, 3,3,'2022-02-20');
+
+/*inserir valores produto_fornecedor:pf_prod_id ,pf_frn_id */
+INSERT INTO Produto_Fornecedor VALUES (1,1);
+INSERT INTO Produto_Fornecedor VALUES (2,2);
+INSERT INTO Produto_Fornecedor VALUES (3,3);
+INSERT INTO Produto_Fornecedor VALUES (4,1);
+INSERT INTO Produto_Fornecedor VALUES (5,2);
+INSERT INTO Produto_Fornecedor VALUES (6,3);
+
 
 /*1- Crie uma view que mostra todos os produtos e suas respectivas marcas;*/
 CREATE VIEW Produtos_E_Marcas as
@@ -69,10 +78,13 @@ SELECT * FROM Produtos_E_Fornecdores;
 
 /*3- Crie uma view que mostra todos os produtos e seus respectivos fornecedores e marcas;*/
 CREATE VIEW Produtos_Fornecedores_Marcas as
-SELECT prd_id, prd_nome, frn_nome, marca_nome
-FROM Produtos_E_Marcas
-INNER JOIN Produtos_E_Fornecdores
-ON prd_id = prd_id;
+SELECT prd_nome, frn_nome, marca_nome FROM Produto
+JOIN Produto_Fornecedor
+ON pf_prod_id = produto.prd_id
+JOIN Fornecedor
+ON fornecedor.frn_id = pf_frn_id
+JOIN Marcas
+ON marcas.marca_id = produto.prd_marca_id ;
 
 SELECT * FROM Produtos_Fornecedores_Marcas;
 
@@ -105,5 +117,3 @@ SELECT * FROM Produtos_Marcas_Vencidos;
 SELECT prd_id, prd_nome, prd_valor 
 FROM Produto 
 WHERE prd_valor > (select avg(prd_valor) from Produto);
-
-DROP TABLE Produto;
