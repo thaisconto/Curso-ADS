@@ -1,0 +1,23 @@
+Criar tabela produto (ou usasr o SQL que esta no canvas)
+id (int)
+nome (varchar 200)
+quantidade (int)
+valorProduto (decimal 10,2)
+Projeto em Swing usando DB
+O projeto devera:
+Aba Cadastrar
+Cadastrar
+Buscar todos
+Aba Busca
+Buscar um produto por ID
+Apagar por ID
+ 
+
+ Tabela criada em SQL:
+
+CREATE TABLE Produto (
+ID INT AUTO_INCREMENT PRIMARY KEY,
+nome varchar(30),
+quantidadeProduto int,
+valorProduto decimal(9,2)
+);
