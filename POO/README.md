@@ -1,16 +1,16 @@
 # Curso-ADS
-<h2>Curso análise e desenvolvimento de sistemas</h2>
+<h2>Curso programação orientada a objetos</h2>
 
 Exercícios desenvolvidos durante as aulas:
 - [Colletion](https://github.com/thaisconto/Curso-ADS/tree/main/POO/aulaColection);
 - [Construtor](https://github.com/thaisconto/Curso-ADS/tree/main/POO/aulaConstrutor);
 - [FrameForm](https://github.com/thaisconto/Curso-ADS/tree/main/POO/aulaFrameForm);
 - [Associação de classes](https://github.com/thaisconto/Curso-ADS/tree/main/POO/aula7Associacao);
-- Herabça: [1](https://github.com/thaisconto/Curso-ADS/tree/main/POO/aula7Heranca) e [2](https://github.com/thaisconto/Curso-ADS/tree/main/POO/aula9.Heranca);
+- Herança: [1](https://github.com/thaisconto/Curso-ADS/tree/main/POO/aula7Heranca) e [2](https://github.com/thaisconto/Curso-ADS/tree/main/POO/aula9.Heranca);
 - [Abas no FrameForm](https://github.com/thaisconto/Curso-ADS/tree/main/POO/aula6.AbasFrameForm);
 - [Conecção com banco de dados]();
 
-Anotações durante as aulas estão disponíveis [aqui]().
+Anotações durante as aulas estão disponíveis [aqui](https://github.com/thaisconto/Curso-ADS/blob/main/POO/aulasPOO.txt).
 
 -----------------------------------------------
 
