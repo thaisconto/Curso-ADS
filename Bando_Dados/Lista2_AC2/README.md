@@ -29,6 +29,9 @@
   
 - Selecione todos os animais cujo nome comece com 'C' e não sejam brancos
 <img src = animais.print8.png>
+
+OBS: como não tinha nenhum, fiz um select para nomes que iniciam com 'A'.
+<img src = animais.print8.1.png>
   
 - Selecione todos os animais cujo nome contenha 'ba'
 <img src = animais.print9.png>
