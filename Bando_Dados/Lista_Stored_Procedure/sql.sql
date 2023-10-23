@@ -1,4 +1,3 @@
--- Eu criei uma variável de contador, pra quando for igual, acrescentar um número
 -- criar tabela Curso
 CREATE TABLE IF NOT EXISTS Curso (
   `id_curso` INT NOT NULL AUTO_INCREMENT,
@@ -13,7 +12,7 @@ CREATE TABLE IF NOT EXISTS Aluno (
   `nome_aluno` VARCHAR(45) NOT NULL,
   `sobrenome_aluno` VARCHAR(45) NOT NULL,
    `id_curso_aluno` INT NOT NULL,
-	`email_aluno` VARCHAR(60) AS (CONCAT (nome_aluno, ".", sobrenome_aluno, "@dominio.com")),
+	`email_aluno` VARCHAR(60),
   PRIMARY KEY (`id_aluno`),
   INDEX `id_curso_aluno_idx` (`id_curso_aluno` ASC) VISIBLE,
   CONSTRAINT `id_curso_aluno`
@@ -62,14 +61,27 @@ create procedure insert_aluno(
     id_curso_aluno INT
 )
 begin
-	INSERT INTO Aluno (id_aluno, nome_aluno, sobrenome_aluno, id_curso_aluno)
-    Values (null, nome_aluno, sobrenome_aluno, id_curso_aluno);
+	DECLARE email_base VARCHAR(255);
+    DECLARE email VARCHAR(255);
+    DECLARE i INT;
+	
+    -- setar email_base
+    SET email_base  = CONCAT (nome_aluno, ".", sobrenome_aluno, "@dominio.com");
+    
+    -- verificar se já existe
+    SET i = 0;
+    REPEAT
+        SET i = i + 1;
+        SET email = IF (i = 1, email_base, CONCAT(i, email_base));
+		UNTIL NOT EXISTS (SELECT 1 FROM Aluno WHERE email_aluno = email) 
+    END REPEAT;
+    
+    -- inserir dados
+	INSERT INTO Aluno (id_aluno, nome_aluno, sobrenome_aluno, id_curso_aluno, email_aluno)
+    Values (null, nome_aluno, sobrenome_aluno, id_curso_aluno, email);
 end$
 delimiter ;
 
-
-INSERT INTO Aluno (id_aluno, nome_aluno, sobrenome_aluno, id_curso_aluno) 
-VALUES (NULL, 'Thaís','Marchetti', 1);
 
 call insert_aluno(null, 'Thaís', 'Marchetti', 1);
 call insert_aluno(null, 'Felipe', 'Silva', 1);
@@ -77,8 +89,6 @@ call insert_aluno(null, 'Felipe', 'Silva', 2);
 call insert_aluno(null, 'Marcos', 'José', 3);
 call insert_aluno(null, 'Robson', 'Souza', 4);
 call insert_aluno(null, 'Gustavo', 'Souza', 5);
-
-drop procedure insert_aluno;
 
 SELECT * from Aluno;
 
@@ -175,7 +185,6 @@ call selecao_aluno_curso(2);
 -- -------------------------
 
 -- criar stored procedure para seleção de professor com curso
-
 delimiter $
 create procedure selecao_professor_curso(id_professor int)
 begin
@@ -186,14 +195,7 @@ begin
     JOIN Curso
     ON curso.id_curso = pc_id_curso
     where professor.id_professor = id_professor;
-end$
+end$ 
 delimiter ;
 
 call selecao_professor_curso(1);
-
--------------
-DROP TABLE Curso;
-DROP TABLE Aluno;
-DROP TABLE Professor;
-DROP TABLE Professor_Curso;
-

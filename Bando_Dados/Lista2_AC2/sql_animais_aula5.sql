@@ -50,6 +50,9 @@ SELECT nome, cor, peso FROM Animais WHERE cor IN ('vermelho', 'amarelo', 'marrom
 /*7- Selecione nome, cor, data de nascimento e peso de todos ordenados pelos mais jovens*/
 SELECT nome, cor, nasc, peso FROM Animais ORDER BY nasc DESC;
 
+/*8- Selecione todos os animais cujo nome comece com 'C' e não sejam brancos*/
+SELECT * FROM Animais WHERE nome LIKE 'C%' and cor != 'branco';
+
 /*8.1- Selecione todos os animais cujo nome comece com 'A' e não sejam brancos*/
 SELECT * FROM Animais WHERE nome LIKE 'A%' and cor != 'branco';
 
