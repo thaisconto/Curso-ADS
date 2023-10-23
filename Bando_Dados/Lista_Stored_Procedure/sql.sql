@@ -1,9 +1,4 @@
-/*
-O aluno possui um email que deve ter seu endereço gerado automaticamente no seguinte formato:
-nome.sobrenome@dominio.com
-Como fica o email se duas pessoas tiverem o mesmo nome e sobrenome?
-*/
-
+-- Eu criei uma variável de contador, pra quando for igual, acrescentar um número
 -- criar tabela Curso
 CREATE TABLE IF NOT EXISTS Curso (
   `id_curso` INT NOT NULL AUTO_INCREMENT,
@@ -17,8 +12,8 @@ CREATE TABLE IF NOT EXISTS Aluno (
   `id_aluno` INT NOT NULL AUTO_INCREMENT,
   `nome_aluno` VARCHAR(45) NOT NULL,
   `sobrenome_aluno` VARCHAR(45) NOT NULL,
-  `email_aluno` VARCHAR(45) DEFAULT (`nome_aluno` + `sobrenome_aluno` + '@dominio.com'),
-  `id_curso_aluno` INT NOT NULL,
+   `id_curso_aluno` INT NOT NULL,
+	`email_aluno` VARCHAR(60) AS (CONCAT (nome_aluno, ".", sobrenome_aluno, "@dominio.com")),
   PRIMARY KEY (`id_aluno`),
   INDEX `id_curso_aluno_idx` (`id_curso_aluno` ASC) VISIBLE,
   CONSTRAINT `id_curso_aluno`
@@ -64,22 +59,26 @@ create procedure insert_aluno(
 	id_aluno int,
     nome_aluno VARCHAR(45),
 	sobrenome_aluno VARCHAR(45),
-    email_aluno varchar(45),
-	id_curso_aluno INT
+    id_curso_aluno INT
 )
 begin
-	INSERT INTO Aluno Values (null, nome_aluno, sobrenome_aluno, null, id_curso_aluno);
+	INSERT INTO Aluno (id_aluno, nome_aluno, sobrenome_aluno, id_curso_aluno)
+    Values (null, nome_aluno, sobrenome_aluno, id_curso_aluno);
 end$
 delimiter ;
 
 
-call insert_aluno(null, 'Thaís', 'Marchetti', null, 1);
-call insert_aluno(null, 'Felipe', 'Silva', null, 1);
-call insert_aluno(null, 'Felipe', 'Silva', null, 2);
-call insert_aluno(null, 'Marcos', 'José', null, 3);
-call insert_aluno(null, 'Robson', 'Souza', null, 4);
-call insert_aluno(null, 'Gustavo', 'Souza', null, 5);
+INSERT INTO Aluno (id_aluno, nome_aluno, sobrenome_aluno, id_curso_aluno) 
+VALUES (NULL, 'Thaís','Marchetti', 1);
 
+call insert_aluno(null, 'Thaís', 'Marchetti', 1);
+call insert_aluno(null, 'Felipe', 'Silva', 1);
+call insert_aluno(null, 'Felipe', 'Silva', 2);
+call insert_aluno(null, 'Marcos', 'José', 3);
+call insert_aluno(null, 'Robson', 'Souza', 4);
+call insert_aluno(null, 'Gustavo', 'Souza', 5);
+
+drop procedure insert_aluno;
 
 SELECT * from Aluno;
 
@@ -191,3 +190,10 @@ end$
 delimiter ;
 
 call selecao_professor_curso(1);
+
+-------------
+DROP TABLE Curso;
+DROP TABLE Aluno;
+DROP TABLE Professor;
+DROP TABLE Professor_Curso;
+

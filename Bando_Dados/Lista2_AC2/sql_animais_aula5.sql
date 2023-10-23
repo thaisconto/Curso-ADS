@@ -28,46 +28,42 @@ INSERT INTO Animais values (23 , 'Scooby' , '2012-01-02' , 19.9 , 'marrom' );
 INSERT INTO Animais values (24 , 'Rufus' , '2014-04-05' , 19.7 , 'branco' );
 INSERT INTO Animais values (25 , 'Rex' , '2021-08-19' , 19.7 , 'branco' );
 
-
-
-
-
-/*Selecione todos os animais*/
+/*1- Selecione todos os animais*/
 SELECT * FROM Animais;
 
-/* Selecione todos os animais que pesam menos que 13.1*/
+/* 2- Selecione todos os animais que pesam menos que 13.1*/
 SELECT * from Animais WHERE peso < 13.1;
 
-/*Selecione todos nasceram entre fevereiro e dezembro de 2015*/
+/*3- Selecione todos nasceram entre fevereiro e dezembro de 2015*/
 SELECT * FROM Animais WHERE nasc BETWEEN '2015-02-01' and '2015-12-01';
 
-/*Selecione todos os animais brancos que pesam menos que 15.0*/
+/*4- Selecione todos os animais brancos que pesam menos que 15.0*/
 SELECT * FROM Animais WHERE cor = 'branco' and peso < 15.0;
 
-/* Selecione nome, cor e peso de todos cujo nome comece com ’B’*/
+/* 5- Selecione nome, cor e peso de todos cujo nome comece com ’B’*/
 SELECT nome, cor, peso FROM Animais WHERE nome LIKE 'B%';
 
-/*Selecione nome, cor e peso de todos com cor vermelha, amarela, marrom e laranja*/
+/*6- Selecione nome, cor e peso de todos com cor vermelha, amarela, marrom e laranja*/
 SELECT nome, cor, peso FROM Animais WHERE cor IN ('vermelho', 'amarelo', 'marrom', 'laranja');
 
-/*Selecione nome, cor, data de nascimento e peso de todos ordenados pelos mais jovens*/
+/*7- Selecione nome, cor, data de nascimento e peso de todos ordenados pelos mais jovens*/
 SELECT nome, cor, nasc, peso FROM Animais ORDER BY nasc DESC;
 
-/*Selecione todos os animais cujo nome comece com 'C' e não sejam brancos*/
+/*8- Selecione todos os animais cujo nome comece com 'C' e não sejam brancos*/
 SELECT * FROM Animais WHERE nome LIKE 'C%' and cor != 'branco';
 
-/*Selecione todos os animais cujo nome contenha 'ba'*/
+/*9- Selecione todos os animais cujo nome contenha 'ba'*/
 SELECT * FROM Animais WHERE nome like '%ba%';
 
-/*Selecione todos os animais com peso entre 13.0 à 15.0*/
+/*10 -Selecione todos os animais com peso entre 13.0 à 15.0*/
 SELECT * FROM Animais WHERE peso BETWEEN 13.0 AND 15.0;
 
-/* Selecione todos os animais que o peso não seja maior que 30, com cor amarelo ou roxo e nascidos
+/*11-  Selecione todos os animais que o peso não seja maior que 30, com cor amarelo ou roxo e nascidos
 depois de 2012*/
 SELECT * FROM Animais WHERE peso < 30 and cor in ('amarelo', 'roxo') and nasc >= 2012-01-01;
 
-/*(Desafio) Selecione todos os capricornianos (entre 22 de dezembro e 19 de janeiro)*/
+/*12- (Desafio) Selecione todos os capricornianos (entre 22 de dezembro e 19 de janeiro)*/
 
 
-/* (Desafio) Selecione todos os animais com nome formado por mais de uma palavra.*/
+/* 13- (Desafio) Selecione todos os animais com nome formado por mais de uma palavra.*/
 select * from Animais WHERE nome like '% %';
