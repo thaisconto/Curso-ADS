@@ -31,6 +31,7 @@ INSERT INTO Animais values (25 , 'Rex' , '2021-08-19' , 19.7 , 'branco' );
 /*1- Selecione todos os animais*/
 SELECT * FROM Animais;
 
+
 /* 2- Selecione todos os animais que pesam menos que 13.1*/
 SELECT * from Animais WHERE peso < 13.1;
 
@@ -49,8 +50,8 @@ SELECT nome, cor, peso FROM Animais WHERE cor IN ('vermelho', 'amarelo', 'marrom
 /*7- Selecione nome, cor, data de nascimento e peso de todos ordenados pelos mais jovens*/
 SELECT nome, cor, nasc, peso FROM Animais ORDER BY nasc DESC;
 
-/*8- Selecione todos os animais cujo nome comece com 'C' e não sejam brancos*/
-SELECT * FROM Animais WHERE nome LIKE 'C%' and cor != 'branco';
+/*8.1- Selecione todos os animais cujo nome comece com 'A' e não sejam brancos*/
+SELECT * FROM Animais WHERE nome LIKE 'A%' and cor != 'branco';
 
 /*9- Selecione todos os animais cujo nome contenha 'ba'*/
 SELECT * FROM Animais WHERE nome like '%ba%';
