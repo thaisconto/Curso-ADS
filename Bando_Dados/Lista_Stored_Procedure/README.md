@@ -6,49 +6,50 @@
 
 ------------------------------------------------
 
-Crie uma base de dados conforma modelo lógico abaixo:
+Crie um modelo lógico de banco de dados para armazenar alunos, cursos e professores.
 
 <img src = modelo_lógico.png>
 
 ------------------------------------------------
 
-- Crie uma view que mostra todos os produtos e suas respectivas marcas;
+Crie o modelo físico do banco de dados (script SQL). Sendo que o aluno possui um email que deve ter seu endereço gerado automaticamente no seguinte formato:
+nome.sobrenome@dominio.com. 
 
 <img src = print1.png>
 
 ------------------------------------------------
 
-- Crie uma view que mostra todos os produtos e seus respectivos fornecedores;
+Criar stored procedure: inserir dados Aluno;
 
 <img src = print2.png>
 
 ------------------------------------------------
 
-- Crie uma view que mostra todos os produtos e seus respectivos fornecedores e marcas;
+Criar stored procedure: inserir dados Curso;
 
 <img src = print3.png>
 
 ------------------------------------------------
 
-- Crie uma view que mostra todos os produtos com estoque abaixo do mínimo;
+Criar stored procedure: inserir dados Professor;
 
 <img src = print4.png>
 
 ------------------------------------------------
 
-- Adicione o campo data de validade. Insira novos produtos com essa informação;
+Criar stored procedure: inserir dados Professor_Curso;
 
 <img src = print5.png>
 
 ------------------------------------------------
 
-- Crie uma view que mostra todos os produtos e suas respectivas marcas com validade vencida;
+Criar stored procedure para seleção de alunos com curso;
 
 <img src = print6.png>
 
 ------------------------------------------------
 
-- Selecionar os produtos com preço acima da média.
-- 
+Criar stored procedure para seleção de professor com curso;
+ 
 <img src = print7.png>
 
