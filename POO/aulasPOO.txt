@@ -1,0 +1,207 @@
+Anotações das aulas de POO
+
+-------------------------------------------
+aula 5 - JFrame
+-------------------------------------------
+Esse exercício foi realizado pelo netBeans
+
+Passo 1:
+criar arquivo com botao direito e importar java class JFrame Form
+na parte principal tem source, design e history
+no lado direito tem as abas pallete (onde escolho as coisas que vão ter no meu código) e propriedades
+
+
+Passo 2:
+em pallet seleciono panel, button e text fild
+na aba propriedades 
+com o botao selecionado eu entro em propriedade-propriedades e altero o nome para cadastrar 
+com o bitao selecionado eu entro em propriedades-code e altero o nome da variável para btncadastrar
+seleciono a caixa de texto e em propriedade-code altero o nome da variável para txtNome
+
+Passo 3:
+vou para o código (source)
+ na linha 132 apagar o comentario e inserior:
+JOptionPane.showMessageDialog(rootPane, txtNome.getText());
+
+
+Passo 4:
+vou no pallete e adiciono o label
+em propriedades altero o nome para Nome:
+
+Passo 5:
+criar para RA e Curso igual anterior para Nome
+no código inserir
+JOptionPane.showMessageDialog(rootPane, "Nome: " + txtNome.getText() + "\nRA: " + txtRA.getText() +  "\nCurso: " + txtCurso.getText());
+
+Passo 6:
+criar outro main igual a esse para praticar: Vendedor: nome, codigo, %percentualComissao
+
+Passo 7:
+criar objeto no exercicio de aluno
+logo depois da classe linha 15
+Aluno aluno = null;
+intancio meu aluno quando clico no botao, linha 140
+aluno = new Aluno();
+aluno.setNome(txtNome.getText());
+Criar a classe aluno também, igual nas aulas anteriores
+
+Passo 8:
+Criar botão mostrar
+
+
+-------------------------------------------
+aula 6 - Abas JFrame
+-------------------------------------------
+
+aumentar o painel
+inserir pallette>tabbed pane
+coloca tudo dentro desse painel
+botão direito no tab1 e edit text - cadastrar aluno
+para criar novas abas é só pallete>panel e arrastar ao lado da primeira aba
+
+na aba pesquisar criei o campo para pesquisar por RA
+na ação do botão vou colocar:
+for (int i=0; i < lstAlunos.size(); i++) {
+            if (lstAlunos.get(i).getRa().equals(txtPesquisarRa.getText())) {
+                JOptionPane.showMessageDialog(rootPane, lstAlunos.get(i).imprimir());
+            }
+        }
+
+também posso deixar o for mais simples:
+for (Aluno aluno : lstAlunos) {
+            if (aluno.getRa().equals(txtPesquisarRa.getText())) {
+                JOptionPane.showMessageDialog(rootPane, aluno.imprimir());
+            }
+        }
+
+
+Agora vamos fazer o botão de apagar:
+ for (int i = 0; i < lstAlunos.size(); i++) {
+            if (lstAlunos.get(i).getRa().equals(txtPesquisarRa.getText())) {
+                lstAlunos.remove(i);
+                JOptionPane.showMessageDialog(rootPane, "Deletado");        
+            }
+        }
+
+
+
+
+-------------------------------------------
+aula 7 - Assosiação e Herança
+-------------------------------------------
+classe: molde
+
+encapsulamento: deixar os atributos provados e acessar através de métodos
+
+construtor: ponto de partida de uma classe com alguns parâmetros préestabelecidos, iniciado com o new
+
+associação de classe: é a relação entre as classes, é o atributo de uma classe que é uma lista de outra classe
+
+associação multiplicidade: é a relaçao dentro da mesma classe, exemplo lista de fincionário onde o próprio chefe é um funcinário, ou tem um coordenador com subordinados abaixo dele, mas todos são da classe fincionários
+
+papeis:
+
+binária: uma classe relacionada com outra, um sócio (classe) de um club que possui dependendes (classe)
+
+navegabilidade: é a setinha, indicando quem consegue enxergar quem
+
+agregação e composição: são formas de relacionamentos binários
+
+-----------------------------------
+
+EXERCÍCIO:
+
+criei a classe PET  e Tutor
+no tutor eu crio o construtor que chama a lista de Pet
+também crio os métodos de adicionar e remover pet da lista
+no método imprimir eu adicino o for da lista pet
+
+agora cria o main, onde vou adicionar o tutor e pet, depois mandar imprimir
+
+
+herança: quando duas classes tem os mesmos atributoes, elas podem apenas herdar de outra. Pessoa tem nome, cpf. Aluno herda pessoa + curso. Professos herda pessoa + salário.
+
+Para usar herança é extendsasso
+
+-----------------------------------------------
+
+Polimorfismo: universal (paramétrico ou inclusão) e ad hoc (sobrecarga ou coerção)
+
+--------------------
+
+Conectar com BD
+no MySQL cria a tabela Usuario - fiz nova conecção com POO
+dentro do netbeans libraries - botao direito - add library - econtrar o mysql conector que foi baixado
+cria uma pasta DAO (data acces object) e cria uma classe ConnectionFactory
+Nessa classe vai constar qual o bd, url, usuario, senha
+Vai ter um método pra conectar
+Cria outra classe UsuarioDAO - método inserir, editar, excluir, getAllUsuarios
+Cria outra classe usuario (dentro da pasta Entity)- variaveis e construtores
+Cria o Main, conforme vou executando posso verificar o MySQL
+
+
+
+---------------------------------------------------
+aula 10 - conectando com BD
+----------------------------------------------------
+
+Criar tabela produto (ou usasr o SQL que esta no canvas)
+id (int)
+nome (varchar 200)
+quantidade (int)
+valorProduto (decimal 10,2)
+Projeto em Swing usando DB
+O projeto devera:
+Aba Cadastrar
+Cadastrar
+Buscar todos
+Aba Busca
+Buscar um produto por ID
+Apagar por ID
+ 
+
+ Tabela criada em SQL:
+
+CREATE TABLE Produto (
+ID INT AUTO_INCREMENT PRIMARY KEY,
+nome varchar(30),
+quantidadeProduto int,
+valorProduto decimal(9,2)
+);
+
+
+
+----------------------------------------------------
+aula 11 - Generic DAO
+----------------------------------------------------
+
+criar um JFrame
+pegar as imagens no canvas, abre no explore e arrasta para pasta Imagens dentro do netbeans
+Add dois panel  no design
+Coloca um label (onde vai a imagem)
+No label existe a proprieda icon (tres pontinhos) e achar a pasta onde esta as imagens - Facens
+Adiciona os botões, que também tem a propriedade icon e adiciona a imagem - menino e carrinho
+se eu quiser colocar como plano de fundo, eu clico botão direito e muda set layout para absolut layout --> não achei
+para tirar aquele minimizar e fechar automatico, seleciono o frame - propriedades - undecorated
+o botão fechar vou chamar o método dispose();
+para criar duas abas posso pegar o menu bar
+na aba, clicar botão direito - event - menu item (vai criar aqueles itens pata selecionar igual tres pontinhos)
+----
+agora vamos criar um JDialog
+---
+agora no botão usuraio de JFrame:
+vou criar um objeto que chama a outra janela e quando a nova janela esta aberta não consigo mecher na anterior
+        JDUsuario janelaUsuario = new JDUsuario(this, true);
+        janelaUsuario.setVisible(true);
+---
+crio as pastas e classes de conect e DAO
+--
+vamos popular a tablea de usuarios
+cria uma tabela no JDialog
+
+
+
+
+
+
+
