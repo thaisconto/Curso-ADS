@@ -54,6 +54,7 @@ OBS: como não tinha nenhum, fiz um select para nomes que iniciam com 'A'.
 
 <h2>Exercício Animais - Espécies</h2>
  Crie um banco de dados para armazenar dados de Animais e Espécies. Um animal tem seu nome, data_nasc e peso. Uma espécie tem um nome e uma descrição.
+Código [aqui](https://github.com/thaisconto/Curso-ADS/blob/main/Bando_Dados/Lista2_AC2/sql_animais_especies.sql)
 
 Faça a modelagem relacional, DER.
 <img src = animais.especies.der.png>
@@ -64,6 +65,7 @@ Insira pelo menos 8 animais e 3 espécies.
 ---------------------------------------------------------
 <h2>Exercício Produtos - Marcas</h2>
 Crie um banco de dados para registrar dados de Produtos e Marcas. Um produto deve ter nome, preço de custo, preço de venda, data de validade e marca. Uma marca deve ter, nome, site oficial e telefone.
+Código [aqui](https://github.com/thaisconto/Curso-ADS/blob/main/Bando_Dados/Lista2_AC2/sql_produtos_marcas.sql)
 
 Faça a modelagem relacional, DER.
 <img src = produtos.marcas.der.png>
@@ -74,6 +76,7 @@ Insira pelo menos 8 Produtos e 3 Marcas.
 ---------------------------------------------------------
 <h2>Exercício Filmes - Categorias</h2>
 Crie um banco de dados para registrar dados de Filmes e Categorias. Um filme tem seu título, sinopse, estudio e categoria. Uma categoria deve ter nome e público alvo.
+Código [aqui](https://github.com/thaisconto/Curso-ADS/blob/main/Bando_Dados/Lista2_AC2/sql_filmes_categorias.sql)
 
 Faça a modelagem relacional, DER.
 <img src = filmes.categorias.der.png>
