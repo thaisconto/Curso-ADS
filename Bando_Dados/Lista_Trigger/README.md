@@ -2,53 +2,33 @@
 
 * Obs: O execício foi elaborado através do [SQL Server da Oracle](https://dev.mysql.com/doc/) e [WAMP](https://sourceforge.net/projects/wampserver/).
 
-* O <b>código completo</b> desenvolvido para a resolução do exercício está disponibilizado [aqui](https://github.com/thaisconto/Curso-ADS/blob/main/Bando_Dados/Lista_View/sql.sql).
+* O <b>código completo</b> desenvolvido para a resolução do exercício está disponibilizado [aqui]().
 
 ------------------------------------------------
 
-Crie uma base de dados conforma modelo lógico abaixo:
+<h2>Exercício Peidos</h2>
+Crie uma base de dados Pedidos, que contenha: ID, data e nome do cliente. 
 
-<img src = modelo_lógico.png>
-
-------------------------------------------------
-
-- Crie uma view que mostra todos os produtos e suas respectivas marcas;
-
-<img src = print1.png>
+Crie uma Trigger para quando o novo pedido for inserido sem fornecer a data. Mostre a inserção de dados sem e com a Trigger.
 
 ------------------------------------------------
-
-- Crie uma view que mostra todos os produtos e seus respectivos fornecedores;
-
-<img src = print2.png>
-
-------------------------------------------------
-
-- Crie uma view que mostra todos os produtos e seus respectivos fornecedores e marcas;
+- Criação da Trigger:
 
 <img src = print3.png>
 
 ------------------------------------------------
 
-- Crie uma view que mostra todos os produtos com estoque abaixo do mínimo;
+- Inserção de dados sem utilizar a Trigger:
 
-<img src = print4.png>
-
-------------------------------------------------
-
-- Adicione o campo data de validade. Insira novos produtos com essa informação;
-
-<img src = print5.png>
+<img src = print1.png>
 
 ------------------------------------------------
 
-- Crie uma view que mostra todos os produtos e suas respectivas marcas com validade vencida;
+- Inserção de dados utilizando a Trigger:
 
-<img src = print6.png>
+<img src = print2.png>
 
 ------------------------------------------------
 
-- Selecionar os produtos com preço acima da média.
-- 
-<img src = print7.png>
+<h2>Exercício Filmes</h2>
 
