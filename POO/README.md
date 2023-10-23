@@ -15,4 +15,6 @@ Anotações durante as aulas estão disponíveis [aqui]().
 -----------------------------------------------
 
 Lista de exercícios:
+<img src = lista1.ex1>
+
 
