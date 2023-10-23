@@ -48,6 +48,27 @@ Criar a classe aluno também, igual nas aulas anteriores
 Passo 8:
 Criar botão mostrar
 
+------------------------------------------
+aula - lista 3
+-----------------------------------------
+_______________________
+Passos:
+criar o array list com o tipo aluno dentro da classe (linha 17)
+no botão cadastrar add o aluno na lista
+no botão mostrar crir o for para percorrer a lista
+for (int i = 0; i < listAlunos.size(); i++){
+        JOptionPane.showMessageDialog(rootPane, listAlunos.get(i).imprimir());
+        }
+_______________________
+
+agora vou imprimir tudo em uma janela só:
+String str = "";
+        for (int i = 0; i < listAlunos.size(); i++){
+            str += "\n--------\n";
+            str += listAlunos.get(i).imprimir();
+        }
+        JOptionPane.showMessageDialog(rootPane, str);
+
 
 -------------------------------------------
 aula 6 - Abas JFrame
