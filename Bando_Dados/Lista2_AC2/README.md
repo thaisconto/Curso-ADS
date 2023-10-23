@@ -7,6 +7,7 @@
  Crie a tabela animais com nome, nascimento, peso e cor. Após inserir os dados, gere os seguintes relatórios: 
 
 - Selecione todos os animais
+ 
 - Selecione todos os animais que pesam menos que 13.1
 - Selecione todos nasceram entre fevereiro e dezembro de 2015
 - Selecione todos os animais brancos que pesam menos que 15.0
@@ -22,20 +23,24 @@
 
 ---------------------------------------------------------
 
-<h2>Exercício </h2>
-1) Crie um banco de dados para armazenar dados de Animais e Espécies. Um animal tem seu nome, data_nasc e peso. Uma espécie tem um nome e uma descrição.
+<h2>Exercício Animais - Espécies</h2>
+ Crie um banco de dados para armazenar dados de Animais e Espécies. Um animal tem seu nome, data_nasc e peso. Uma espécie tem um nome e uma descrição.
 
 Faça a modelagem relacional, DER.
 
 Insira pelo menos 8 animais e 3 espécies.
 
-2) Crie um banco de dados para registrar dados de Produtos e Marcas. Um produto deve ter nome, preço de custo, preço de venda, data de validade e marca. Uma marca deve ter, nome, site oficial e telefone.
+---------------------------------------------------------
+<h2>Exercício Produtos - Marcas</h2>
+Crie um banco de dados para registrar dados de Produtos e Marcas. Um produto deve ter nome, preço de custo, preço de venda, data de validade e marca. Uma marca deve ter, nome, site oficial e telefone.
 
 Faça a modelagem relacional, DER.
 
 Insira pelo menos 8 Produtos e 3 Marcas.
 
-3) Crie um banco de dados para registrar dados de Filmes e Categorias. Um filme tem seu título, sinopse, estudio e categoria. Uma categoria deve ter nome e público alvo.
+---------------------------------------------------------
+<h2>Exercício Filmes - Categorias</h2>
+Crie um banco de dados para registrar dados de Filmes e Categorias. Um filme tem seu título, sinopse, estudio e categoria. Uma categoria deve ter nome e público alvo.
 
 Faça a modelagem relacional, DER.
 
