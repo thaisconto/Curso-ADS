@@ -7,7 +7,8 @@
 
 <h2>Exercício Pedidos</h2>
 Crie uma base de dados Pedidos, que contenha: ID, data e nome do cliente. 
-* O <b>código completo</b> desenvolvido para a resolução do exercício está disponibilizado [aqui]().
+
+* O <b>código completo</b> desenvolvido para a resolução do exercício está disponibilizado [aqui](https://github.com/thaisconto/Curso-ADS/blob/main/Bando_Dados/Lista_Trigger/sql_pedidos.sql).
 
 ------------------------------------------------
 
@@ -35,7 +36,7 @@ Crie uma Trigger para quando o novo pedido for inserido sem fornecer a data. Mos
 <h2>Exercício Filmes</h2>
 
 Crie uma base de dados Filmes, que contenha: id, titulo, minutos.
-* O <b>código completo</b> desenvolvido para a resolução do exercício está disponibilizado [aqui]().
+* O <b>código completo</b> desenvolvido para a resolução do exercício está disponibilizado [aqui](https://github.com/thaisconto/Curso-ADS/blob/main/Bando_Dados/Lista_Trigger/sql_filmes.sql).
 
 ------------------------------------------------
 
