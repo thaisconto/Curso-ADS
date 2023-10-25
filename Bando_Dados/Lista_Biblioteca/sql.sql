@@ -41,6 +41,7 @@ CREATE TABLE IF NOT EXISTS Emprestimos (
   status ENUM ('pendente', 'devolvido', 'atrasado'),
   livro_id INT NOT NULL,
   cliente_id INT NOT NULL,
+  multa DECIMAL (10,2),
   PRIMARY KEY (id_emprestimo),
   FOREIGN KEY (cliente_id) REFERENCES Clintes (id_cliente),
   FOREIGN KEY (livro_id) REFERENCES Livros (id_livro),
@@ -137,11 +138,11 @@ INSERT INTO  livros_autores VALUES (3,5);
 select * from livros_autores;
 
 -- EMPRESTIMOS: id, data_emprestimo, data_devolução, status, livro_id, cliente_id
-INSERT INTO Emprestimos VALUES (null, "2023-10-25", "2023-10-31", "pendente", 1, 1);
-INSERT INTO Emprestimos VALUES (null, "2022-10-25", "2022-10-31", "devolvido", 1, 2);
-INSERT INTO Emprestimos VALUES (null, "2023-10-10", "2023-10-21", "atrasado", 2, 3);
-INSERT INTO Emprestimos VALUES (null, "2023-10-24", "2023-11-01", "pendente", 3, 4);
-INSERT INTO Emprestimos VALUES (null, "2023-10-14", "2023-10-20", "devolvido", 4, 4);
+INSERT INTO Emprestimos VALUES (null, "2023-10-25", "2023-10-31", "pendente", 1, 1, null);
+INSERT INTO Emprestimos VALUES (null, "2022-10-25", "2022-10-31", "devolvido", 1, 2, null);
+INSERT INTO Emprestimos VALUES (null, "2023-10-10", "2023-10-21", "atrasado", 2, 3, null);
+INSERT INTO Emprestimos VALUES (null, "2023-10-24", "2023-11-01", "pendente", 3, 4, null);
+INSERT INTO Emprestimos VALUES (null, "2023-10-14", "2023-10-20", "devolvido", 4, 4, null);
 
 select * from emprestimos;
 
@@ -185,18 +186,83 @@ CALL novo_emprestimo (NULL, "2023-10-25", "2023-10-31", "pendente", 4, 1);
 
 CALL novo_emprestimo (NULL, "2023-10-25", "2023-10-31", "pendente", 1, 1);
 
+-- ----------------------------------------------------------------------------
 -- recuperar a lista de livros emprestados por um cliente específico.
+delimiter $
+create procedure emprestimos_por_cliente (
+	cliente_id int
+)
+BEGIN
+	SELECT Emprestimos.data_emprestimo, Emprestimos.data_devolucao, Emprestimos.status, Livros.id_livro
+	FROM Emprestimos
+    INNER JOIN Livros 
+    ON Emprestimos.livro_id = Livros.id_livro
+    WHERE Emprestimos.cliente_id = cliente_id;
+    
+END$
+DELIMITER ;
 
+call emprestimos_por_cliente (1);
 
+-- --------------------------------------------------------------------------------------------
 -- calcule multas para empréstimos atrasados.
+-- ????????????????????????????????????????????????? arrumar
+DELIMITER $
+CREATE PROCEDURE calcular_multas (
+	consulta_cliente_id int
+)
+BEGIN
+	-- declarando e definindo o valor da multa por dia
+    DECLARE multa DECIMAL (10,2);
+    SET multa = 0.50;
+    
+    -- pegando os emprestimos que estão atrasados
+    
+    -- primeiro: alterar o pendente para atrasado se for necessário
+    UPDATE Emprestimos
+    SET status = 'atrasado'
+    WHERE data_devolucao < CURDATE() AND status = 'pendente' AND cliente_id = consulta_cliente_id;
+    
+    -- calcular a multa 
+    UPDATE Emprestimos
+    SET multa = DATEDIFF(CURDATE(), data_devolucao) * multa
+    WHERE status = 'atrasado'AND cliente_id = consulta_cliente_id;
+    
+    -- mostrando valor da multa atualizado
+    SELECT Emprestimos.multa, Emprestimos.status, Clientes.id_cliente
+	FROM Emprestimos
+    INNER JOIN Clientes 
+    ON Emprestimos.cliente_id = Clientes.id_cliente
+    WHERE Emprestimos.cliente_id = consulta_cliente_id;
+    
+    
+END$
+DELIMITER ;
 
-
+call calcular_multas(1);
 
 -- ------------------------------------------------------------------
 -- Views:
 -- ------------------------------------------------------------------
 
 -- mostre os livros disponíveis para empréstimo, excluindo aqueles que já foram emprestados.
-
+-- ??????????????????????????? arrumar
+CREATE VIEW livros_disponiveis AS
+	SELECT Livros.titulo, Livros.numero_isbn, Livros.ano_publicacao, Autores.nome 
+    AS autor, Editoras.nome_editora AS editora
+	FROM Livros
+	INNER JOIN Autores ON Livros.autor_id = Autores.id_autor
+	INNER JOIN Editoras ON Livros.editora_id = Editoras.id_editora
+	WHERE Livros.id_livro NOT IN (
+        SELECT livro_id
+		FROM Emprestimos
+		WHERE status = 'pendente' OR status = 'atrasado'
+);
 
 -- forneça uma lista de todos os empréstimos atuais, incluindo os detalhes dos livros emprestados e dos clientes.
+-- ???????????????? arrumar
+CREATE VIEW lista_emprestimos AS
+	SELECT E.emprestimo_id, L.titulo, C.nome AS cliente, E.data_emprestimo, E.data_devolucao, E.status
+	FROM Emprestimos E
+	INNER JOIN Livros L ON E.livro_id = L.livro_id
+	INNER JOIN Clientes C ON E.cliente_id = C.cliente_id;
