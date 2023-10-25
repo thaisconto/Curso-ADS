@@ -2,7 +2,7 @@
 
 Você foi designado para criar um sistema de biblioteca.
 
-* Código completo do exercício [aqui]().
+* Código completo do exercício [aqui](https://github.com/thaisconto/Curso-ADS/blob/main/Bando_Dados/Lista_Biblioteca/sql.sql).
 * Obs: O execício foi elaborado através do [SQL Server da Oracle](https://dev.mysql.com/doc/) e [WAMP](https://sourceforge.net/projects/wampserver/).
 
 <h2>Tabelas:</h2>
