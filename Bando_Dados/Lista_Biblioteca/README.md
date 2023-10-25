@@ -23,7 +23,16 @@ As tabelas devem incluir:
 
 * Registrar um novo empréstimo, verificando a disponibilidade do livro e atualizando o estoque.
 
-<img src = stored_procedure_1.png>
+Stored procedure:
+<img src = stored_procedure_1_1.png>
+<img src = stored_procedure_1_2.png>
+
+Simulação de sucesso no empréstimo:
+<img src = print_emprestimo_sucesso.png>
+
+Simulação de emprétimo não permitido:
+<img src = print_emprestimo_nao_sucesso.png>
+
 
 * Recuperar a lista de livros emprestados por um cliente específico.
 
