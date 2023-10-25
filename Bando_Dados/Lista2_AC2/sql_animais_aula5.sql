@@ -67,6 +67,10 @@ depois de 2012*/
 SELECT * FROM Animais WHERE peso < 30 and cor in ('amarelo', 'roxo') and nasc >= 2012-01-01;
 
 /*12- (Desafio) Selecione todos os capricornianos (entre 22 de dezembro e 19 de janeiro)*/
+SELECT * FROM Animais WHERE 
+(DATE_FORMAT(nasc, '%m') = '12' AND DATE_FORMAT(nasc, '%d') BETWEEN '22' AND '31')
+OR 
+(DATE_FORMAT(nasc, '%m') = '01' AND DATE_FORMAT(nasc, '%d') BETWEEN '01' AND '19');
 
 
 /* 13- (Desafio) Selecione todos os animais com nome formado por mais de uma palavra.*/
