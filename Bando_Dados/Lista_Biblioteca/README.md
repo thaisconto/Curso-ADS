@@ -36,7 +36,12 @@ Simulação de emprétimo não permitido:
 
 * Recuperar a lista de livros emprestados por um cliente específico.
 
-<img src = stored_procedure_2.png>
+<img src = stored_procedure_2_1.png>
+
+Simulando uma consulta:
+
+<img src = stored_procedure_2_2.png>
+
 
 * Calcule multas para empréstimos atrasados.
 
