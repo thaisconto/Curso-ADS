@@ -9,7 +9,7 @@ Foi proposto a criação de uma tabela Produtos, onde:
 
 O execício foi elaborado através do [SQL Server da Oracle](https://dev.mysql.com/doc/) e [WAMP](https://sourceforge.net/projects/wampserver/).
 
-O <b>código SQL completo</b> desenvolvido para a resolução do exercício está disponibilizado [aqui](https://github.com/thaisconto/Curso-ADS/blob/main/Bando_Dados/Lista2/sql.sql).
+O <b>código SQL completo</b> desenvolvido para a resolução do exercício está disponibilizado [aqui](https://github.com/thaisconto/Curso-ADS/blob/main/Bando_Dados/Lista_agrupamento_agregacao/sql.sql).
 
 Após a criação da tabela, foi lançado o desafio de criar uma sequência de relatórios que serão apresentados a seguir:
 
