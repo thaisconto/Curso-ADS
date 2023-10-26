@@ -143,6 +143,7 @@ INSERT INTO Emprestimos VALUES (null, "2022-10-25", "2022-10-31", "devolvido", 1
 INSERT INTO Emprestimos VALUES (null, "2023-10-10", "2023-10-21", "atrasado", 2, 3, null);
 INSERT INTO Emprestimos VALUES (null, "2023-10-24", "2023-11-01", "pendente", 3, 4, null);
 INSERT INTO Emprestimos VALUES (null, "2023-10-14", "2023-10-20", "devolvido", 4, 4, null);
+INSERT INTO Emprestimos VALUES (null, "2023-10-14", "2023-10-20", "pendente", 5, 5, null);
 
 select * from emprestimos;
 
@@ -206,7 +207,6 @@ call emprestimos_por_cliente (1);
 
 -- --------------------------------------------------------------------------------------------
 -- calcule multas para empréstimos atrasados.
--- ????????????????????????????????????????????????? arrumar
 DELIMITER $
 CREATE PROCEDURE calcular_multas (
 	consulta_cliente_id int
@@ -214,32 +214,34 @@ CREATE PROCEDURE calcular_multas (
 BEGIN
 	-- declarando e definindo o valor da multa por dia
     DECLARE multa DECIMAL (10,2);
-    SET multa = 0.50;
-    
-    -- pegando os emprestimos que estão atrasados
+    SET multa = 0.50;  -- ajustar o valor da multa conforme necessidade
     
     -- primeiro: alterar o pendente para atrasado se for necessário
     UPDATE Emprestimos
     SET status = 'atrasado'
-    WHERE data_devolucao < CURDATE() AND status = 'pendente' AND cliente_id = consulta_cliente_id;
-    
+    WHERE data_devolucao < now() 
+    AND status = 'pendente' 
+    AND consulta_cliente_id = cliente_id;
+          
     -- calcular a multa 
     UPDATE Emprestimos
     SET multa = DATEDIFF(CURDATE(), data_devolucao) * multa
-    WHERE status = 'atrasado'AND cliente_id = consulta_cliente_id;
-    
+    WHERE status = 'atrasado'
+    AND cliente_id = consulta_cliente_id;
+           
     -- mostrando valor da multa atualizado
-    SELECT Emprestimos.multa, Emprestimos.status, Clientes.id_cliente
+    SELECT Emprestimos.multa, Emprestimos.status, Clientes.nome, Livros.titulo
 	FROM Emprestimos
-    INNER JOIN Clientes 
+    JOIN Clientes 
     ON Emprestimos.cliente_id = Clientes.id_cliente
-    WHERE Emprestimos.cliente_id = consulta_cliente_id;
-    
-    
+    JOIN Livros
+	ON Emprestimos.livro_id = Livros.id_livro
+	WHERE Emprestimos.cliente_id = consulta_cliente_id
+    AND Emprestimos.status = "atrasado";    
 END$
 DELIMITER ;
 
-call calcular_multas(1);
+call calcular_multas(3);
 
 -- ------------------------------------------------------------------
 -- Views:
