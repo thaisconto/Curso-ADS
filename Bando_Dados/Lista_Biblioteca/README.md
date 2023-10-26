@@ -58,10 +58,13 @@ Simulando uma consulta:
 
 * Mostre os livros disponíveis para empréstimo, excluindo aqueles que já foram emprestados.
 
-<img src = view_1.png>
+<img src = view_1_1.png>
+<img src = view_1_2.png>
+
 
 * Forneça uma lista de todos os empréstimos atuais, incluindo os detalhes dos livros emprestados e dos clientes.
 
-<img src = view_2.png>
+<img src = view_2_1.png>
+<img src = view_2_2.png>
 
 ------------------------------------------------
