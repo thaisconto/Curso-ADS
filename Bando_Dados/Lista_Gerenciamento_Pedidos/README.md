@@ -1,70 +1,30 @@
 <h1>Proposta:</h1>
 
-Você foi designado para criar um sistema de biblioteca.
+Você foi designado para criar um sistema de gerenciamento de pedidos de uma loja.
 
-* Código completo do exercício [aqui](https://github.com/thaisconto/Curso-ADS/blob/main/Bando_Dados/Lista_Biblioteca/sql.sql).
+* Código completo do exercício [aqui]().
 * Obs: O execício foi elaborado através do [SQL Server da Oracle](https://dev.mysql.com/doc/) e [WAMP](https://sourceforge.net/projects/wampserver/).
 
-<h2>Tabelas:</h2>
+<h2>Tabelas</h2>
 
-As tabelas devem incluir: 
+Crie as tabelas "Clientes" e "Pedidos" com campos apropriados. Insira dados de exemplo nas tabelas para simular clientes e pedidos. Certifique-se de incluir uma chave primária em cada tabela.
 
-* **Livros:** Armazene informações sobre cada livro, incluindo título, ISBN, ano de publicação e um identificador exclusivo;
-* **Autores:** Registre informações sobre os autores, como nome, data de nascimento e nacionalidade;
-* **Editoras:** Mantenha detalhes sobre as editoras, como nome e endereço;
-* **Empréstimos:** Controle os empréstimos de livros, incluindo a data de empréstimo e de devolução, bem como o status do empréstimo (pendente, devolvido, atrasado);
-* **Relacionamentos:** entre "Livros" e "Autores" para associar cada livro a um ou mais autores; e entre "Empréstimos" e "Clientes" para rastrear quem pegou emprestado um livro.
+<h2>Stored Procedure</h2>
 
-<img src = modelo_logico.png>
+Crie uma stored procedure chamada "InserirPedido" que permite inserir um novo pedido na tabela "Pedidos" com as informações apropriadas. A stored procedure deve receber parâmetros como o ID do cliente e os detalhes do pedido. Ao término teste o funcionamento da stored procedure criada inserindo um pedido.
 
-----------------------------------------------------------------
+<h2>Trigger</h2>
 
-<h2>Stored Procedures:</h2>
+Crie uma trigger que seja acionada APÓS a inserção de um novo pedido na tabela "Pedidos". A trigger deve calcular o valor total dos pedidos para o cliente correspondente e atualizar um campo "TotalPedidos" na tabela "Clientes" com o valor total. Teste a Trigger inserindo um novo pedido na tabela "Pedidos“.
 
-* Registrar um novo empréstimo, verificando a disponibilidade do livro e atualizando o estoque.
+<h2>View</h2>
 
-Stored procedure:
-<img src = stored_procedure_1_1.png>
-<img src = stored_procedure_1_2.png>
+Crie uma view chamada "PedidosClientes" que combina informações das tabelas "Clientes" e "Pedidos" usando JOIN para mostrar os detalhes dos pedidos e os nomes dos clientes.
 
-Simulação de sucesso no empréstimo:
-<img src = print_emprestimo_sucesso.png>
+<h2> Consulta com JOIN</h2>
 
-Simulação de emprétimo não permitido:
-<img src = print_emprestimo_nao_sucesso.png>
+Escreva uma consulta SQL que utiliza JOIN para listar os detalhes dos pedidos de cada cliente, incluindo o nome do cliente e o valor total de seus pedidos. Utilize a view "PedidosClientes" para essa consulta.
 
-
-* Recuperar a lista de livros emprestados por um cliente específico.
-
-<img src = stored_procedure_2_1.png>
-
-Simulando uma consulta:
-
-<img src = stored_procedure_2_2.png>
-
-
-* Calcule multas para empréstimos atrasados.
-
-<img src = stored_procedure_3_1.png>
-<img src = stored_procedure_3_2.png>
-
-Simulando uma consulta:
-
-<img src = stored_procedure_3_3.png>
-
-----------------------------------------------------------------
-
-<h2>Views:</h2>
-
-* Mostre os livros disponíveis para empréstimo, excluindo aqueles que já foram emprestados.
-
-<img src = view_1_1.png>
-<img src = view_1_2.png>
-
-
-* Forneça uma lista de todos os empréstimos atuais, incluindo os detalhes dos livros emprestados e dos clientes.
-
-<img src = view_2_1.png>
 <img src = view_2_2.png>
 
-------------------------------------------------
+
