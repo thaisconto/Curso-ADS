@@ -105,6 +105,7 @@ INSERT INTO Livros VALUES (null, "Livro 2", "2222", "2022-01-01", 2);
 INSERT INTO Livros VALUES (null, "Livro 3", "3333", "2023-01-01", 3);
 INSERT INTO Livros VALUES (null, "Livro 4", "4444", "2020-01-01", 2);
 INSERT INTO Livros VALUES (null, "Livro 5", "5555", "2020-01-01", 3);
+INSERT INTO Livros VALUES (null, "Livro 6", "6666", "2020-01-01", 1);
 
 select * from livros;
 
@@ -230,7 +231,7 @@ BEGIN
     AND cliente_id = consulta_cliente_id;
            
     -- mostrando valor da multa atualizado
-    SELECT Emprestimos.multa, Emprestimos.status, Clientes.nome, Livros.titulo
+    SELECT Emprestimos.multa, Emprestimos.status, Emprestimos.data_devolucao, Clientes.nome, Livros.titulo
 	FROM Emprestimos
     JOIN Clientes 
     ON Emprestimos.cliente_id = Clientes.id_cliente
@@ -248,23 +249,49 @@ call calcular_multas(3);
 -- ------------------------------------------------------------------
 
 -- mostre os livros disponíveis para empréstimo, excluindo aqueles que já foram emprestados.
--- ??????????????????????????? arrumar
+
 CREATE VIEW livros_disponiveis AS
-	SELECT Livros.titulo, Livros.numero_isbn, Livros.ano_publicacao, Autores.nome 
-    AS autor, Editoras.nome_editora AS editora
+	/*
+    tentando juntar com autor e editora
+    
+    SELECT Livros.titulo, Livros.numero_isbn, Livros.ano_publicacao, 
+    Autores.nome AS autor, 
+    Editoras.nome_editora AS editora
 	FROM Livros
-	INNER JOIN Autores ON Livros.autor_id = Autores.id_autor
-	INNER JOIN Editoras ON Livros.editora_id = Editoras.id_editora
+	JOIN Livros_Autores
+    ON Livros_Autores.la_livro_id = Livros.id_livro 
+    JOIN Autores
+    ON id_autor = la_autor_id
+    JOIN Editoras 
+    ON Livros.editora_id = Editoras.id_editora
+	-- SELECT titulo
+    -- from Livros
+    WHERE Livros.id_livro NOT IN (
+        SELECT livro_id
+		FROM Emprestimos
+		WHERE status = 'pendente' OR status = 'atrasado'
+);
+*/
+
+	SELECT Livros.titulo, Livros.numero_isbn, Livros.ano_publicacao
+	FROM Livros
 	WHERE Livros.id_livro NOT IN (
         SELECT livro_id
 		FROM Emprestimos
 		WHERE status = 'pendente' OR status = 'atrasado'
 );
 
+Select * from livros_disponiveis;
+
 -- forneça uma lista de todos os empréstimos atuais, incluindo os detalhes dos livros emprestados e dos clientes.
--- ???????????????? arrumar
+
 CREATE VIEW lista_emprestimos AS
-	SELECT E.emprestimo_id, L.titulo, C.nome AS cliente, E.data_emprestimo, E.data_devolucao, E.status
-	FROM Emprestimos E
-	INNER JOIN Livros L ON E.livro_id = L.livro_id
-	INNER JOIN Clientes C ON E.cliente_id = C.cliente_id;
+	SELECT Emprestimos.id_emprestimo, Livros.titulo, Clientes.nome AS cliente, 
+    Emprestimos.data_emprestimo, Emprestimos.data_devolucao, Emprestimos.status
+	FROM Emprestimos
+	JOIN Livros
+    ON Emprestimos.livro_id = Livros.id_livro
+	JOIN Clientes 
+    ON Emprestimos.cliente_id = Clientes.id_cliente;
+
+select * from lista_emprestimos;
