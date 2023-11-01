@@ -221,8 +221,17 @@ vamos popular a tablea de usuarios
 cria uma tabela no JDialog
 
 
+----------------------------------------------------
+aula 12 - Classe abstrata
+----------------------------------------------------
+revisão prova: não cai swing,
+cai classe, objeto, construtor, sobrecarga, coleção - array, associação de classes (tutor - pets), herança, sobrescrita de métodos (imrpimir - calcular salário), polimorfismo (override metodo), classe abstrata
 
+Classe abstrata: aparece em italico
+quando usa? quando não vai instaciar a classe ela fica abstrata (exemplo do ex pessoa - aluno, a pessoa poderia ser abstrata)
+public abstract class
+método abstrato? sópode estar em classe abstrata, não coloca nada nele, e todos que herdam a classe precisam implemnetar esse metodo junto (ex: classe animal abs. tem metodo comer, todas s classes de animais teram que herdam esse metodo abs. comer
 
-
-
-
+exercicio:
+classe animal (pegando da aula 9)
+exercício 12.atributo: testar o atributo com e sem static, para perceber como se comporta a memória (imprimi sem 1,1 e com 1,2)
