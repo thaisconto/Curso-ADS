@@ -127,8 +127,6 @@ begin
 end$
 delimiter ;
 
-drop procedure insert_curso;
-
 call insert_curso (null, 'Curso 1', 10 , 1);
 call insert_curso (null, 'Curso 2', 5 , 1);
 call insert_curso (null, 'Curso 3', 20 , 2);
@@ -147,6 +145,8 @@ INNER JOIN Areas
 ON area_id = id_area;
 
 SELECT * FROM Cursos_e_Areas;
+
+
 
 -- -----------------------------------------------------
 -- Stored procedure: recebe os dados do aluno e de um curso e faz sua matrícula. 
@@ -206,6 +206,7 @@ drop procedure nova_matricula;
 -- Function: recebe o nome de um curso e sua área, em seguida retorna o id do curso 
 -- -----------------------------------------------------
 -- ???????????????????????????????????
+
 CREATE FUNCTION obter_ID_curso (
 	novo_nome_curso VARCHAR(100),
     novo_nome_area VARCHAR(50)
