@@ -26,12 +26,15 @@ Obs: O aluno possui um e-mail que deve ter seu endereço gerado automaticamente 
 • Utilize Stored Procedures para automatizar a inserção de áreas.
 
 <img src = print_stored_procedure_insert_area_1.png>
+<img src = print_stored_procedure_insert_area_2.png>
+
 
 ----------------------------------------------------------------------------
 
 • Utilize Stored Procedures para automatizar a inserção de cursos.
 
 <img src = print_stored_procedure_insert_curso_1.png>
+<img src = print_stored_procedure_insert_curso_2.png>
 
 ----------------------------------------------------------------------------
 
@@ -44,7 +47,7 @@ Obs: O aluno possui um e-mail que deve ter seu endereço gerado automaticamente 
 <h2>View</h2>
 • Utilize um View para selecionar os cursos e suas áreas.
 
-<img src = print_view_cursos_e_areas_1.png>
+<img src = print_view_curso_e_area_1.png>
 
 ----------------------------------------------------------------------------
 
