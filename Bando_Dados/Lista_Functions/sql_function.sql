@@ -1,8 +1,4 @@
-/*
-• Crie uma rotina que recebe os dados de um novo curso e o insere no banco de dados;
-• Crie uma função que recebe o nome de um curso e sua área, em seguida retorna o id do
-curso;
-*/
+
 CREATE DATABASE Universidade;
 USE Universidade;
 
@@ -33,7 +29,7 @@ CREATE TABLE IF NOT EXISTS Alunos (
   nome_aluno VARCHAR(45) NOT NULL,
   sobrenome_aluno VARCHAR(45) NOT NULL,
   cpf_aluno VARCHAR(45) NOT NULL UNIQUE,
-  email_aluno VARCHAR(45) NULL,
+  email_aluno VARCHAR(45),
   PRIMARY KEY (id_aluno)
 );
 
@@ -48,32 +44,115 @@ CREATE TABLE IF NOT EXISTS Matriculas (
 );
 
 -- -----------------------------------------------------
--- Trigger: gerar email
+-- Stored procedure: aidiconar aluno 
 -- -----------------------------------------------------
 -- O aluno possui um e-mail gerado automaticamente no seguinte formato: nome.sobrenome@dominio.com
-DELIMITER $
-CREATE TRIGGER gerar_email_automatico
-	AFTER INSERT ON Alunos  
-    FOR EACH ROW
-    BEGIN	
-		UPDATE Alunos
-		SET email_aluno = concat(nome_aluno, ".", sobrenome_aluno, "@dominio.com") 
-		WHERE Alunos.id_aluno = NEW.id_aluno;
-                  
-END;
-    $
-DELIMITER ;
+delimiter $
+create procedure insert_aluno(
+	id_aluno int,
+    nome_aluno VARCHAR(45),
+	sobrenome_aluno VARCHAR(45),
+    cpf_aluno varchar(45)
+)
+begin
+	DECLARE email_base VARCHAR(255);
+    DECLARE email VARCHAR(255);
+    DECLARE i INT;
+	
+    -- setar email_base
+    SET email_base  = CONCAT (nome_aluno, ".", sobrenome_aluno, "@dominio.com");
+    
+    -- verificar se já existe
+    SET i = 0;
+    REPEAT
+        SET i = i + 1;
+        SET email = IF (i = 1, email_base, CONCAT(i, email_base));
+		UNTIL NOT EXISTS (SELECT 1 FROM Alunos WHERE email_aluno = email) 
+    END REPEAT;
+    
+    -- inserir dados
+	INSERT INTO Alunos (id_aluno, nome_aluno, sobrenome_aluno, cpf_aluno, email_aluno)
+    Values (null, nome_aluno, sobrenome_aluno, cpf_aluno, email);
+end$
+delimiter ;
 
-drop TRIGGER gerar_email_automatico;
-INSERT INTO Alunos VALUES (null, 'thais', 'marchetti', '1', null);
-select * from Alunos;
+drop procedure insert_aluno;
+
+call insert_aluno(null, 'Nome', 'Sobrenome1', 'CPF 1');
+call insert_aluno(null, 'Nome', 'Sobrenome2', 'CPF 2');
+call insert_aluno(null, 'Nome', 'Sobrenome3', 'CPF 3');
+call insert_aluno(null, 'Nome', 'Sobrenome4', 'CPF 4');
+call insert_aluno(null, 'Nome', 'Sobrenome5', 'CPF 5');
+
+SELECT * from Alunos;
+
 -- -----------------------------------------------------
--- Stored procedure
+-- Stored procedure: automatizar a inserção area;
 -- -----------------------------------------------------
--- Utilize Stored Procedures para automatizar a inserção e seleção dos cursos;
--- Crie uma procedure que recebe os dados do aluno e de um curso e faz sua matrícula;
+delimiter $
+create procedure insert_area(
+	id_area int,
+    nome VARCHAR(45)
+)
+begin
+	   
+    -- inserir dados
+	INSERT INTO Areas (id_area, nome)
+    Values (null, nome);
+end$
+delimiter ;
+
+call insert_area (null, 'Area 1');
+call insert_area (null, 'Area 2');
+call insert_area (null, 'Area 3');
+call insert_area (null, 'Area 4');
+call insert_area (null, 'Area 5');
+
+Select * from Areas;
+-- -----------------------------------------------------
+-- Stored procedure: automatizar a inserção dos cursos;
+-- -----------------------------------------------------
+delimiter $
+create procedure insert_curso(
+	id_curso int,
+    nome_curso VARCHAR(45),
+	duracao_meses VARCHAR(45),
+    area_id varchar(45)
+)
+begin
+	   
+    -- inserir dados
+	INSERT INTO Cursos (id_curso, nome_curso, duracao_meses, area_id)
+    Values (null, nome_curso, duracao_meses, area_id);
+end$
+delimiter ;
+
+drop procedure insert_curso;
+
+call insert_curso (null, 'Curso 1', 10 , 1);
+call insert_curso (null, 'Curso 2', 5 , 1);
+call insert_curso (null, 'Curso 3', 20 , 2);
+call insert_curso (null, 'Curso 4', 18 , 3);
+call insert_curso (null, 'Curso 5', 30 , 4);
+
+select * from Cursos;
+
+-- -----------------------------------------------------
+-- View: seleção dos cursos;
+-- -----------------------------------------------------
+CREATE VIEW Cursos_e_Areas as
+SELECT Areas.nome as Area, Cursos.nome_curso, Cursos.duracao_meses
+FROM Cursos
+INNER JOIN Areas
+ON area_id = id_area;
+
+SELECT * FROM Cursos_e_Areas;
+
+-- -----------------------------------------------------
+-- Stored procedure: recebe os dados do aluno e de um curso e faz sua matrícula. 
 -- Caso o aluno já esteja matriculado em um curso, essa matrícula não pode ser realizada;
-
+-- -----------------------------------------------------
+-- ???????????????????????????????????
 delimiter $
 create procedure nova_matricula (
   id_aluno INT,
@@ -84,17 +163,67 @@ create procedure nova_matricula (
   curso_id INT
 )
 begin
-	
-    
-    -- inserir dados alunos
-	INSERT INTO Alunos (id_aluno, nome_aluno, sobrenome_aluno, cpf_aluno, email_aluno)
-    Values (null, nome_aluno, sobrenome_aluno, cpf_aluno, email);
-    
-    -- inserir dados matricula
-    INSERT INTO Matriculas (id_matricula, aluno_id, curso_id)
-    Values (null, id_aluno, curso_id);
+	DECLARE alunoID INT;
+    DECLARE cursoID INT;
+
+    -- Verificar se o aluno já está matriculado em algum curso
+    SELECT id_aluno INTO alunoID
+    FROM Alunos
+    WHERE Email = email_aluno;
+
+    IF alunoID IS NOT NULL THEN
+        SIGNAL SQLSTATE '45000'
+        SET MESSAGE_TEXT = 'O aluno já está matriculado em outro curso';
+    END IF;
+
+    -- Inserir o aluno
+    call insert_aluno (id_aluno, nome_aluno, sobrenome_aluno, cpf_aluno, null);
+    SET alunoID = LAST_INSERT_ID();
+
+    -- Obter o ID do curso
+    SET curso_id = ObterIDCurso(nome_curso, area_id);
+
+    IF id_curso IS NOT NULL THEN
+        -- Matricular o aluno no curso
+        INSERT INTO Matriculas (id_matricula, aluno_id, curso_id) VALUES (null, id_aluno, id_curso);
+    ELSE
+        SIGNAL SQLSTATE '45000'
+        SET MESSAGE_TEXT = 'Curso não encontrado';
+    END IF;
     
 end$
 delimiter ;
 
+   
+call nova_matricula (1,'Nome','Sobrenome1','CPF 1', NULL, 1);
 drop procedure nova_matricula;
+
+
+
+
+
+-- -----------------------------------------------------
+-- Function: recebe o nome de um curso e sua área, em seguida retorna o id do curso 
+-- -----------------------------------------------------
+-- ???????????????????????????????????
+CREATE FUNCTION obter_ID_curso (
+	novo_nome_curso VARCHAR(100),
+    novo_nome_area VARCHAR(50)
+) 
+    RETURNS INT
+    
+BEGIN
+    
+    DECLARE novo_curso_id INT;
+
+    SELECT id_curso INTO novo_curso_id
+    FROM Cursos
+    JOIN Areas 
+    ON Cursos.area_id = Areas.id_area
+    WHERE Cursos.nome_curso = novo_nome_curso AND Areas.nome = novo_nome_area;
+
+    RETURN novo_curso_id;
+    
+END;
+
+select obter_ID_curso ('Curso 1', 'Area 1');
