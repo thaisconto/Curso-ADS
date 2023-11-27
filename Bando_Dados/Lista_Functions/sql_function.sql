@@ -152,7 +152,6 @@ SELECT * FROM Cursos_e_Areas;
 -- Stored procedure: recebe os dados do aluno e de um curso e faz sua matrícula. 
 -- Caso o aluno já esteja matriculado em um curso, essa matrícula não pode ser realizada;
 -- -----------------------------------------------------
--- ???????????????????????????????????
 delimiter $
 create procedure nova_matricula (
  IN alunoNome VARCHAR(50),
@@ -195,7 +194,7 @@ end$
 delimiter ;
 
 -- call nova_matricula (Nome, Sobrenome, email, CPF, nome curso, curso area);
-call nova_matricula ('Nome','Sobrenome 01',null, 'CPF 01', 'Curso 2', 'Area 1');
+call nova_matricula ('Nome','Sobrenome 1',null, 'CPF 1', 'Curso 2', 'Area 1');
 
 
 -- -----------------------------------------------------
