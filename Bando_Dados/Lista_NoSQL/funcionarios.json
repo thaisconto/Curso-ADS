@@ -1,0 +1,63 @@
+{
+"nome": "Jõao Grilo",
+"endereço": {
+	     "rua": "Suassuna",
+	     "numero": "30",
+	     "bairro": null,
+	     "cidade": "João Pessoa",
+	     "estado": "PB",
+	     "complemento": null
+	    }
+"email": [grillo@mail.com, joaog@mk.com],
+"cargo": "Contador",
+"jornada": 40,
+"salario": 3000.00
+}
+
+{
+"nome": "Ada Byrron",
+"endereço": {
+	     "rua": "Lovelace",
+	     "numero": "67",
+	     "bairro": null,
+	     "cidade": London,
+	     "estado": null,
+	     "complemento": null
+	    }
+"email": [ada@mail.com, abyron@tech.com],
+"cargo": "Developer",
+"jornada": 20,
+"salario": 15000.00
+}
+
+{
+"nome": "Gerundino",
+"endereço": {
+	     "rua": "Substantivo",
+	     "numero": "78",
+	     "bairro": "Predicado",
+	     "cidade": "Mesóclise",
+	     "estado": "AC",
+	     "complemento": null
+	    }
+"email": [gerundino@mail.com],
+"cargo": "Linguista",
+"jornada": 44,
+"salario": 8000.00
+}
+
+{
+"nome": "Chicó",
+"endereço": {
+	     "rua": "Eurico",
+	     "numero": "50",
+	     "bairro": null,
+	     "cidade": "João Pessoa",
+	     "estado": "PB",
+	     "complemento": "Apt 28 bloco C"
+	    }
+"email": [],
+"cargo": "Developer",
+"jornada": 20,
+"salario": 15000.00
+}
