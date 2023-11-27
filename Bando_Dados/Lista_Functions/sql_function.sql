@@ -155,12 +155,14 @@ SELECT * FROM Cursos_e_Areas;
 -- ???????????????????????????????????
 delimiter $
 create procedure nova_matricula (
-  id_aluno INT,
-  nome_aluno VARCHAR(45),
-  sobrenome_aluno VARCHAR(45),
-  cpf VARCHAR(45),
-  id_matricula INT,
-  curso_id INT
+ in id_aluno INT,
+ in nome_aluno VARCHAR(45),
+ in sobrenome_aluno VARCHAR(45),
+ in cpf VARCHAR(45),
+ in id_matricula INT,
+ in curso_id INT,
+ in nome_curso VARCHAR(45),
+ in area_id INT
 )
 begin
 	DECLARE alunoID INT;
@@ -169,7 +171,7 @@ begin
     -- Verificar se o aluno já está matriculado em algum curso
     SELECT id_aluno INTO alunoID
     FROM Alunos
-    WHERE Email = email_aluno;
+    WHERE cpf = cpf_aluno;
 
     IF alunoID IS NOT NULL THEN
         SIGNAL SQLSTATE '45000'
@@ -177,15 +179,15 @@ begin
     END IF;
 
     -- Inserir o aluno
-    call insert_aluno (id_aluno, nome_aluno, sobrenome_aluno, cpf_aluno, null);
+    call insert_aluno (id_aluno, nome_aluno, sobrenome_aluno, cpf);
     SET alunoID = LAST_INSERT_ID();
 
     -- Obter o ID do curso
-    SET curso_id = ObterIDCurso(nome_curso, area_id);
+    SET curso_id = obter_ID_curso(nome_curso, area_id);
 
-    IF id_curso IS NOT NULL THEN
+    IF curso_id IS NOT NULL THEN
         -- Matricular o aluno no curso
-        INSERT INTO Matriculas (id_matricula, aluno_id, curso_id) VALUES (null, id_aluno, id_curso);
+        INSERT INTO Matriculas (id_matricula, aluno_id, curso_id) VALUES (null, id_aluno, curso_id);
     ELSE
         SIGNAL SQLSTATE '45000'
         SET MESSAGE_TEXT = 'Curso não encontrado';
@@ -194,10 +196,12 @@ begin
 end$
 delimiter ;
 
-   
-call nova_matricula (1,'Nome','Sobrenome1','CPF 1', NULL, 1);
+-- call nova_matricula (id aluno, Nome, Sobrenome, CPF, id matricula, id curso, nome curso, area id);
+call nova_matricula (null,'Nome','Sobrenome 11','CPF 11', NULL, 1, 'Curso 1', 1);
 drop procedure nova_matricula;
 
+select * from Alunos;
+select * from Cursos;
 
 
 
@@ -205,8 +209,7 @@ drop procedure nova_matricula;
 -- -----------------------------------------------------
 -- Function: recebe o nome de um curso e sua área, em seguida retorna o id do curso 
 -- -----------------------------------------------------
--- ???????????????????????????????????
-
+delimiter $$
 CREATE FUNCTION obter_ID_curso (
 	novo_nome_curso VARCHAR(100),
     novo_nome_area VARCHAR(50)
@@ -217,14 +220,17 @@ BEGIN
     
     DECLARE novo_curso_id INT;
 
-    SELECT id_curso INTO novo_curso_id
+    SELECT Cursos.id_curso INTO novo_curso_id
     FROM Cursos
-    JOIN Areas 
-    ON Cursos.area_id = Areas.id_area
-    WHERE Cursos.nome_curso = novo_nome_curso AND Areas.nome = novo_nome_area;
-
+    WHERE nome_curso = novo_nome_curso AND area_id = (  SELECT id_area
+                                                        FROM Areas
+                                                        WHERE nome = novo_nome_area);
     RETURN novo_curso_id;
     
-END;
+END $$
+delimiter ;
 
-select obter_ID_curso ('Curso 1', 'Area 1');
+drop function obter_ID_curso;
+
+select obter_ID_curso ('Curso 2', 'Area 1');
+SELECT * FROM Cursos;
