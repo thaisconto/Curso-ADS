@@ -5,72 +5,35 @@
 
 ------------------------------------------------
 
-<h2>Exercício Pedidos</h2>
-Crie uma base de dados Pedidos, que contenha: ID, data e nome do cliente. 
+<h2>Etapa 1</h2>
+Um usuário configura seu navegador com os seguintes dados. Escreva os dados acima na notação JSON. 
 
-* O <b>código completo</b> desenvolvido para a resolução do exercício está disponibilizado [aqui](https://github.com/thaisconto/Curso-ADS/blob/main/Bando_Dados/Lista_Trigger/sql_pedidos.sql).
+página inicial: www.google.com
+Idioma preferido: Português do Brasil
+Localização: São Paulo
+Tema: Clássico
+Mostrar favoritos: Sim
+Zoom: 100%
+
+Script [aqui]()
+
+------------------------------------------------
+ 
+<h2>Etapa 2</h2>
+
+Uma empresa deseja cadastrar seus funcionários. Ao verificar seus documentos, encontrou-se a seguinte planilha abaixo.
+Crie, conforme o modelo relacional, as tabelas normalizadas. Crie também um documento JSON que contenha esses dados.
+
+Script [aqui]()
+
+<img src = planilha_funcionario.png>
 
 ------------------------------------------------
 
-Crie uma Trigger para quando o novo pedido for inserido sem fornecer a data. Mostre a inserção de dados sem e com a Trigger.
+<h2>Etapa 3</h2>
+Crie um banco de dados NoSQL no Firebase conforme foi demonstrado nos slides 26 ao 35 da AULA 14;
+Ao término do exemplo crie um segundo banco de dados, mas utilizando o tema Jogos;
+Nesse banco deve haver, coleções de personagens, jogos e fabricante;
+Relacione documentos de diferentes coleções.
 
-------------------------------------------------
-- Criação da Trigger:
-
-<img src = print3.png>
-
-------------------------------------------------
-
-- Inserção de dados sem utilizar a Trigger:
-
-<img src = print1.png>
-
-------------------------------------------------
-
-- Inserção de dados utilizando a Trigger:
-
-<img src = print2.png>
-
-------------------------------------------------
-
-<h2>Exercício Filmes</h2>
-
-Crie uma base de dados Filmes, que contenha: id, titulo, minutos.
-* O <b>código completo</b> desenvolvido para a resolução do exercício está disponibilizado [aqui](https://github.com/thaisconto/Curso-ADS/blob/main/Bando_Dados/Lista_Trigger/sql_filmes.sql).
-
-------------------------------------------------
-
-Crie uma Trigger que não aceite a inserção de minutos negativos.
-
-<img src = print4.png>
-
-------------------------------------------------
-
-Insira dados e teste se a trigger está funcionando.
-Obs: observe que ao inserir -88 minutos, ele alterou para null.
-
-<img src = print5.png>
-
-------------------------------------------------
-
-Crie uma trigger que avise o erro ao inserir minutos negativos.
-
-<img src = print6.png>
-
-------------------------------------------------
-
-Insira dados e verifique se a Trigger esta funcionando.
-
-<img src = print7.png>
-
-------------------------------------------------
-
-Crie uma Trigger que mostre as ocorrências ao deletar dados.
-
-<img src = print8.png>
-
-------------------------------------------------
-
-Detele dados e verifique se a Trigger está funcionando.
-
-<img src = print9.png>
+Script [aqui]()
