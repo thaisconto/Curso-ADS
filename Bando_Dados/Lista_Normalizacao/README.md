@@ -19,7 +19,7 @@ _________________________________________
 
 Faça o modelo lógico de banco de dados relacional:
 
-<img src = modelo_tabela_normal.png>
+<img src = modelo_logico.png>
 
 _________________________________________
 
