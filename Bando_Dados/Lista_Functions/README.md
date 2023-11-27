@@ -40,8 +40,8 @@ Obs: O aluno possui um e-mail que deve ter seu endereço gerado automaticamente 
 
 • Crie uma procedure que recebe os dados do aluno e de um curso e faz sua matrícula. Caso o aluno já esteja matriculado em um curso, essa matrícula não pode ser realizada;
 
-<img src = print_stored_procedure_nova_matricula_1.png>
-<img src = print_stored_procedure_nova_matricula_2.png>
+<img src = print_procedured_nova_matricula_1.png>
+<img src = print_procedured_nova_matricula_2.png>
 
 ----------------------------------------------------------------------------
 
