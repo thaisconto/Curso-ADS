@@ -8,7 +8,7 @@
 	     "estado": "PB",
 	     "complemento": null
 	    }
-"email": [grillo@mail.com, joaog@mk.com],
+"email": ["grillo@mail.com", "joaog@mk.com"],
 "cargo": "Contador",
 "jornada": 40,
 "salario": 3000.00
@@ -20,11 +20,11 @@
 	     "rua": "Lovelace",
 	     "numero": "67",
 	     "bairro": null,
-	     "cidade": London,
+	     "cidade": "London",
 	     "estado": null,
 	     "complemento": null
 	    }
-"email": [ada@mail.com, abyron@tech.com],
+"email": ["ada@mail.com", "abyron@tech.com"],
 "cargo": "Developer",
 "jornada": 20,
 "salario": 15000.00
@@ -40,7 +40,7 @@
 	     "estado": "AC",
 	     "complemento": null
 	    }
-"email": [gerundino@mail.com],
+"email": ["gerundino@mail.com"],
 "cargo": "Linguista",
 "jornada": 44,
 "salario": 8000.00
