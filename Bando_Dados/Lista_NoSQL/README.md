@@ -15,7 +15,7 @@ Tema: Clássico
 Mostrar favoritos: Sim
 Zoom: 100%
 
-Script [aqui]()
+Script [aqui](https://github.com/thaisconto/Curso-ADS/blob/main/Bando_Dados/Lista_NoSQL/localiza%C3%A7%C3%A3o_google_sp.json)
 
 ------------------------------------------------
  
@@ -24,7 +24,7 @@ Script [aqui]()
 Uma empresa deseja cadastrar seus funcionários. Ao verificar seus documentos, encontrou-se a seguinte planilha abaixo.
 Crie, conforme o modelo relacional, as tabelas normalizadas. Crie também um documento JSON que contenha esses dados.
 
-Script [aqui]()
+Script [aqui](https://github.com/thaisconto/Curso-ADS/blob/main/Bando_Dados/Lista_NoSQL/funcionarios.json)
 
 <img src = planilha_funcionario.png>
 
@@ -36,4 +36,4 @@ Ao término do exemplo crie um segundo banco de dados, mas utilizando o tema Jog
 Nesse banco deve haver, coleções de personagens, jogos e fabricante;
 Relacione documentos de diferentes coleções.
 
-Script [aqui]()
+Script [aqui](https://console.firebase.google.com/project/atividade-34af4/firestore/data/~2FAnimais~2FGarfield?hl=pt-br) ou [aqui](https://github.com/thaisconto/Curso-ADS/blob/main/Bando_Dados/Lista_NoSQL/links.txt)
