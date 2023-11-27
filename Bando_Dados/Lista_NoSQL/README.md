@@ -1,6 +1,6 @@
 <h1>Proposta:</h1>
 
-* Obs: O execício foi elaborado através do [SQL Server da Oracle](https://dev.mysql.com/doc/) e [WAMP](https://sourceforge.net/projects/wampserver/).
+* Obs: O execício foi elaborado através do [FireBase](https://firebase.google.com/) e Bloco de notas.
 
 
 ------------------------------------------------
