@@ -155,14 +155,12 @@ SELECT * FROM Cursos_e_Areas;
 -- ???????????????????????????????????
 delimiter $
 create procedure nova_matricula (
- in id_aluno INT,
- in nome_aluno VARCHAR(45),
- in sobrenome_aluno VARCHAR(45),
- in cpf VARCHAR(45),
- in id_matricula INT,
- in curso_id INT,
- in nome_curso VARCHAR(45),
- in area_id INT
+ IN alunoNome VARCHAR(50),
+ IN alunoSobrenome VARCHAR(50),
+ IN alunoEmail VARCHAR(100),
+ IN alunoCPF VARCHAR(100),
+ IN cursoNome VARCHAR(100),
+ IN cursoArea VARCHAR(50)
 )
 begin
 	DECLARE alunoID INT;
@@ -171,7 +169,7 @@ begin
     -- Verificar se o aluno já está matriculado em algum curso
     SELECT id_aluno INTO alunoID
     FROM Alunos
-    WHERE cpf = cpf_aluno;
+    WHERE email_aluno = alunoEmail;
 
     IF alunoID IS NOT NULL THEN
         SIGNAL SQLSTATE '45000'
@@ -179,15 +177,15 @@ begin
     END IF;
 
     -- Inserir o aluno
-    call insert_aluno (id_aluno, nome_aluno, sobrenome_aluno, cpf);
+    call insert_curso (null, alunoNome, alunoSobrenome, alunoCPF);
     SET alunoID = LAST_INSERT_ID();
 
     -- Obter o ID do curso
-    SET curso_id = obter_ID_curso(nome_curso, area_id);
+    SET cursoID = obter_ID_curso(cursoNome, cursoArea);
 
-    IF curso_id IS NOT NULL THEN
+    IF cursoID IS NOT NULL THEN
         -- Matricular o aluno no curso
-        INSERT INTO Matriculas (id_matricula, aluno_id, curso_id) VALUES (null, id_aluno, curso_id);
+        INSERT INTO Matriculas (aluno_id, curso_id) VALUES (alunoID, cursoID);
     ELSE
         SIGNAL SQLSTATE '45000'
         SET MESSAGE_TEXT = 'Curso não encontrado';
@@ -196,14 +194,8 @@ begin
 end$
 delimiter ;
 
--- call nova_matricula (id aluno, Nome, Sobrenome, CPF, id matricula, id curso, nome curso, area id);
-call nova_matricula (null,'Nome','Sobrenome 11','CPF 11', NULL, 1, 'Curso 1', 1);
-drop procedure nova_matricula;
-
-select * from Alunos;
-select * from Cursos;
-
-
+-- call nova_matricula (Nome, Sobrenome, email, CPF, nome curso, curso area);
+call nova_matricula ('Nome','Sobrenome 01',null, 'CPF 01', 'Curso 2', 'Area 1');
 
 
 -- -----------------------------------------------------
