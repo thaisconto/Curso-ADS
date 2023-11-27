@@ -53,15 +53,41 @@ INSERT INTO Veiculos VALUES (NULL, 'Comodoro', 'Preto', 'CVB-9933', 20);
 INSERT INTO Veiculos VALUES (NULL, 'Deloriam', 'Azul', 'FGH-2256', 80);
 INSERT INTO Veiculos VALUES (NULL, 'Brasília', 'Amarela', 'DDI-3948', 45);
 
+
+-- calcular o total após inserção em locação ??????????????????????
+DELIMITER $
+CREATE TRIGGER AtualizarTotal
+	AFTER INSERT ON Locacao 
+    FOR EACH ROW
+    BEGIN
+			UPDATE Locacao
+            SET total = (SELECT valor_diaria FROM Veiculos WHERE veiculo_id = NEW.veiculo_id) * dias
+            WHERE Veiculos.id_veiculo = NEW.veiculo_id;
+	END;
+    $ 
+    DELIMITER ;
+
+DROP TRIGGER AtualizarTotal;
+
 INSERT INTO Locacao VALUES (NULL, 1, 1, 3, NULL);
 INSERT INTO Locacao VALUES (NULL, 2, 2, 7, NULL);
 INSERT INTO Locacao VALUES (NULL, 3, 3, 1, NULL);
 INSERT INTO Locacao VALUES (NULL, 4, 4, 3, NULL);
 INSERT INTO Locacao VALUES (NULL, 5, 5, 7, NULL);
 
--- calcular o total após inserção em locação
+select * from Locacao;
+drop table Locacao;
 
 
 -- --------------------------------------------------
 -- View que seleciona todas as locações e seus respectivos veículos e clientes.
 -- --------------------------------------------------
+CREATE VIEW LocacaoClienteVeiculo as
+SELECT Clientes.nome_cliente, Veiculos.nome_veiculo, Veiculos.valor_diaria, Locacao.dias, Locacao.total
+FROM Locacao
+JOIN Clientes
+ON cliente_id = id_cliente
+JOIN Veiculos
+ON veiculo_id = id_veiculo;
+
+SELECT * FROM LocacaoClienteVeiculo;
