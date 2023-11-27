@@ -55,6 +55,6 @@ Obs: O aluno possui um e-mail que deve ter seu endereço gerado automaticamente 
 
 • Crie uma função que recebe o nome de um curso e sua área, em seguida retorna o id do curso;
 
-<img src = print_function_1.png>
-
+<img src = print_function_obter_id_curso_1.png>
+<img src = print_function_obter_id_curso_2.png>
 
