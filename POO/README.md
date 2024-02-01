@@ -1,5 +1,5 @@
 # Curso-ADS
-<h2>Curso programação orientada a objetos</h2>
+<h2>Curso programação orientada a objetos - POO</h2>
 
 Exercícios desenvolvidos durante as aulas:
 - [Colletion](https://github.com/thaisconto/Curso-ADS/tree/main/POO/aulaColection);
