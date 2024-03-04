@@ -26,7 +26,7 @@ Aprender a aplicar esses recursos
 
 Exercícios realizados durante a aula disponíveis [aqui](https://github.com/thaisconto/Curso-ADS/tree/main/JavaScript_Web/aula3)
 
-## Lista de exercícios:
+# Lista de exercícios:
 
 [Lista 1](https://github.com/thaisconto/Curso-ADS/tree/main/JavaScript_Web/Listas/Lista1): JavaScript básico
 
