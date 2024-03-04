@@ -1,4 +1,4 @@
-# Banco de dados
+# Banco de dados (SQL)
 
 Disponível [aqui](https://github.com/thaisconto/Curso-ADS/tree/main/Bando_Dados)
 
