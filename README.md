@@ -7,5 +7,5 @@ Disponível [aqui](https://github.com/thaisconto/Curso-ADS/tree/main/Bando_Dados
 Disponível [aqui](https://github.com/thaisconto/Curso-ADS/tree/main/POO)
 
 # Programação WEB (JavaScript, HTML, CSS)
-Disónível [aqui](https://github.com/thaisconto/Curso-ADS/tree/main/JavaScript_Web)
+Disponível [aqui](https://github.com/thaisconto/Curso-ADS/tree/main/JavaScript_Web)
 
