@@ -28,6 +28,8 @@ Exercícios realizados durante a aula disponíveis [aqui](https://github.com/tha
 
 # Lista de exercícios:
 
+[Todas](https://github.com/thaisconto/Curso-ADS/tree/main/JavaScript_Web/Listas)
+
 [Lista 1](https://github.com/thaisconto/Curso-ADS/tree/main/JavaScript_Web/Listas/Lista1): JavaScript básico
 
 [Lista 2](https://github.com/thaisconto/Curso-ADS/tree/main/JavaScript_Web/Listas/Lista2) : JavaScript funcções
