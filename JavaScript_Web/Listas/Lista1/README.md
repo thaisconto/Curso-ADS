@@ -18,4 +18,4 @@
 
 9. Escreva uma função que recebe um endereço de e-mail como argumento e retorna true se o e-mail for válido ou false caso contrário. Um e-mail válido deve conter um único símbolo '@' e pelo menos um ponto '.' após o '@'. [Resolução](https://github.com/thaisconto/Curso-ADS/blob/main/JavaScript_Web/Listas/Lista1/ex9.js)
 
-10. Escreva uma função que verifique se uma determinada string é um palíndromo (ou seja, pode ser lida da mesma forma tanto da esquerda para a direita quanto da direita para a esquerda). Exemplo: arara
+10. Escreva uma função que verifique se uma determinada string é um palíndromo (ou seja, pode ser lida da mesma forma tanto da esquerda para a direita quanto da direita para a esquerda). Exemplo: arara  [Resolução](https://github.com/thaisconto/Curso-ADS/blob/main/JavaScript_Web/Listas/Lista1/ex10.js)
