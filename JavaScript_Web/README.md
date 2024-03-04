@@ -4,6 +4,7 @@
 
 Objetivos:
 Ferramentas
+
 Variáveis
 
 Exercícios realizados durante a aula disponíveis [aqui](https://github.com/thaisconto/Curso-ADS/tree/main/JavaScript_Web/aula1) 
@@ -12,8 +13,11 @@ Exercícios realizados durante a aula disponíveis [aqui](https://github.com/tha
 
 Objetivos:
 Entender tipos de funções em JavaScript
+
 Entender como funcionam Arrays em JavaScript
+
 Entender como funciona OO em JavaScript
+
 Praticar os conceitos desenvolvidos
 
 Exercícios realizados durante a aula disponíveis [aqui](https://github.com/thaisconto/Curso-ADS/tree/main/JavaScript_Web/aula2) 
@@ -22,6 +26,7 @@ Exercícios realizados durante a aula disponíveis [aqui](https://github.com/tha
 
 Objetivos:
 Conhecer recursos essenciais e mais básicos da linguagem
+
 Aprender a aplicar esses recursos
 
 Exercícios realizados durante a aula disponíveis [aqui](https://github.com/thaisconto/Curso-ADS/tree/main/JavaScript_Web/aula3)
