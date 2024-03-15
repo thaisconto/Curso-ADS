@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Divs Lado a Lado</title>
+    <style>
+        /* Define estilos para o container */
+        .container {
+            display: flex; /* Transforma o container em um flex container */
+        }
+        /* Define estilos para a barra lateral (sidebar) */
+        .sidebar {
+            flex: 1; /* Define a barra lateral para ocupar 1 parte da "flexibilidade" disponível */
+            background-color: #f0f0f0; /* Define a cor de fundo da barra lateral */
+            padding: 20px; /* Adiciona um espaçamento interno de 20px */
+        }
+        /* Define estilos para o conteúdo principal (content) */
+        .content {
+            flex: 3; /* Define o conteúdo principal para ocupar 3 partes da "flexibilidade" disponível */
+            background-color: #ccc; /* Define a cor de fundo do conteúdo principal */
+            padding: 20px; /* Adiciona um espaçamento interno de 20px */
+        }
+    </style>
+</head>
+<body>
+    <!-- Div que envolve a barra lateral e o conteúdo principal -->
+    <div class="container">
+        <!-- Barra lateral -->
+        <aside class="sidebar">
+            <h2>Sidebar</h2>
+            <p>Conteúdo da sidebar...</p>
+        </aside>
+        <!-- Conteúdo principal -->
+        <article class="content">
+            <h1>Título</h1>
+            <p>Conteúdo principal aqui...</p>
+        </article>
+    </div>
+</body>
+</html>

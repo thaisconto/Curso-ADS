@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Exemplo de uso de divs</title>
+    <style>
+        /* Define o estilo da div "container" */
+        .container {
+            width: 80%; /* Define a largura da div como 80% da largura do elemento pai */
+            margin: 0 auto; /* Centraliza a div horizontalmente */
+            padding: 20px; /* Define um espaçamento interno de 20px */
+            background-color: #f0f0f0; /* Define a cor de fundo */
+        }
+        /* Define o estilo da div "header" */
+        .header {
+            background-color: #333; /* Define a cor de fundo */
+            color: #fff; /* Define a cor do texto */
+            padding: 10px; /* Define um espaçamento interno de 10px */
+            text-align: center; /* Centraliza o texto horizontalmente */
+            border-bottom: 10px solid #0de84b; /* Adiciona uma borda inferior */
+            border-left: 10px solid #0de84b; /* Adiciona uma borda inferior */
+        }
+        /* Define o estilo da div "content" */
+        .content {
+            margin-top: 20px; /* Define uma margem superior de 20px */
+            padding: 10px; /* Define um espaçamento interno de 10px */
+            border-top: 1px solid #ee0808; /* Adiciona uma borda superior */
+        }
+
+        .header h1 {
+            font-size: 24px; /* Define o tamanho da fonte */
+            margin: 0; /* Remove as margens padrão */
+        }
+
+        .content p {
+            line-height: 1.6; /* Define a altura da linha para melhor legibilidade */
+        }
+
+        .content a {
+            color: #0bf063; /* Define a cor do link */
+            text-decoration: none; /* Remove o sublinhado padrão */
+        }
+
+        .content a:hover {
+            text-decoration: underline; /* Adiciona um sublinhado ao passar o mouse sobre o link */
+        }
+
+        .content ul {
+            list-style-type: disc; /* Define o estilo de marcador de lista */
+            margin-left: 20px; /* Adiciona um recuo à esquerda para as listas */
+        }
+
+        .content li {
+            margin-bottom: 5px; /* Adiciona um espaçamento inferior entre os itens da lista */
+        }
+
+        
+    </style>
+</head>
+<body>
+    <!-- Div que envolve todo o conteúdo da página -->
+    <div class="container">
+        <!-- Div para o cabeçalho -->
+        <div class="header">
+            <h1>Meu Site</h1>
+        </div>
+        <!-- Div para o conteúdo principal -->
+        <div class="content">
+            <p>Este é um exemplo de uso de divs para criar um layout simples.</p>
+        </div>
+    </div>
+</body>
+</html>

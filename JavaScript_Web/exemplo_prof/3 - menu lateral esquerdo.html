@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Layout com Menu Lateral</title>
+    <style>
+        /* Estilos CSS */
+
+        /* Define o corpo (body) como um flex container */
+        body {
+            display: flex; /* A propriedade display: flex faz com que o elemento se torne um flex container, o que permite o uso de flexbox para o layout */
+            flex-direction: row; /* Define a direção dos flex items (filhos do container) como linha, o que coloca os elementos lado a lado horizontalmente */
+        }
+
+        /* Estilos para a navegação (menu lateral) */
+        nav {
+            width: 20%; /* Define a largura da navegação como 20% da largura do flex container pai */
+            background-color: #333; /* Define a cor de fundo da navegação como cinza escuro */
+            color: white; /* Define a cor do texto da navegação como branco */
+            padding: 20px; /* Adiciona um espaçamento interno de 20px em todos os lados da navegação */
+        }
+
+        /* Estilos para a seção principal */
+        main {
+            flex: 1; /* A propriedade flex: 1 faz com que a seção principal (main) ocupe todo o espaço restante no flex container, após levar em conta o espaço ocupado pela navegação */
+            padding: 20px; /* Adiciona um espaçamento interno de 20px em todos os lados da seção principal */
+        }
+    </style>
+</head>
+<body>
+    <!-- Navegação (menu lateral) -->
+    <nav>
+        <ul>
+            <li><a href="#">Item 1</a></li>
+            <li><a href="#">Item 2</a></li>
+            <li><a href="#">Item 3</a></li>
+        </ul>
+    </nav>
+
+    <!-- Seção principal -->
+    <main>
+        <h1>Título</h1>
+        <p>Conteúdo principal aqui...</p>
+    </main>
+</body>
+</html>
