@@ -1,0 +1,36 @@
+header{
+    width: 70%;
+    margin: 0 auto;
+    padding: 20px;
+    text-align: center;
+    background-color: #767474;
+    font-family: "Lucida Sans";
+    color:  #faf7f7;
+    font-size: 40px;
+}
+header:hover, .active {
+    /* Ao passar o mouse sobre o título o fundo deve mudar para a cor preta*/
+    background-color:#050605!important;
+}
+
+p{
+    margin: 80px left;  
+    padding: 10px;
+    font-family: "Arial";
+}
+ol{
+    padding: 10px;
+    font-family: "Arial";
+    text-align: justify;
+}
+.titulo_lista{
+    font-weight: bold;
+    font-size: 20px;
+}
+body{
+    margin-top: 50px;
+    margin-bottom: 50px;
+    margin-left: 200px;
+    margin-right: 200px;
+    text-indent: 20px;;
+}

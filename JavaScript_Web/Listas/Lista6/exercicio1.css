@@ -1,0 +1,23 @@
+.menu_lateral{
+    float: left;
+    background-color: rgba(59, 101, 155, 0.527);
+    width: 20%;
+    height: 100%;
+    position: fixed;
+    text-align: left;
+    color:aliceblue;
+
+}
+
+.principal{
+    width: 80%;
+    height: 100%;
+    background-color: rgb(175, 174, 173);
+    text-align: center;  
+    vertical-align: middle;
+}
+
+.negrito{
+    font-weight: bold;
+    font-size: x-large;
+}

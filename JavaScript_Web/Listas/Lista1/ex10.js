@@ -1,4 +1,4 @@
-var palavra = "Thais"
+var palavra = "Thais" // atenção: o código leva em consideração a diferença de letra maiuscula e minuscula
 reverseString(palavra);
 
 function reverseString(str) {
