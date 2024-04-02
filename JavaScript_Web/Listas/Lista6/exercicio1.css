@@ -1,5 +1,6 @@
 .menu_lateral{
     float: left;
+    position: absolute;
     background-color: rgba(59, 101, 155, 0.527);
     width: 20%;
     height: 100%;
@@ -10,12 +11,14 @@
 }
 
 .principal{
+    float:right;
+    position: absolute;
     width: 80%;
     height: 100%;
     background-color: rgb(175, 174, 173);
     text-align: center;  
     vertical-align: middle;
-}
+    justify-content:center;
 
 .negrito{
     font-weight: bold;

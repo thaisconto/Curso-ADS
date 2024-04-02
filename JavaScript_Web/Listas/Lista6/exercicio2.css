@@ -1,0 +1,38 @@
+body{
+    margin: 0;
+    padding: 0;
+}
+
+.menu_superior{
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background-color:rgba(30, 31, 32, 0.527);
+    text-align: center;
+}
+
+.menu_lateral{
+    position: fixed;
+    top: 40px;
+    left: 0;
+    width: 200px;
+    height: 100%;
+    background-color: rgba(34, 34, 33, 0.498);
+    color:azure;
+    padding: 10px;
+}
+
+.menu_inferior {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    background-color: rgba(30, 31, 32, 0.527);
+    color: azure;
+    padding: 10px;
+    text-align: center;
+}
+
+.principal{
+    margin-left: 220px;
+    padding: 20px;
+}
