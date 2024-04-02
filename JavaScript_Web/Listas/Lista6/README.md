@@ -1,34 +1,66 @@
-Exercícios CSS - Fundamentos
+# Exercícios 1
 
-Crie uma página HTML e acrescente o texto abaixo em seu body:
+## Resolução
 
-"
-    Cascading Style Sheets (CSS):
-    Uma Introdução
-    Cascading Style Sheets (CSS) é uma linguagem de estilo usada para descrever a apresentação de um documento HTML (ou XML). Enquanto o HTML fornece a estrutura de uma página da web, o CSS permite que você altere a aparência dessa estrutura.
-    Com CSS, você pode controlar coisas como cores, fontes, espaçamento, layout e muito mais. A separação de conteúdo (HTML) e estilo (CSS) é uma prática essencial para o desenvolvimento web moderno, pois permite uma manutenção mais fácil, reutilização de código e flexibilidade de design.
+[CSS](https://github.com/thaisconto/Curso-ADS/blob/main/JavaScript_Web/Listas/Lista6/exercicio1.css)
 
-    Conceitos Fundamentais de CSS:
-    1. Seletor: Um seletor é usado para selecionar os elementos HTML aos quais você deseja aplicar estilos. Pode ser um elemento HTML específico, uma classe ou um ID.
-    2. Propriedades: As propriedades são características individuais que você deseja alterar, como cor, tamanho da fonte, margens, etc.
-    3. Valor: Cada propriedade tem um valor associado que define como essa propriedade deve ser aplicada. Por exemplo, uma cor pode ser definida omo "vermelho" ou um tamanho de fonte como "14px".
-    4. Declaração: Uma declaração é composta por uma propriedade e um valor, separados por dois pontos, e terminados por um ponto e vírgula. Por exemplo, color: blue; é uma declaração que define a cor do texto como azul.
-    5. Regras CSS: As regras CSS consistem em um seletor e um conjunto de declarações. Quando um navegador encontra uma regra CSS, ele aplica as declarações associadas aos elementos correspondentes.
+[HTML](https://github.com/thaisconto/Curso-ADS/blob/main/JavaScript_Web/Listas/Lista6/exercicio1.html)
 
-"
+## Objetivo:
 
-Faça as seguintes alterações no texto com o auxílio do CSS
+1. Crie uma estrutura HTML básica com uma <div> para a barra lateral e outra <div> para o conteúdo principal.
 
-1. Altere a cor do fundo para uma tonalidade de marrom claro, o tamanho do texto para 40px, cor da letra branca, alinhe o texto no centro e a fonte da letra para “Lucida Sans”
+2. Estilize a barra lateral com as seguintes propriedades: 
+    - Largura de 20% da largura total da página.
+    - Altura de 100% da altura da janela de visualização.
+    - Cor de fundo diferente da cor de fundo do conteúdo principal.
+    - Conteúdo de texto dentro da barra lateral, como links de navegação.
 
-2. Ao passar o mouse sobre o título o fundo deve mudar para a cor preta.
+3. Estilize o conteúdo principal com as seguintes propriedades:
+    - Largura de 80% da largura total da página.
+    - Altura de 100% da altura da janela de visualização.
+    - Cor de fundo diferente da cor de fundo da barra lateral.
+    - Alinhe o conteúdo no centro vertical e horizontalmente.
 
-3. O conteúdo da página deve ser mostrado com a fonte “Arial”.
+4. Use a propriedade float para fazer com que a barra lateral flutue à esquerda e o conteúdo principal flutue à direita.
 
-4. Todos os parágrafos devem ter um recuo de 20px.
+5. Use a propriedade position para posicionar a barra lateral e o conteúdo principal de forma que eles ocupem toda a altura da janela de visualização, independentemente do
+tamanho do conteúdo.
 
-5. O título introdutório da lista ordenada que possui a escrita: “Conceitos Fundamentais de CSS:” deve estar com seu texto em negrito e a letra deve ter o tamanho de 20x.
+6. Teste o layout redimensionando a janela do navegador para verificar se ele é responsivo.
 
-6. Os itens da lista devem estar com alinhamento justificado.
+Segue um exemplo:
 
-7. Todo o conteúdo da página precisa ter um espaçamento superior e inferior de 50px e os lados precisam ter um espaçamento de 200px
+<img src = print1.png>
+
+# Exercícios 2
+
+## Resolução
+
+[CSS](https://github.com/thaisconto/Curso-ADS/blob/main/JavaScript_Web/Listas/Lista6/exercicio2.css)
+
+[HTML](https://github.com/thaisconto/Curso-ADS/blob/main/JavaScript_Web/Listas/Lista6/exercicio2.html)
+
+## Objetivo:
+
+Crie uma página HTML que tenha a seguinte estrutura de layout:
+
+1. Um menu superior fixo no topo da página.
+
+2. Um menu lateral à esquerda que ocupe uma parte da largura da página.
+
+3. Uma área de conteúdo à direita do menu lateral.
+
+4. Um rodapé fixo na parte inferior da página.
+
+5. Use a propriedade position do CSS para posicionar os elementos da seguinte maneira:
+    - O menu superior deve ter position: fixed; para permanecer fixo no topo da página.
+    - O menu lateral deve ter position: fixed; para permanecer fixo à esquerda da página.
+    - A área de conteúdo deve ter margin-left para deixar espaço para o menu lateral e não ser ocultada por ele.
+    - O rodapé deve ter position: fixed; para permanecer fixo na parte inferior da página.
+
+6. Personalize os estilos e os conteúdos dos menus e do conteúdo conforme desejar.
+
+Segue um exemplo:
+
+<img src = print2.png>
