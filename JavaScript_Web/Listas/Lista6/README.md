@@ -8,7 +8,7 @@
 
 ## Objetivo:
 
-1. Crie uma estrutura HTML básica com uma <div> para a barra lateral e outra <div> para o conteúdo principal.
+1. Crie uma estrutura HTML básica com uma div para a barra lateral e outra div para o conteúdo principal.
 
 2. Estilize a barra lateral com as seguintes propriedades: 
     - Largura de 20% da largura total da página.
