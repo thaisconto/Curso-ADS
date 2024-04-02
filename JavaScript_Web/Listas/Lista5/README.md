@@ -1,14 +1,17 @@
-Exercícios CSS - Fundamentos
+# Exercícios CSS - Fundamentos
 
+## Resolução 
+[CSS](https://github.com/thaisconto/Curso-ADS/blob/main/JavaScript_Web/Listas/Lista5/exercicio.css)
+[HTML](https://github.com/thaisconto/Curso-ADS/blob/main/JavaScript_Web/Listas/Lista5/exercicio.html)
+
+## Objetivo: 
 Crie uma página HTML e acrescente o texto abaixo em seu body:
 
 "
     Cascading Style Sheets (CSS):
-    Uma Introdução
-    Cascading Style Sheets (CSS) é uma linguagem de estilo usada para descrever a apresentação de um documento HTML (ou XML). Enquanto o HTML fornece a estrutura de uma página da web, o CSS permite que você altere a aparência dessa estrutura.
-    Com CSS, você pode controlar coisas como cores, fontes, espaçamento, layout e muito mais. A separação de conteúdo (HTML) e estilo (CSS) é uma prática essencial para o desenvolvimento web moderno, pois permite uma manutenção mais fácil, reutilização de código e flexibilidade de design.
+    Uma Introdução: Cascading Style Sheets (CSS) é uma linguagem de estilo usada para descrever a apresentação de um documento HTML (ou XML). Enquanto o HTML fornece a estrutura de uma página da web, o CSS permite que você altere a aparência dessa estrutura. Com CSS, você pode controlar coisas como cores, fontes, espaçamento, layout e muito mais. A separação de conteúdo (HTML) e estilo (CSS) é uma prática essencial para o desenvolvimento web moderno, pois permite uma manutenção mais fácil, reutilização de código e flexibilidade de design.
 
-    Conceitos Fundamentais de CSS:
+Conceitos Fundamentais de CSS:
     1. Seletor: Um seletor é usado para selecionar os elementos HTML aos quais você deseja aplicar estilos. Pode ser um elemento HTML específico, uma classe ou um ID.
     2. Propriedades: As propriedades são características individuais que você deseja alterar, como cor, tamanho da fonte, margens, etc.
     3. Valor: Cada propriedade tem um valor associado que define como essa propriedade deve ser aplicada. Por exemplo, uma cor pode ser definida omo "vermelho" ou um tamanho de fonte como "14px".
@@ -17,7 +20,7 @@ Crie uma página HTML e acrescente o texto abaixo em seu body:
 
 "
 
-Faça as seguintes alterações no texto com o auxílio do CSS
+## Faça as seguintes alterações no texto com o auxílio do CSS
 
 1. Altere a cor do fundo para uma tonalidade de marrom claro, o tamanho do texto para 40px, cor da letra branca, alinhe o texto no centro e a fonte da letra para “Lucida Sans”
 
@@ -32,3 +35,7 @@ Faça as seguintes alterações no texto com o auxílio do CSS
 6. Os itens da lista devem estar com alinhamento justificado.
 
 7. Todo o conteúdo da página precisa ter um espaçamento superior e inferior de 50px e os lados precisam ter um espaçamento de 200px
+
+Segue exemplo de como deverá ficar sua página:
+
+<img src = print1.png>
