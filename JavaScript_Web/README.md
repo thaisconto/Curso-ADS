@@ -31,6 +31,31 @@ Objetivos:
 
 Exercícios realizados durante a aula disponíveis [aqui](https://github.com/thaisconto/Curso-ADS/tree/main/JavaScript_Web/aula3)
 
+## Aula 4: HTML Formulário
+
+Objetivos:
+  - Conhecer recursos essenciais de formulários
+
+  - Aprender a aplicar esses recursos
+
+Exercícios realizados durante a aula disponíveis [aqui](https://github.com/thaisconto/Curso-ADS/tree/main/JavaScript_Web/aula4)
+
+## Aula 5: CSS Básico
+
+Objetivos:
+  - Conhecer recursos essenciais e mais básicos da linguagem
+
+  - Aprender a aplicar esses recursos
+
+Exercícios realizados durante a aula disponíveis [aqui](https://github.com/thaisconto/Curso-ADS/tree/main/JavaScript_Web/aula5)
+
+## Aula 6: HTML + CSS
+
+Objetivos:
+  - Conhecer recursos folha de estilo em cascata
+
+  - Aprender a aplicar esses recursos
+
 # Lista de exercícios:
 
 [Todas](https://github.com/thaisconto/Curso-ADS/tree/main/JavaScript_Web/Listas)
@@ -40,3 +65,9 @@ Exercícios realizados durante a aula disponíveis [aqui](https://github.com/tha
 [Lista 2](https://github.com/thaisconto/Curso-ADS/tree/main/JavaScript_Web/Listas/Lista2) : JavaScript funcções
 
 [Lista 3](https://github.com/thaisconto/Curso-ADS/tree/main/JavaScript_Web/Listas/Lista3) : HTML básico
+
+[Lista 4](https://github.com/thaisconto/Curso-ADS/tree/main/JavaScript_Web/Listas/Lista4) : HTML formulário
+
+[Lista 5](https://github.com/thaisconto/Curso-ADS/tree/main/JavaScript_Web/Listas/Lista5) : CSS básico
+
+[Lista 6](https://github.com/thaisconto/Curso-ADS/tree/main/JavaScript_Web/Listas/Lista6) : HTML + CSS
