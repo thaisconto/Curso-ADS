@@ -56,7 +56,7 @@ Objetivos:
 
   - Aprender a aplicar esses recursos
 
-Exercícios realizados durante a aula disponíveis [aqui](https://github.com/thaisconto/Curso-ADS/tree/main/JavaScript_Web/aula5)
+Exercícios realizados durante a aula disponíveis [aqui](https://github.com/thaisconto/Curso-ADS/tree/main/JavaScript_Web/aula6)
 
 # Lista de exercícios:
 
