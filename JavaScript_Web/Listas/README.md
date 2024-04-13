@@ -6,7 +6,7 @@
 
 [Lista 2](https://github.com/thaisconto/Curso-ADS/tree/main/JavaScript_Web/Listas/Lista2) : JavaScript funcções
 
-[Lista 3](https://github.com/thaisconto/Curso-ADS/tree/main/JavaScript_Web/Listas/Lista3) : HTML básico
+[Lista 3](https://github.com/thaisconto/Curso-ADS/tree/main/JavaScript_Web/Listas/Lista3_HTML_básico) : HTML básico
 
 [Lista 4](https://github.com/thaisconto/Curso-ADS/tree/main/JavaScript_Web/Listas/Lista4) : HTML formulário
 
