@@ -13,3 +13,7 @@
 [Lista 5](https://github.com/thaisconto/Curso-ADS/tree/main/JavaScript_Web/Listas/Lista5) : CSS básico
 
 [Lista 6](https://github.com/thaisconto/Curso-ADS/tree/main/JavaScript_Web/Listas/Lista6) : HTML + CSS
+
+[Lista 7](https://github.com/thaisconto/Curso-ADS/tree/main/JavaScript_Web/Listas/Lista7) : FlexBox
+
+[Lista 8](https://github.com/thaisconto/Curso-ADS/tree/main/JavaScript_Web/Listas/Lista8) : DOM
