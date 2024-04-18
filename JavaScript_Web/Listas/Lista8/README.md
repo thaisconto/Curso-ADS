@@ -5,6 +5,7 @@ Crie uma página HTML com um botão e uma div. Quando o botão é clicado, a cor
 ### Resolução: 
 [CSS](https://github.com/thaisconto/Curso-ADS/blob/main/JavaScript_Web/Listas/Lista8/exercicio1.css)
 [HTML](https://github.com/thaisconto/Curso-ADS/blob/main/JavaScript_Web/Listas/Lista8/exercicio1.html)
+[JS](https://github.com/thaisconto/Curso-ADS/blob/main/JavaScript_Web/Listas/Lista8/exercicio1.js)
 
 # Exercício 2
 
@@ -14,6 +15,7 @@ Obs.: Para criar um novo elemento HTML utiliza-se o método createElement (Ex.: 
 ### Resolução: 
 [CSS](https://github.com/thaisconto/Curso-ADS/blob/main/JavaScript_Web/Listas/Lista8/exercicio2.css)
 [HTML](https://github.com/thaisconto/Curso-ADS/blob/main/JavaScript_Web/Listas/Lista8/exercicio2.html)
+[JS](https://github.com/thaisconto/Curso-ADS/blob/main/JavaScript_Web/Listas/Lista8/exercicio2.js)
 
 # Exercício 3
 
@@ -22,6 +24,7 @@ Crie uma página HTML com um botão e um contador. Quando o botão é clicado, o
 ### Resolução: 
 [CSS](https://github.com/thaisconto/Curso-ADS/blob/main/JavaScript_Web/Listas/Lista8/exercicio3.css)
 [HTML](https://github.com/thaisconto/Curso-ADS/blob/main/JavaScript_Web/Listas/Lista8/exercicio3.html)
+[JS](https://github.com/thaisconto/Curso-ADS/blob/main/JavaScript_Web/Listas/Lista8/exercicio3.js)
 
 # Exercício 4
 
@@ -30,6 +33,7 @@ Crie uma página HTML que possui 2 campos e 4 botões (Somar, Subtrair, Dividir 
 ### Resolução: 
 [CSS](https://github.com/thaisconto/Curso-ADS/blob/main/JavaScript_Web/Listas/Lista8/exercicio4.css)
 [HTML](https://github.com/thaisconto/Curso-ADS/blob/main/JavaScript_Web/Listas/Lista8/exercicio4.html)
+[JS](https://github.com/thaisconto/Curso-ADS/blob/main/JavaScript_Web/Listas/Lista8/exercicio4.js)
 
 # Exercício 5
 
@@ -38,4 +42,4 @@ Crie uma página HTML que conte o número de palavras em uma frase ou parágrafo
 ### Resolução: 
 [CSS](https://github.com/thaisconto/Curso-ADS/blob/main/JavaScript_Web/Listas/Lista8/exercicio5.css)
 [HTML](https://github.com/thaisconto/Curso-ADS/blob/main/JavaScript_Web/Listas/Lista8/exercicio5.html)
-
+[JS](https://github.com/thaisconto/Curso-ADS/blob/main/JavaScript_Web/Listas/Lista8/exercicio5.js)
