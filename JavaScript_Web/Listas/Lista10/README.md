@@ -4,6 +4,7 @@ Hoje é o seu primeiro dia como desenvolvedor frontend web e como primeiro
 trabalho, precisa desenvolver uma tela de cadastro de funcionário.
 
 A tela deve ter as seguintes informações:
+   
     • Dados Pessoais
 
         o Nome
