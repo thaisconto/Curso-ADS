@@ -7,41 +7,31 @@ A tela deve ter as seguintes informações:
     • Dados Pessoais
 
         o Nome
-
         o Telefone
-
         o E-mail
-
         o CPF
-
         o RG
 
     • Cargo
 
         o Nome
-
         o Salário
 
     • Setor
 
         o Sigla
-
         o Nome
 
     • Convênio
 
         o Nome
-
         o Valor para o titular
-
         o Valor para o dependente
 
 O cargo, setor e convênio devem ser selecionados pelo usuário, onde ao selecionar completa as demais informações. Para isso, utilize os seguintes web services:
 
     • https://aulalp2024.free.beeceptor.com/setor
-
     • https://aulalp2024.free.beeceptor.com/cargo
-
     • https://aulalp2024.free.beeceptor.com/convenio
 
 
