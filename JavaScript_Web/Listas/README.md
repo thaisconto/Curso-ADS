@@ -17,3 +17,7 @@
 [Lista 7](https://github.com/thaisconto/Curso-ADS/tree/main/JavaScript_Web/Listas/Lista7) : FlexBox
 
 [Lista 8](https://github.com/thaisconto/Curso-ADS/tree/main/JavaScript_Web/Listas/Lista8) : DOM
+
+[Lista 9](https://github.com/thaisconto/Curso-ADS/tree/main/JavaScript_Web/Listas/Lista9) : DOM + AJAX
+
+[Lista 10](https://github.com/thaisconto/Curso-ADS/tree/main/JavaScript_Web/Listas/Lista10) : DOM + Métodos HTTP

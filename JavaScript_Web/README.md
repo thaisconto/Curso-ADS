@@ -74,6 +74,28 @@ Objetivos:
 
 Exercícios realizados durante a aula disponíveis [aqui](https://github.com/thaisconto/Curso-ADS/tree/main/JavaScript_Web/aula8)
 
+## Aula 9: DOM e AJAX
+
+Objetivos:
+  - Aprender sobre requisições assíncronas em JavaScrip;
+
+  - Implementar requisições assíncronas usando Async/Await;
+
+  - Implementar requisições assíncronas usando promises.
+
+
+## Aula 10: AJAX e Métodos HTTP
+
+Objetivos:
+  - O que é Springboot
+
+  - Desenvolvimento com Springboot
+
+  - Configuração do ambiente de desenvolvimento
+
+
+Exercícios realizados durante a aula disponíveis [aqui](https://github.com/thaisconto/Curso-ADS/tree/main/JavaScript_Web/aula9)
+
 # Lista de exercícios:
 
 [Todas](https://github.com/thaisconto/Curso-ADS/tree/main/JavaScript_Web/Listas)
@@ -93,3 +115,7 @@ Exercícios realizados durante a aula disponíveis [aqui](https://github.com/tha
 [Lista 7](https://github.com/thaisconto/Curso-ADS/tree/main/JavaScript_Web/Listas/Lista7) : FlexBox
 
 [Lista 8](https://github.com/thaisconto/Curso-ADS/tree/main/JavaScript_Web/Listas/Lista8) : DOM
+
+[Lista 9](https://github.com/thaisconto/Curso-ADS/tree/main/JavaScript_Web/Listas/Lista9) : DOM + AJAX
+
+[Lista 10](https://github.com/thaisconto/Curso-ADS/tree/main/JavaScript_Web/Listas/Lista10) : DOM + Métodos HTTP
