@@ -94,7 +94,17 @@ Objetivos:
   - Configuração do ambiente de desenvolvimento
 
 
-Exercícios realizados durante a aula disponíveis [aqui](https://github.com/thaisconto/Curso-ADS/tree/main/JavaScript_Web/aula9)
+Exercícios realizados durante a aula disponíveis [aqui](https://github.com/thaisconto/Curso-ADS/tree/main/JavaScript_Web/aula10)
+
+## Aula 11 e 12: BootsTrap
+
+Objetivos:
+  - O que é BootsTrap
+
+  - Desenvolvimento com BootsTra
+
+
+Exercícios realizados durante a aula disponíveis [aqui](https://github.com/thaisconto/Curso-ADS/tree/main/JavaScript_Web/aula11)
 
 # Lista de exercícios:
 
@@ -119,3 +129,7 @@ Exercícios realizados durante a aula disponíveis [aqui](https://github.com/tha
 [Lista 9](https://github.com/thaisconto/Curso-ADS/tree/main/JavaScript_Web/Listas/Lista9) : DOM + AJAX
 
 [Lista 10](https://github.com/thaisconto/Curso-ADS/tree/main/JavaScript_Web/Listas/Lista10) : DOM + Métodos HTTP
+
+[Lista 11](https://github.com/thaisconto/Curso-ADS/tree/main/JavaScript_Web/Listas/Lista11) : BOOTSTRAP
+
+[Lista 12](https://github.com/thaisconto/Curso-ADS/tree/main/JavaScript_Web/Listas/Lista12) : BOOTSTRAP

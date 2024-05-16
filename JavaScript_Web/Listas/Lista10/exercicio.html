@@ -1,24 +1,111 @@
-<html><link href="exercicio.css" rel="stylesheet" />
-   
-    <head>
-        <title>Exercicio</title>
-    </head>
-    
-    <body>
-        <div class="container">
-            <div class="sidebar">
-                <ul>
-                    <li><a href="#" onclick="showActivity('html')">Tags HTML</a></li>
-                    <li><a href="#" onclick="showActivity('css')">CSS Fundamentos</a></li>
-                    <li><a href="#" onclick="showActivity('flexbox')">Flexbox</a></li>
-                    <li><a href="#" onclick="showActivity('dom')">DOM</a></li>
-                </ul>
-            </div>
-            <div class="content" id="content">
-                Selecione uma atividade para começar.
-            </div>
-        </div>
-        <script src="exercicio.js"></script>
-    </body>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Exercicio</title>
+    <link href="exercicio.css">
+</head>
+<body>
+    </div><div class="container">
+        <h1>Dados Pessoais</h1>
 
+        <form action="submit.php" method="post">
+            <section class="section">
+                <h2>Dados Pessoais</h2>
+
+                <div class="row">
+                    <div class="col">
+                        <label for="nome">Nome:</label>
+                        <input type="text" id="nome" name="nome" required>
+                    </div>
+
+                    <div class="col">
+                        <label for="telefone">Telefone:</label>
+                        <input type="tel" id="telefone" name="telefone" required>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col">
+                        <label for="email">E-mail:</label>
+                        <input type="email" id="email" name="email" required>
+                    </div>
+
+                    <div class="col">
+                        <label for="cpf">CPF:</label>
+                        <input type="text" id="cpf" name="cpf" required>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col">
+                        <label for="rg">RG:</label>
+                        <input type="text" id="rg" name="rg" required>
+                    </div>
+                </div>
+            </section>
+
+            <section class="section">
+                <h2>Cargo</h2>
+
+                <div class="row">
+                    <div class="col">
+                        <label for="cargo">Cargo:</label>
+                        <select id="cargo" name="cargo" id="cargo" required>
+                            <option value="">Selecione</option>
+                            </select>
+                    </div>
+
+                    <div class="col">
+                        <label for="cargoSalario">Salário:</label>
+                        <input type="number" id="cargoSalario" name="cargoSalario" required disabled>
+                    </div>
+                </div>
+            </section>
+
+            <section class="section">
+                <h2>Setor</h2>
+
+                <div class="row">
+                    <div class="col">
+                        <label for="setorSigla">Sigla:</label>
+                        <input type="text" id="setorSigla" name="setorSigla" required disabled>
+                    </div>
+
+                    <div class="col">
+                        <label for="setorNome">Setor:</label>
+                        <input type="text" id="setorNome" name="setorNome" required disabled>
+                    </div>
+                </div>
+            </section>
+
+            <section class="section">
+                <h2>Convênio</h2>
+
+                <div class="row">
+                    <div class="col">
+                        <label for="convenio">Convênio:</label>
+                        <input type="text" id="convenio" name="convenio" required disabled>
+                            <option value="">Selecione</option>
+                            </select>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col">
+                        <label for="convenioTitularValor">Valor para o Titular:</label>
+                        <input type="number" id="convenioTitularValor" name="convenioTitularValor" required disabled>
+                    </div>
+
+                    <div class="col">
+                        <label for="convenioDependenteValor">Valor para o Dependente:</label>
+                        <input type="number" id="convenioDependenteValor" name="convenioDependenteValor" required disabled>
+                    </div>
+                </div>
+            </section>
+
+            <button type="submit">Enviar</button>
+        </form>
+    </div>
+    <script src="exercicio.js"></script>
+</body>
 </html>

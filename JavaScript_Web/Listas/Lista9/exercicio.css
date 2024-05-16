@@ -5,6 +5,7 @@
 .sidebar {
     width: 200px;
     background-color: #f4f4f4;
+    float: left;
 }
 
 .sidebar ul {

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Página de Demonstração do Bootstrap</title>
+    <!-- CSS do Bootstrap (instalado com o Node.js) -->
+    <link href="/node_modules/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body>
+    <div class="container mt-5">
+        <h1>Página de Demonstração do Bootstrap</h1>
+        <p>Esta página demonstra alguns componentes e ações do Bootstrap.</p>
+        <div class="alert alert-primary" role="alert">
+            Esta é uma mensagem de alerta.
+        </div>
+        <button class="btn btn-primary" id="btnExemplo">Clique Aqui</button>
+    </div>
+    <!-- JavaScript do Bootstrap (instalado com o Node.js) -->
+    <script src="/node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        // Adiciona um evento de clique ao botão
+        document.getElementById('btnExemplo').addEventListener('click', function() {
+            // Exibe um modal do Bootstrap
+            var myModal = new bootstrap.Modal(document.getElementById('exampleModal'));
+            myModal.show();
+        });
+    </script>
+    <!-- Exemplo de Modal do Bootstrap -->
+    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Modal de Exemplo</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    Este é um modal de exemplo do Bootstrap.
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fechar</button>
+                    <button type="button" class="btn btn-primary">Salvar mudanças</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

@@ -42,6 +42,6 @@ Para salvar as informações foi passado o web service:
 Importante: O chefe requisitou que os dados de cargo, setor e convênio devem ser baixados em paralelo no momento que a tela de cadastro é carregada com o método Promise.All.
 
 ### Resulução
-[HTML](https://github.com/thaisconto/Curso-ADS/tree/main/JavaScript_Web/Listas/Lista9/exercicio.html)
-[CSS](https://github.com/thaisconto/Curso-ADS/tree/main/JavaScript_Web/Listas/Lista9/exercicio.css)
-[JS](https://github.com/thaisconto/Curso-ADS/tree/main/JavaScript_Web/Listas/Lista9/exercicio.js)
+[HTML](https://github.com/thaisconto/Curso-ADS/tree/main/JavaScript_Web/Listas/Lista10/exercicio.html)
+[CSS](https://github.com/thaisconto/Curso-ADS/tree/main/JavaScript_Web/Listas/Lista10/exercicio.css)
+[JS](https://github.com/thaisconto/Curso-ADS/tree/main/JavaScript_Web/Listas/Lista10/exercicio.js)

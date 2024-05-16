@@ -18,10 +18,10 @@
 
 [Lista 8](https://github.com/thaisconto/Curso-ADS/tree/main/JavaScript_Web/Listas/Lista8) : DOM
 
-<<<<<<< HEAD
 [Lista 9](https://github.com/thaisconto/Curso-ADS/tree/main/JavaScript_Web/Listas/Lista9) : DOM + AJAX
 
 [Lista 10](https://github.com/thaisconto/Curso-ADS/tree/main/JavaScript_Web/Listas/Lista10) : DOM + Métodos HTTP
-=======
-[Lista 9](https://github.com/thaisconto/Curso-ADS/tree/main/JavaScript_Web/Listas/Lista9) : AJAX
->>>>>>> b3d6607c8f6145b1b77b3fc5b605ce2acd390700
+
+[Lista 11](https://github.com/thaisconto/Curso-ADS/tree/main/JavaScript_Web/Listas/Lista11) : BOOTSTRAP
+
+[Lista 12](https://github.com/thaisconto/Curso-ADS/tree/main/JavaScript_Web/Listas/Lista12) : BOOTSTRAP
