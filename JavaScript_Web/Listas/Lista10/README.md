@@ -6,7 +6,6 @@ trabalho, precisa desenvolver uma tela de cadastro de funcionário.
 A tela deve ter as seguintes informações:
    
     • Dados Pessoais
-
         o Nome
         o Telefone
         o E-mail
@@ -14,17 +13,14 @@ A tela deve ter as seguintes informações:
         o RG
 
     • Cargo
-
         o Nome
         o Salário
 
     • Setor
-
         o Sigla
         o Nome
 
     • Convênio
-
         o Nome
         o Valor para o titular
         o Valor para o dependente
@@ -43,6 +39,19 @@ Para salvar as informações foi passado o web service:
 Importante: O chefe requisitou que os dados de cargo, setor e convênio devem ser baixados em paralelo no momento que a tela de cadastro é carregada com o método Promise.All.
 
 ### Resulução
+
+Foi criada a minha própria webservice:
+
+https://exercicio.free.beeceptor.com/cargo
+https://exerciciothais.free.beeceptor.com/
+
+Tela antes de selecionar:
+
+Tela após selecionar um cargo (com campos preenchidos automaticamente)
+
+
+
+Código
 [HTML](https://github.com/thaisconto/Curso-ADS/tree/main/JavaScript_Web/Listas/Lista10/exercicio.html)
 [CSS](https://github.com/thaisconto/Curso-ADS/tree/main/JavaScript_Web/Listas/Lista10/exercicio.css)
 [JS](https://github.com/thaisconto/Curso-ADS/tree/main/JavaScript_Web/Listas/Lista10/exercicio.js)
