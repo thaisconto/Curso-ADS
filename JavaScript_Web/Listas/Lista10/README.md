@@ -31,6 +31,7 @@ O cargo, setor e convênio devem ser selecionados pelo usuário, onde ao selecio
     • https://aulalp2024.free.beeceptor.com/cargo
     • https://aulalp2024.free.beeceptor.com/convenio
 
+## Resulução
 
 Para salvar as informações foi passado o web service:
 
@@ -38,7 +39,7 @@ Para salvar as informações foi passado o web service:
 
 Importante: O chefe requisitou que os dados de cargo, setor e convênio devem ser baixados em paralelo no momento que a tela de cadastro é carregada com o método Promise.All.
 
-### Resulução
+
 
 Foi criada a minha própria webservice:
 
@@ -47,11 +48,14 @@ https://exerciciothais.free.beeceptor.com/
 
 Tela antes de selecionar:
 
+<img src = print1.png>
+
 Tela após selecionar um cargo (com campos preenchidos automaticamente)
 
+<img src = print2.png>
 
 
-Código
+### Código
 [HTML](https://github.com/thaisconto/Curso-ADS/tree/main/JavaScript_Web/Listas/Lista10/exercicio.html)
 [CSS](https://github.com/thaisconto/Curso-ADS/tree/main/JavaScript_Web/Listas/Lista10/exercicio.css)
 [JS](https://github.com/thaisconto/Curso-ADS/tree/main/JavaScript_Web/Listas/Lista10/exercicio.js)
