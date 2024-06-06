@@ -22,6 +22,9 @@ Esse projeto pode ser expandido adicionando funcionalidades extras, como a capac
 Página inicial
 <img src = print1.png>
 
+Adicionando uma tarefa: caso não seja inserido nada, emitirá uma mensagem de alerta
+<img src = print6.png>
+
 Após adicionar a tarefa, ela será incluida na tabela dos itens "A fazer"
 <img src = print2.png>
 
