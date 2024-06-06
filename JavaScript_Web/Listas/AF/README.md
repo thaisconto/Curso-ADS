@@ -11,18 +11,19 @@ JavaScript: Use JavaScript para adicionar interatividade à sua página. Por exe
 
 Esse projeto pode ser expandido adicionando funcionalidades extras, como a capacidade de editar tarefas, classificar tarefas por prioridade, adicionar prazos às tarefas, entre outras. 
 
-### Resulução
-#### Código: 
+# Resulução
+## Código
 [HTML](https://github.com/thaisconto/Curso-ADS/tree/main/JavaScript_Web/Listas/AF/index.html)
-
 [CSS](https://github.com/thaisconto/Curso-ADS/tree/main/JavaScript_Web/Listas/AF/styles.css)
-
 [JS](https://github.com/thaisconto/Curso-ADS/tree/main/JavaScript_Web/Listas/AF/script.js)
 
-#### Como funciona
+## Como funciona
 
 Página inicial
 <img src = print1.png>
+
+Adicionando uma tarefa: caso não seja inserido nada, emitirá uma mensagem de alerta
+<img src = print6.png>
 
 Após adicionar a tarefa, ela será incluida na tabela dos itens "A fazer"
 <img src = print2.png>
