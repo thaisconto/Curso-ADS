@@ -1,4 +1,5 @@
-Vocês irão desenvolver uma ToDo list usando todas as tecnologias que vimos no semestre.
+# Objetivo
+Desenvolver uma ToDo list usando todas as tecnologias que vimos no semestre.
 
 HTML: Use HTML para estruturar a página web. Crie elementos como cabeçalho, corpo e rodapé. 
 
@@ -11,4 +12,30 @@ JavaScript: Use JavaScript para adicionar interatividade à sua página. Por exe
 Esse projeto pode ser expandido adicionando funcionalidades extras, como a capacidade de editar tarefas, classificar tarefas por prioridade, adicionar prazos às tarefas, entre outras. 
 
 ### Resulução
+#### Código: 
 [HTML](https://github.com/thaisconto/Curso-ADS/tree/main/JavaScript_Web/Listas/AF/index.html)
+
+[CSS](https://github.com/thaisconto/Curso-ADS/tree/main/JavaScript_Web/Listas/AF/styles.css)
+
+[JS](https://github.com/thaisconto/Curso-ADS/tree/main/JavaScript_Web/Listas/AF/script.js)
+
+#### Como funciona
+
+Página inicial
+<img src = print1.png>
+
+Após adicionar a tarefa, ela será incluida na tabela dos itens "A fazer"
+<img src = print2.png>
+
+Apósclicar no botão "começar", ela será incluida na tabela dos itens "Fazendo"
+<img src = print3.png>
+
+Apósclicar no botão "concluir", ela será incluida na tabela dos itens "Finalizado"
+<img src = print4.png>
+
+Em qualquer momento pode-se clicar no botão "deletar", que a tarefa será excluida
+<img src = print1.png>
+
+Pode-se adicionar várias tarefas, conforme necessidade
+<img src = print5.png>
+
