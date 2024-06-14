@@ -1,24 +1,21 @@
-/* Definições básicas */
 body {
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif, sans-serif;
-    background-color: #e6acf3; /* Cor de fundo da página */
+    background-color: #e6acf3;
     margin: 0;
     padding: 0;
 }
 
-/* Estilização do cabeçalho */
 .header {
-    background-color: #8f08f6; /* Cor de fundo do cabeçalho */
-    color: rgb(211, 149, 247); /* Cor do texto do cabeçalho */
+    background-color: #8f08f6;
+    color: rgb(211, 149, 247);
     padding: 20px;
     text-align: center;
     margin-bottom: 20px;
 }
 
-/* Estilização do rodapé */
 .footer {
-    background-color: #8f08f6; /* Cor de fundo do rodapé */
-    color: rgb(211, 149, 247); /* Cor do texto do rodapé */
+    background-color: #8f08f6;
+    color: rgb(211, 149, 247);
     padding: 10px;
     text-align: center;
     position: fixed;
@@ -26,27 +23,22 @@ body {
     width: 100%;
 }
 
-/* Estilização dos itens da lista */
 .list-group-item {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background-color: rgb(188, 117, 239); /* Cor de fundo dos itens da lista */
-    margin-bottom: 5px;
+    background-color: rgb(188, 117, 239);
     border: 1px solid #5a0360;
 }
 
-/* Estilização dos botões */
 .btn-group .btn {
     margin-left: 5px;
 }
 
-/* Estilização dos títulos */
 h3 {
-    color: #403f40; /* Cor dos títulos das colunas */
+    color: #403f40;
 }
 
-/* Margem no rodapé para evitar sobreposição com o rodapé fixo */
 main {
     margin-bottom: 60px;
 }

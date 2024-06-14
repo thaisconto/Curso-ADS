@@ -40,3 +40,7 @@ Em qualquer momento pode-se clicar no botão "deletar", que a tarefa será exclu
 Pode-se adicionar várias tarefas, conforme necessidade
 <img src = print5.png>
 
+Pode-se verificar a responsividade quando a página sofre alteração de tamanho.
+<img src = print7.png>
+
+
