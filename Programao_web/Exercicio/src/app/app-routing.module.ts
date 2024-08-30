@@ -15,7 +15,11 @@ const routes: Routes = [
   {path: 'home', component:HomeComponent},
   {path: 'about', component:AboutComponent},
   {path: 'feature', component:FeatureComponent},
-  {path: 'feature/:id', component:Tema1Component},
+  {path: 'feature/tema1', component:Tema1Component},
+  {path: 'feature/tema2', component:Tema2Component},
+  {path: 'feature/tema3', component:Tema3Component},
+  {path: 'feature/tema4', component:Tema4Component},
+  {path: 'feature/tema5', component:Tema5Component},
   {path: '**', component: NotfoundComponent}
 ];
 
