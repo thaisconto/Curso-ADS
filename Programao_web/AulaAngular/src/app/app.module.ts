@@ -10,6 +10,8 @@ import { AboutComponent } from './about/about.component';
 import { NotfoundComponent } from './notfound/notfound.component';
 import { FormsModule } from '@angular/forms';
 import { CalcularJurosSimplesComponent } from './calcular-juros-simples/calcular-juros-simples.component';
+import { ExemploDiretivaComponent } from './exemplo-diretiva/exemplo-diretiva.component';
+import { TarefasComponent } from './tarefas/tarefas.component';
 
 @NgModule({
   declarations: [
@@ -18,7 +20,9 @@ import { CalcularJurosSimplesComponent } from './calcular-juros-simples/calcular
     FeatureComponent,
     AboutComponent,
     NotfoundComponent,
-    CalcularJurosSimplesComponent
+    CalcularJurosSimplesComponent,
+    ExemploDiretivaComponent,
+    TarefasComponent
   ],
   imports: [
     BrowserModule,
