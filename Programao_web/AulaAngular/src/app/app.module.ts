@@ -16,6 +16,7 @@ import { ClienteComponent } from './cliente/cliente.component';
 import { ListaClienteComponent } from './cliente/lista-cliente/lista-cliente.component';
 import { ListaCompraClienteComponent } from './cliente/lista-compra-cliente/lista-compra-cliente.component';
 import { EditarClienteComponent } from './cliente/editar-cliente/editar-cliente.component';
+import { LoginComponent } from './cliente/login/login.component';
 
 @NgModule({
   declarations: [
@@ -30,7 +31,8 @@ import { EditarClienteComponent } from './cliente/editar-cliente/editar-cliente.
     ClienteComponent,
     ListaClienteComponent,
     ListaCompraClienteComponent,
-    EditarClienteComponent
+    EditarClienteComponent,
+    LoginComponent
   ],
   imports: [
     BrowserModule,
