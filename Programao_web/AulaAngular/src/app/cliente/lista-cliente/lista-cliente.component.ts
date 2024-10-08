@@ -1,15 +1,15 @@
 import { Component } from '@angular/core';
-import { Cliente } from '../../models/Cliente';
+import { Cliente } from 'src/app/models/Cliente';
 
 @Component({
   selector: 'app-lista-cliente',
   templateUrl: './lista-cliente.component.html',
-  styleUrl: './lista-cliente.component.css'
+  styleUrls: ['./lista-cliente.component.css'],
 })
 export class ListaClienteComponent {
   clientes: Cliente[] = [
-    {id:1, nome:'Thais', celular: '11999999999', email:'email@email.com'},
-    {id:2, nome:'Marcos', celular: '22999999999', email:'email@email.com'},
-    {id:3, nome:'Gustavo', celular: '33999999999', email:'email@email.com'},
-];
+    { id: 1, nome: 'João', celular: '999999999', email: 'teste@teste' },
+    { id: 2, nome: 'José', celular: '999999999', email: 'teste@teste' },
+    { id: 3, nome: 'Maria', celular: '999999999', email: 'teste@teste' },
+  ];
 }

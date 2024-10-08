@@ -7,16 +7,18 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { HomeComponent } from './home/home.component';
 import { FeatureComponent } from './feature/feature.component';
 import { AboutComponent } from './about/about.component';
-import { NotfoundComponent } from './notfound/notfound.component';
-import { FormsModule } from '@angular/forms';
+import { NotFoundComponent } from './not-found/not-found.component';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { CalcularJurosSimplesComponent } from './calcular-juros-simples/calcular-juros-simples.component';
 import { ExemploDiretivaComponent } from './exemplo-diretiva/exemplo-diretiva.component';
-import { TarefasComponent } from './tarefas/tarefas.component';
+import { TarefaComponent } from './tarefa/tarefa.component';
 import { ClienteComponent } from './cliente/cliente.component';
 import { ListaClienteComponent } from './cliente/lista-cliente/lista-cliente.component';
 import { ListaCompraClienteComponent } from './cliente/lista-compra-cliente/lista-compra-cliente.component';
 import { EditarClienteComponent } from './cliente/editar-cliente/editar-cliente.component';
-import { LoginComponent } from './cliente/login/login.component';
+import { FormTemplateDriveComponent } from './form-template-drive/form-template-drive.component';
+import { FormReactiveComponent } from './form-reactive/form-reactive.component';
+import { FormExercicioComponent } from './form-exercicio/form-exercicio.component';
 
 @NgModule({
   declarations: [
@@ -24,23 +26,26 @@ import { LoginComponent } from './cliente/login/login.component';
     HomeComponent,
     FeatureComponent,
     AboutComponent,
-    NotfoundComponent,
+    NotFoundComponent,
     CalcularJurosSimplesComponent,
     ExemploDiretivaComponent,
-    TarefasComponent,
+    TarefaComponent,
     ClienteComponent,
     ListaClienteComponent,
     ListaCompraClienteComponent,
     EditarClienteComponent,
-    LoginComponent
+    FormTemplateDriveComponent,
+    FormReactiveComponent,
+    FormExercicioComponent,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     NgbModule,
-    FormsModule
+    FormsModule,
+    ReactiveFormsModule,
   ],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
 })
-export class AppModule { }
+export class AppModule {}

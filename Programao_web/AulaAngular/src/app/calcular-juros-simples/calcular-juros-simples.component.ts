@@ -3,7 +3,7 @@ import { Component } from '@angular/core';
 @Component({
   selector: 'app-calcular-juros-simples',
   templateUrl: './calcular-juros-simples.component.html',
-  styleUrl: './calcular-juros-simples.component.css'
+  styleUrls: ['./calcular-juros-simples.component.css']
 })
 export class CalcularJurosSimplesComponent {
   public capitalInicial : number = 0;
@@ -16,6 +16,6 @@ export class CalcularJurosSimplesComponent {
   public calcularJuros(){
     this.juros = this.capitalInicial * (this.taxaJuros/100) * this.tempo;
     this.montante = this.juros + this.capitalInicial;
-  }
 
+}
 }

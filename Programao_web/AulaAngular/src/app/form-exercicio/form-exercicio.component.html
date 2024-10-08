@@ -1,0 +1,56 @@
+<form [formGroup]="form" (ngSubmit)="salvar()">
+
+  <!-- RA -->
+  <label class="form-label">RA*</label>
+  <input type="text" class="form-control" formControlName="ra" />
+
+  <!-- Mensagem de erro -->
+  <div class="error"
+    *ngIf="form.get('ra')?.invalid && (form.get('ra')?.dirty || form.get('ra')?.touched)">
+    <div *ngIf="form.get('ra')?.errors?.['required']">RA é obrigatório</div>
+    <div *ngIf="form.get('ra')?.errors?.['minlength'] || form.get('ra')?.errors?.['maxlength']">RA deve ter entre 5 e 10 dígitos</div>
+  </div>
+
+  <!-- NOME -->
+  <label class="form-label">Nome*</label>
+  <input type="text" class="form-control" formControlName="nome" />
+
+  <!-- Mensagem de erro, ? = se existe, touch é quando toca no campo -->
+  <div class="error"
+    *ngIf="form.get('nome')?.invalid && (form.get('nome')?.dirty || form.get('nome')?.touched)">
+    <div *ngIf="form.get('nome')?.errors?.['required']">Nome é obrigatório</div>
+  </div>
+
+  <!-- CURSO -->
+  <label class="form-label">Curso*</label>
+  <select class="form-control" formControlName="curso">
+    <option value="">Selecione o curso</option>
+    <option value="ADS">Análise e Desenvolvimento de Sistemas</option>
+    <option value="SI">Sistemas de Informação</option>
+    <option value="Jogos">Jogos Digitais</option>
+  </select>
+
+  <!-- Mensagem de erro -->
+  <div class="error"
+    *ngIf="form.get('curso')?.invalid && (form.get('curso')?.dirty || form.get('curso')?.touched)">
+    <div *ngIf="form.get('curso')?.errors?.['required']">Curso é obrigatório</div>
+  </div>
+
+  <!-- DATA MATRICULA -->
+  <label class="form-label">Data matrícula*</label>
+  <input type="date" class="form-control" formControlName="dataMatricula" />
+
+  <!-- VALOR MENSALIDADE -->
+  <label class="form-label">Valor mensalidade*</label>
+  <input type="numer" class="form-control" formControlName="valorMensalidade" />
+
+  <!-- Mensagem de erro -->
+  <div class="error"
+    *ngIf="form.get('valorMensalidade')?.invalid && (form.get('valorMensalidade')?.dirty || form.get('valorMensalidade')?.touched)">
+    <div *ngIf="form.get('valorMensalidade')?.errors?.['required']">Valor mensalidade é obrigatório</div>
+  </div>
+
+  <!-- BOTÃO - desabilitado, se form valido habilitar -->
+  <button [disabled]="!form.valid" type="submit" class="btn btn-primary">Salvar</button>
+
+</form>

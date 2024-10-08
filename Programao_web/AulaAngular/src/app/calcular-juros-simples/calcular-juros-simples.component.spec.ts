@@ -8,7 +8,7 @@ describe('CalcularJurosSimplesComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [CalcularJurosSimplesComponent]
+      declarations: [ CalcularJurosSimplesComponent ]
     })
     .compileComponents();
 

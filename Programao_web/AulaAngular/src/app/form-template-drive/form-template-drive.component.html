@@ -1,0 +1,50 @@
+<form #form="ngForm" (ngSubmit)="salvar(form)">
+
+  <!-- NOME -->
+  <div class="form-group">
+    <label for="name">Nome</label>
+    <input [(ngModel)]="cliente.nome"
+    type="text" class="form-control"
+    id="nome" name="nome" required>
+
+    <!-- Validando obrigatoriedade de nome -->
+    <div *ngIf="form.submitted && form.controls['nome'].errors" class="error">
+      <div *ngIf="form.controls['nome'].errors['required']">Nome é obrigatório</div>
+    </div>
+
+  </div>
+
+  <!-- CELULAR -->
+  <div class="form-group">
+    <label for="name">Celular</label>
+    <input [(ngModel)]="cliente.celular"
+    type="text" class="form-control"
+    id="celular" name="celular" required>
+
+  <!-- Validando obrigatoriedade de celular -->
+  <div *ngIf="form.submitted && form.controls['celular'].errors" class="error">
+    <div *ngIf="form.controls['celular'].errors['required']">Celular é obrigatório</div>
+  </div>
+
+  </div>
+
+  <!-- E-MAIL -->
+  <div class="form-group">
+    <label for="name">E-mail</label>
+    <input [(ngModel)]="cliente.email"
+    type="email" class="form-control"
+    id="email" name="email" required email>
+
+    <!-- Validando obrigatoriedade e tipo de email -->
+  <div *ngIf="form.submitted && form.controls['email'].errors" class="error">
+    <div *ngIf="form.controls['email'].errors['required']">E-mail é obrigatório</div>
+    <div *ngIf="form.controls['email'].errors['email']">E-mail inválido</div>
+  </div>
+
+  </div>
+
+  <!-- BOTÃO -->
+  <button type="submit" class="btn btn-primary">Salvar</button>
+
+</form>
+

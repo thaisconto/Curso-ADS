@@ -1,0 +1,10 @@
+<img [src]="caminhoLogo" />
+
+<input type="number" [(ngModel)]="numero1" placeholder="Numero 1" />
+<input type="number" [(ngModel)]="numero2" placeholder="Numero 2" />
+
+<p>O número 1 é: {{numero1}}</p>
+<p>O número 2 é: {{numero2}}</p>
+
+<button (click)="somar()">Somar</button>
+<p>O resultado da soma é: {{resultado}}</p>

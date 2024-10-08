@@ -1,0 +1,31 @@
+<form [formGroup]="form" (ngSubmit)="salvar()">
+
+  <!-- NOME -->
+  <label class="form-label">Nome</label>
+  <input type="text" class="form-control" formControlName="nome" />
+
+  <!-- Mensagem de erro, ? = se existe, touch é quando toca no campo -->
+  <div class="error"
+    *ngIf="form.get('nome')?.invalid && (form.get('nome')?.dirty || form.get('nome')?.touched)">
+    <div *ngIf="form.get('nome')?.errors?.['required']">Nome é obrigatório</div>
+  </div>
+
+  <!-- CELULAR -->
+  <label class="form-label">Celular</label>
+  <input type="text" class="form-control" formControlName="celular" />
+
+  <!-- E-MAIL -->
+  <label class="form-label">E-mail</label>
+  <input type="email" class="form-control" formControlName="email" />
+
+  <!-- Mensagem de erro, ? = se existe, touch é quando toca no campo -->
+  <div class="error"
+    *ngIf="form.get('email')?.invalid && (form.get('email')?.dirty || form.get('email')?.touched)">
+    <div *ngIf="form.get('email')?.errors?.['required']">E-mail é obrigatório</div>
+    <div *ngIf="form.get('email')?.errors?.['email']">E-mail inválido</div>
+  </div>
+
+  <!-- BOTÃO - desabilitado, se form valido habilitar -->
+  <button [disabled]="!form.valid" type="submit" class="btn btn-primary">Salvar</button>
+
+</form>

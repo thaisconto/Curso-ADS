@@ -8,7 +8,7 @@ describe('ExemploDiretivaComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ExemploDiretivaComponent]
+      declarations: [ ExemploDiretivaComponent ]
     })
     .compileComponents();
 

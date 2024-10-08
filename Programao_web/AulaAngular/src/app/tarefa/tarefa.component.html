@@ -1,0 +1,14 @@
+<ul>
+  <li *ngFor="let tarefa of tarefas">
+    <span
+      [ngStyle]="{
+        'text-decoration': tarefa.concluida ? 'line-through' : 'none'
+      }"
+    >
+      {{ tarefa.descricao }}
+    </span>
+    <button (click)="alternarConclusao(tarefa)">
+      {{ tarefa.concluida ? "Desfazer" : "Concluir" }}
+    </button>
+  </li>
+</ul>
