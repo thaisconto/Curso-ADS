@@ -14,6 +14,7 @@ import { EditarClienteComponent } from './cliente/editar-cliente/editar-cliente.
 import { FormTemplateDriveComponent } from './form-template-drive/form-template-drive.component';
 import { FormReactiveComponent } from './form-reactive/form-reactive.component';
 import { FormExercicioComponent } from './form-exercicio/form-exercicio.component';
+import { ExercicioAc2Component } from './exercicio-ac2/exercicio-ac2.component';
 
 const routes: Routes = [
   { path: '', redirectTo: '/home', pathMatch: 'full' },
@@ -35,6 +36,7 @@ const routes: Routes = [
   { path: 'form-template', component: FormTemplateDriveComponent},
   { path: 'form-reactive', component: FormReactiveComponent},
   { path: 'form-exercicio', component: FormExercicioComponent},
+  { path: 'exercicio-ac2', component: ExercicioAc2Component},
   { path: '**', component: NotFoundComponent },
 ];
 

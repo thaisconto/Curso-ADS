@@ -1,0 +1,68 @@
+<div class="container mt-4">
+  <!-- Título da página -->
+  <h2 class="text-center">Lista de Compras</h2>
+
+  <!-- Formulário -->
+  <form [formGroup]="form" (ngSubmit)="adicionar()" class="mt-4">
+    <div class="mb-3">
+      <label class="form-label">Produto*</label>
+      <input type="text" class="form-control" formControlName="produto" placeholder="Digite o nome do produto" />
+      <div class="text-danger" *ngIf="form.get('produto')?.invalid && (form.get('produto')?.dirty || form.get('produto')?.touched)">
+        <small *ngIf="form.get('produto')?.errors?.['required']">Produto é obrigatório.</small>
+      </div>
+    </div>
+
+    <div class="mb-3">
+      <label class="form-label">Quantidade*</label>
+      <input type="number" class="form-control" formControlName="quantidade" placeholder="Digite a quantidade" />
+      <div class="text-danger" *ngIf="form.get('quantidade')?.invalid && (form.get('quantidade')?.dirty || form.get('quantidade')?.touched)">
+        <small *ngIf="form.get('quantidade')?.errors?.['required']">Quantidade é obrigatória.</small>
+      </div>
+    </div>
+
+    <div class="mb-3">
+      <label class="form-label">Unidade*</label>
+      <select class="form-select" formControlName="unidade">
+        <option value="">Selecione a unidade</option>
+        <option value="un">Unidade</option>
+        <option value="kg">Kg</option>
+        <option value="mL">mL</option>
+      </select>
+      <div class="text-danger" *ngIf="form.get('unidade')?.invalid && (form.get('unidade')?.dirty || form.get('unidade')?.touched)">
+        <small *ngIf="form.get('unidade')?.errors?.['required']">Unidade é obrigatória.</small>
+      </div>
+    </div>
+
+    <!-- Botões -->
+    <div class="d-flex justify-content-between">
+      <button [disabled]="!form.valid" type="submit" class="btn btn-primary">Adicionar</button>
+      <button type="button" class="btn btn-secondary" (click)="listar()">Listar Itens</button>
+    </div>
+  </form>
+
+  <!-- Tabela -->
+  <div class="mt-4" *ngIf="mostrarTabela && listaDeCompras.length > 0">
+    <h3 class="text-center">Itens na Lista</h3>
+    <table class="table table-striped mt-3">
+      <thead>
+        <tr>
+          <th>Produto</th>
+          <th>Quantidade</th>
+          <th>Unidade</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let item of listaDeCompras">
+          <td>{{ item.produto }}</td>
+          <td>{{ item.quantidade }}</td>
+          <td>{{ item.unidade }}</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <!-- Mensagem caso não existam itens -->
+  <div class="alert alert-info text-center mt-4" *ngIf="mostrarTabela && listaDeCompras.length === 0">
+    Nenhum item foi adicionado à lista.
+  </div>
+</div>

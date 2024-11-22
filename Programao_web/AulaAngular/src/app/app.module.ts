@@ -19,6 +19,8 @@ import { EditarClienteComponent } from './cliente/editar-cliente/editar-cliente.
 import { FormTemplateDriveComponent } from './form-template-drive/form-template-drive.component';
 import { FormReactiveComponent } from './form-reactive/form-reactive.component';
 import { FormExercicioComponent } from './form-exercicio/form-exercicio.component';
+import { ExercicioAc2Component } from './exercicio-ac2/exercicio-ac2.component';
+
 
 @NgModule({
   declarations: [
@@ -37,6 +39,7 @@ import { FormExercicioComponent } from './form-exercicio/form-exercicio.componen
     FormTemplateDriveComponent,
     FormReactiveComponent,
     FormExercicioComponent,
+    ExercicioAc2Component,
   ],
   imports: [
     BrowserModule,

@@ -1,0 +1,17 @@
+.container {
+  max-width: 600px;
+  margin: auto;
+}
+
+h2 {
+  color: #007bff;
+  font-weight: bold;
+}
+
+button {
+  min-width: 120px;
+}
+
+.alert {
+  font-size: 1rem;
+}
