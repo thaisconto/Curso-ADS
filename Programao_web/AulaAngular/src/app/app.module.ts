@@ -20,6 +20,7 @@ import { FormTemplateDriveComponent } from './form-template-drive/form-template-
 import { FormReactiveComponent } from './form-reactive/form-reactive.component';
 import { FormExercicioComponent } from './form-exercicio/form-exercicio.component';
 import { ExercicioAc2Component } from './exercicio-ac2/exercicio-ac2.component';
+import { HttpClientModule } from '@angular/common/http';
 
 
 @NgModule({
@@ -47,6 +48,7 @@ import { ExercicioAc2Component } from './exercicio-ac2/exercicio-ac2.component';
     NgbModule,
     FormsModule,
     ReactiveFormsModule,
+    HttpClientModule,
   ],
   providers: [],
   bootstrap: [AppComponent],

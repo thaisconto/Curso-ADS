@@ -1,23 +1,43 @@
-import { ComponentFixture, TestBed } from '@angular/core/testing';
+import { Component } from '@angular/core';
+import { FormControl, FormGroup, Validators } from '@angular/forms';
+import { ProdutoService } from '../services/produto.service';
 
-import { ExercicioAc2Component } from './exercicio-ac2.component';
+@Component({
+  selector: 'app-exercicio-ac2',
+  templateUrl: './exercicio-ac2.component.html',
+  styleUrls: ['./exercicio-ac2.component.css'],
+})
+export class ExercicioAc2Component {
+  form: FormGroup;
+  listaDeCompras: any[] = [];
+  mostrarTabela: boolean = false;
 
-describe('ExercicioAc2Component', () => {
-  let component: ExercicioAc2Component;
-  let fixture: ComponentFixture<ExercicioAc2Component>;
+  // Injeção do Serviço no Construtor
+  constructor(private produtoService: ProdutoService) {
+    this.form = new FormGroup({
+      produto: new FormControl('', Validators.required),
+      unidade: new FormControl('', Validators.required),
+      quantidade: new FormControl('', Validators.required),
+    });
+  }
 
-  beforeEach(async () => {
-    await TestBed.configureTestingModule({
-      declarations: [ ExercicioAc2Component ]
-    })
-    .compileComponents();
+  adicionar() {
+    if (this.form.valid) {
+      this.listaDeCompras.push(this.form.value);
+      this.form.reset();
+    }
+  }
 
-    fixture = TestBed.createComponent(ExercicioAc2Component);
-    component = fixture.componentInstance;
-    fixture.detectChanges();
-  });
-
-  it('should create', () => {
-    expect(component).toBeTruthy();
-  });
-});
+  // esta chamando a api
+  listar() {
+    this.produtoService.obterProdutos().subscribe(
+      (produtos) => {
+        this.listaDeCompras = produtos;
+        this.mostrarTabela = true; // Exibe a tabela
+      },
+      (erro) => {
+        console.error('Erro ao obter produtos:', erro);
+      }
+    );
+  }
+}
