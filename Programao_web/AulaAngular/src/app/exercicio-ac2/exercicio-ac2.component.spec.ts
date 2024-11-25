@@ -1,43 +1,38 @@
-import { Component } from '@angular/core';
-import { FormControl, FormGroup, Validators } from '@angular/forms';
-import { ProdutoService } from '../services/produto.service';
+import { ComponentFixture, TestBed } from '@angular/core/testing';
+import { HttpClientTestingModule } from '@angular/common/http/testing';
+import { ReactiveFormsModule } from '@angular/forms';
+import { ExercicioAc2Component } from './exercicio-ac2.component';
 
-@Component({
-  selector: 'app-exercicio-ac2',
-  templateUrl: './exercicio-ac2.component.html',
-  styleUrls: ['./exercicio-ac2.component.css'],
-})
-export class ExercicioAc2Component {
-  form: FormGroup;
-  listaDeCompras: any[] = [];
-  mostrarTabela: boolean = false;
+describe('ExercicioAc2Component', () => {
+  let component: ExercicioAc2Component;
+  let fixture: ComponentFixture<ExercicioAc2Component>;
 
-  // Injeção do Serviço no Construtor
-  constructor(private produtoService: ProdutoService) {
-    this.form = new FormGroup({
-      produto: new FormControl('', Validators.required),
-      unidade: new FormControl('', Validators.required),
-      quantidade: new FormControl('', Validators.required),
-    });
-  }
+  beforeEach(async () => {
+    await TestBed.configureTestingModule({
+      declarations: [ExercicioAc2Component],
+      imports: [ReactiveFormsModule, HttpClientTestingModule],
+    }).compileComponents();
+  });
 
-  adicionar() {
-    if (this.form.valid) {
-      this.listaDeCompras.push(this.form.value);
-      this.form.reset();
-    }
-  }
+  beforeEach(() => {
+    fixture = TestBed.createComponent(ExercicioAc2Component);
+    component = fixture.componentInstance;
+    fixture.detectChanges();
+  });
 
-  // esta chamando a api
-  listar() {
-    this.produtoService.obterProdutos().subscribe(
-      (produtos) => {
-        this.listaDeCompras = produtos;
-        this.mostrarTabela = true; // Exibe a tabela
-      },
-      (erro) => {
-        console.error('Erro ao obter produtos:', erro);
-      }
-    );
-  }
-}
+  it('should create', () => {
+    expect(component).toBeTruthy();
+  });
+
+  it('should have an empty form initially', () => {
+    expect(component.form.valid).toBeFalsy();
+    expect(component.form.get('produto')?.value).toBe('');
+    expect(component.form.get('quantidade')?.value).toBe('');
+    expect(component.form.get('unidade')?.value).toBe('');
+  });
+
+  it('should validate form input', () => {
+    component.form.patchValue({ produto: 'Arroz', quantidade: 1, unidade: 'kg' });
+    expect(component.form.valid).toBeTruthy();
+  });
+});

@@ -1,7 +1,6 @@
 const produtoModel = require('../models/produto');
 
-
-//1. listar todos os produtos
+// Listar todos os produtos
 exports.obterTodos = async (req, res) => {
     try {
         const produtos = await produtoModel.find();

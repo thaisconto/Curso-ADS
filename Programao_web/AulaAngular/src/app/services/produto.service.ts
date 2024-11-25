@@ -6,11 +6,10 @@ import { Observable } from 'rxjs';
   providedIn: 'root',
 })
 export class ProdutoService {
-  private apiUrl = 'http://localhost:3000/produto'; // URL da API
+  private apiUrl = 'http://localhost:3000/produto';
 
   constructor(private http: HttpClient) {}
 
-  // Método para obter todos os produtos
   obterProdutos(): Observable<any[]> {
     return this.http.get<any[]>(this.apiUrl);
   }
