@@ -9,3 +9,13 @@ exports.obterTodos = async (req, res) => {
         res.status(400).json({ error: error });
     }
 };
+
+//cadastrar novo produto
+exports.inserir = async (req, res) => {
+    try {
+        await produtoModel.create(req.body);
+        res.status(201).json(req.body);
+    } catch (error) {
+        res.status(400).json({ error: error });
+    }
+};

@@ -22,8 +22,18 @@ export class ExercicioAc2Component {
 
   adicionar() {
     if (this.form.valid) {
-      this.listaDeCompras.push(this.form.value);
-      this.form.reset();
+      const novoProduto = this.form.value;
+
+      this.produtoService.adicionarProduto(novoProduto).subscribe({
+        next: (response) => {
+          this.listaDeCompras.push(response);
+          this.form.reset();
+          this.mostrarTabela = true;
+        },
+        error: (err) => {
+          console.error('Erro ao adicionar produto:', err);
+        },
+      });
     }
   }
 
