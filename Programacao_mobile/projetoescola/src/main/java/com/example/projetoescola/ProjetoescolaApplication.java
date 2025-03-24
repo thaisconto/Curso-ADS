@@ -26,38 +26,38 @@ public class ProjetoescolaApplication {
 		return args -> {
 
 			//INSERINDO, SALVANDO E PRINTANDO CURSOS
-		cursoRepository.salvar(
+		cursoRepository.save(
 			new Curso(null, "curso 1",2000));
-		cursoRepository.salvar(
+		cursoRepository.save(
 			new Curso(null, "curso 2", 2050));
 			System.out.println("==============");
 			System.out.println("obterTodos Cursos");
-		List<Curso> listaCursos = cursoRepository.obterTodos();
+		List<Curso> listaCursos = cursoRepository.findAll();
 		listaCursos.forEach(System.out::println);
 
 		//INSERINDO, SALVANDO E PRINTANDO CATEGORIAS-CURSOS
-		CategoriaCurso categ1 = categoriaCursoRepository.inserir(
+		CategoriaCurso categ1 = categoriaCursoRepository.save(
 			new CategoriaCurso(null, "categoria curso 1"));
-		CategoriaCurso categ2 = categoriaCursoRepository.inserir(
+		CategoriaCurso categ2 = categoriaCursoRepository.save(
 			new CategoriaCurso(null, "categoria curso 2"));
 			System.out.println("==============");
 			System.out.println("obterTodos CategoriaCursos");
-		List<CategoriaCurso> listaCategoriaCursos = categoriaCursoRepository.obterTodos();
+		List<CategoriaCurso> listaCategoriaCursos = categoriaCursoRepository.findAll();
 		listaCategoriaCursos.forEach(System.out::println);
 
 		//OBTENDO CURSO POR NOME
 		System.out.println("==============");
 		System.out.println("obterPorNome CategoriaCursos: nome = categoria curso 2");
-		listaCategoriaCursos = categoriaCursoRepository.obterPorNome("categoria curso 2");
+		listaCategoriaCursos = categoriaCursoRepository.findByNome("categoria curso 2");
 		listaCategoriaCursos.forEach(System.out::println);
-
+ 
 		//RELACIONANDO CURSO COM CATEGORIA-CURSO E PRINTANDO
 		System.out.println("==============");
 		System.out.println("obterPorNome o curso, já com o relacionamento da categoria");
-		Curso curso = cursoRepository.obterPorNome("curso 1").get(0);
+		Curso curso = cursoRepository.findByNome("curso 1").get(0);
 		curso.setCategoriaCurso(categ2);
-		cursoRepository.salvar(curso);
-		listaCursos = cursoRepository.obterPorNome("curso 1");
+		cursoRepository.save(curso);
+		listaCursos = cursoRepository.findByNome("curso 1");
 		listaCursos.forEach(System.out::println);
 
 		// INSERINDO E PRINTANDO PESSOAS
@@ -68,13 +68,14 @@ public class ProjetoescolaApplication {
 				new Pessoa(null, "Pessoa 2"));
 		List<Pessoa> listaPessoas = pessoaRepository.obterTodos();
 		listaPessoas.forEach(System.out::println);
-		
+ 	
 		//VINCULAR PESSOA AO CURSO
 		System.out.println("*** Vincular pessoa ao curso ***");
 			curso.addPessoa(pessoa);
 			curso.addPessoa(pessoa2);
 
-			cursoRepository.salvar(curso);
+			cursoRepository.save(curso);
+
 		};
 		
 
