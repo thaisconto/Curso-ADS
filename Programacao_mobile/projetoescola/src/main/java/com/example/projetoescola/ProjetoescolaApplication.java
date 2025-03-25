@@ -10,9 +10,11 @@ import org.springframework.context.annotation.Bean;
 
 import com.example.projetoescola.models.Curso;
 import com.example.projetoescola.models.Pessoa;
+import com.example.projetoescola.models.Professor;
 import com.example.projetoescola.models.CategoriaCurso;
 import com.example.projetoescola.repositories.CursoRepository;
 import com.example.projetoescola.repositories.PessoaRepository;
+import com.example.projetoescola.repositories.ProfessorRepository;
 import com.example.projetoescola.repositories.CategoriaCursoRepository;
 
 @SpringBootApplication
@@ -22,7 +24,8 @@ public class ProjetoescolaApplication {
 	public CommandLineRunner init(
 		@Autowired CursoRepository cursoRepository,
 		@Autowired CategoriaCursoRepository categoriaCursoRepository,
-		@Autowired PessoaRepository pessoaRepository) {
+		@Autowired PessoaRepository pessoaRepository,
+		@Autowired ProfessorRepository professorRepository) {
 		return args -> {
 
 			//INSERINDO, SALVANDO E PRINTANDO CURSOS
@@ -75,6 +78,42 @@ public class ProjetoescolaApplication {
 			curso.addPessoa(pessoa2);
 
 			cursoRepository.save(curso);
+
+
+
+		//INSERINDO 6 PROFESSORES
+		Professor professor1 = professorRepository.save(
+			new Professor(null, "Ana Paula", 10000D));
+		Professor professor2 = professorRepository.save(
+			new Professor(null, "Ana Julia", 5000D));
+		Professor professor3 = professorRepository.save(
+			new Professor(null, "Marcos Oliveira", 15000D));
+		Professor professor4 = professorRepository.save(
+			new Professor(null, "Maria Ana", 15000D));
+		Professor professor5 = professorRepository.save(
+			new Professor(null, "Marcos Rogerio", 20000D));
+		Professor professor6 = professorRepository.save(
+			new Professor(null, "Thaís Marchetti", 25000D));
+
+		System.out.println("==============");
+		System.out.println("lista professores");
+		List<Professor> listaProfessor = professorRepository.findAll();
+		listaProfessor.forEach(System.out::println);
+		
+		System.out.println("==============");
+		System.out.println("professores com salario maior que 17000");
+		List<Professor> listaProfessor1 = professorRepository.salarioMaiorQueValor(17000D);
+		listaProfessor1.forEach(System.out::println);
+		
+		System.out.println("==============");
+		System.out.println("professores com salario menor igual que 15000");
+		List<Professor> listaProfessor2 = professorRepository.salarioMenorIgualQueValor(15000D);
+		listaProfessor2.forEach(System.out::println);
+
+		System.out.println("==============");
+		System.out.println("professores comecam com nome Ana");
+		List<Professor> listaProfessor3 = professorRepository.nomeComecandoCom("Ana");
+		listaProfessor3.forEach(System.out::println);
 
 		};
 		

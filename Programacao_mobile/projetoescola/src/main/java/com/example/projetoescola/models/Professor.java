@@ -2,32 +2,44 @@ package com.example.projetoescola.models;
 
 import java.util.List;
 
+import jakarta.persistence.CascadeType;
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
+import jakarta.persistence.FetchType;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
-import jakarta.persistence.OneToMany;
+import jakarta.persistence.JoinColumn;
+import jakarta.persistence.JoinTable;
+import jakarta.persistence.ManyToMany;
+import jakarta.persistence.ManyToOne;
 
 @Entity
-public class CategoriaCurso {
+public class Professor {
+    
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
-
+   
     @Column(length = 200, nullable = false)
     private String nome;
+   
+    @Column(nullable = false)
+    private Double salario;
 
-    //criando o relacionamento n curso <-> 1 categoriaCurso
-    @OneToMany(mappedBy = "categoriaCurso")
-    private List<Curso> cursos;
-
-    public CategoriaCurso() {
+    
+    @Override
+    public String toString() {
+        return "Professor [id=" + id + ", nome=" + nome + ", salario=" + salario + "]";
     }
 
-    public CategoriaCurso(Long id, String nome) {
+    public Professor(Long id, String nome, Double salario) {
         this.id = id;
         this.nome = nome;
+        this.salario = salario;
+    }
+
+    public Professor() {
     }
 
     public Long getId() {
@@ -46,18 +58,15 @@ public class CategoriaCurso {
         this.nome = nome;
     }
 
-    @Override
-    public String toString() {
-        return "CategoriaCurso [id=" + id + ", nome=" + nome + "]";
+    public Double getSalario() {
+        return salario;
     }
 
-    public List<Curso> getCursos() {
-        return cursos;
+    public void setSalario(Double salario) {
+        this.salario = salario;
     }
 
-    public void setCursos(List<Curso> cursos) {
-        this.cursos = cursos;
-    }
+   
 
-    
 }
+
