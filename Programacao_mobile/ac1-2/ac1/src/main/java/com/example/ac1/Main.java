@@ -14,7 +14,7 @@ import com.example.ac1.repositories.AutorRepository;
 import com.example.ac1.repositories.LivroRepository;
 
 @SpringBootApplication
-public class Ac1Application {
+public class Main {
 
 
 	@Bean
@@ -84,7 +84,7 @@ public class Ac1Application {
 	}
 
 	public static void main(String[] args) {
-		SpringApplication.run(Ac1Application.class, args);
+		SpringApplication.run(Main.class, args);
 	}
 
 }
