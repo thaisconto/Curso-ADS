@@ -26,8 +26,8 @@ public interface ProfessorRepository extends JpaRepository <Professor, Long>{
 
     //consulta nome que começa com x
     @Query
-    (value = "select * from Professor where nome like :nome%", nativeQuery = true)
-    List<Professor> nomeComecandoCom(@Param("nome") String nome);
+    (value = "select * from Professor where nome like :titulo%", nativeQuery = true)
+    List<Professor> tituloComecandoCom(@Param("titulo") String titulo);
 
 
 }
