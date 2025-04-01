@@ -29,7 +29,6 @@ public class Main {
 		livroRepository.save(new Livro(null, "Titulo 2", 200D));
 		livroRepository.save(new Livro(null, "Teste Titulo 3", 300D));
 		
-
 		System.out.println("==============");
 		System.out.println("lista de livros");
 		List<Livro> listaLivro = livroRepository.findAll();
@@ -78,7 +77,7 @@ public class Main {
 		listaAutor1.forEach(System.out::println);
 
 		System.out.println("==============");
-		System.out.println("autor com livro");
+		System.out.println("autor com livro pelo ID");
 		System.out.println(autorRepository.autorComLivroPorIdAutor(1L));
 		};
 	}
