@@ -13,7 +13,7 @@ import jakarta.persistence.OneToMany;
 public class CategoriaCurso {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long id;
+    private Integer id;
 
     @Column(length = 200, nullable = false)
     private String nome;
@@ -25,16 +25,17 @@ public class CategoriaCurso {
     public CategoriaCurso() {
     }
 
-    public CategoriaCurso(Long id, String nome) {
+    public CategoriaCurso(Integer id, String nome) {
         this.id = id;
         this.nome = nome;
     }
 
-    public Long getId() {
+    public Integer getId() {
         return id;
     }
 
-    public void setId(Long id) {
+
+    public void setId(Integer id) {
         this.id = id;
     }
 

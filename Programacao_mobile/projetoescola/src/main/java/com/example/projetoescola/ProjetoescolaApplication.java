@@ -110,10 +110,10 @@ public class ProjetoescolaApplication {
 		List<Professor> listaProfessor2 = professorRepository.salarioMenorIgualQueValor(15000D);
 		listaProfessor2.forEach(System.out::println);
 
-		System.out.println("==============");
-		System.out.println("professores comecam com nome Ana");
-		List<Professor> listaProfessor3 = professorRepository.nomeComecandoCom("Ana");
-		listaProfessor3.forEach(System.out::println);
+		//System.out.println("==============");
+		//System.out.println("professores comecam com nome Ana");
+		//List<Professor> listaProfessor3 = professorRepository.nomeComecandoCom("Ana");
+		//listaProfessor3.forEach(System.out::println);
 
 		};
 		
