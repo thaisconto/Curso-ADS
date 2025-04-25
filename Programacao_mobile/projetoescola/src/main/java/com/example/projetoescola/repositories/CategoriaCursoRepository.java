@@ -17,5 +17,6 @@ public interface CategoriaCursoRepository extends JpaRepository<CategoriaCurso, 
 
     @Query("select cc from CategoriaCurso cc left join fetch cc.cursos c where cc.id = :id ")
     CategoriaCurso findCategoriaCursoFetchCursos(@Param("id") Long id);
+    
 
 }
