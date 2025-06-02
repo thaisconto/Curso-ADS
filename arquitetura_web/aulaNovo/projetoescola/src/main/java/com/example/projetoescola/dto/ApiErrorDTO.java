@@ -8,12 +8,13 @@ import lombok.Getter;
 public class ApiErrorDTO {
     @Getter
     private List<String> errors;
-   
-    public ApiErrorDTO(String mensagem){
-    this.errors = Arrays.asList(mensagem);
+
+    public ApiErrorDTO(String mensagem) {
+        this.errors = Arrays.asList(mensagem);
     }
 
-    public ApiErrorDTO(List<String> erros){
+    public ApiErrorDTO(List<String> erros) {
         this.errors = erros;
-        }
+    }
+
 }

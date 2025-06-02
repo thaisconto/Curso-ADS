@@ -18,56 +18,46 @@ import jakarta.validation.Valid;
 import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.web.bind.annotation.ResponseStatus;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.ResponseStatus;
 
 @RestController
-@RequestMapping("/cursos")  //endereco pra api
+@RequestMapping("/cursos")
 public class CursoController {
-   private CursoService cursoService;
-   
-   public CursoController(CursoService cursoService){
-    this.cursoService  = cursoService;
-   }
-   
-   // @GetMapping()
-    //public List<CursoDTO> getTodosCursos() {
-    //    return cursoService.obterTodos();
-    //}
+    private CursoService cursoService;
+
+    public CursoController(CursoService cursoService) {
+        this.cursoService = cursoService;
+    }
+
+    @GetMapping()
+    public List<CursoDTO> getTodosCursos() {
+        return cursoService.obterTodos();
+    }
+
+    @GetMapping("{id}")
+    public DadosCursoDTO obterPorId(@PathVariable Long id) {
+        return cursoService.obterPorId(id);
+    }
+
+    @DeleteMapping("{id}")
+    @ResponseStatus(HttpStatus.NO_CONTENT)
+    public void delete(@PathVariable Long id) {
+        cursoService.remover(id);
+    }
+
+    @PutMapping("{id}")
+    public void edit(@PathVariable Long id,
+            @RequestBody CursoRequestDTO dto) {
+        cursoService.editar(id, dto);
+    }
 
     @PostMapping()
     public CursoDTO postCurso(@Valid @RequestBody CursoRequestDTO curso) {
         return cursoService.salvar(curso);
     }
-
-    @PutMapping("{id}")
-    public void edit(@PathVariable Long id, @RequestBody CursoDTO
-    dto) {
-    cursoService.editar(id, dto);
-    }
-
-    @GetMapping("")
-    public List<DadosCursoDTO> listarTodos() {
-    return cursoService. listarTodos();
-    }
-
-
-    @GetMapping("{id}")
-    public DadosCursoDTO ObterPorId(@PathVariable Long id) {
-    return cursoService.obterPorId(id);
-    }
-
-
-    @DeleteMapping("{id}")
-    @ResponseStatus(HttpStatus.NO_CONTENT)
-    public void delete(@PathVariable Long id) {
-    cursoService.excluir(id);
-    }
-
-
-
-
 }

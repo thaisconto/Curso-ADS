@@ -13,44 +13,33 @@ import jakarta.persistence.JoinColumn;
 import jakarta.persistence.JoinTable;
 import jakarta.persistence.ManyToMany;
 import jakarta.persistence.ManyToOne;
+import jakarta.validation.constraints.Min;
 import jakarta.validation.constraints.NotEmpty;
 
 @Entity
 public class Curso {
-    
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
-   
+    @NotEmpty(message = "O nome do curso não pode ser vazio")
     @Column(length = 200, nullable = false)
-    @NotEmpty(message = "Nome é obrigatório")
     private String nome;
-   
+    @Min(value = 2000, message = "A carga horária deve ser maior ou igual a 2000")
     @Column(nullable = false)
     private Integer cargaHoraria;
-
-    //criando o relacionamento n curso <-> 1 categoriaCurso
-    @ManyToOne
-    @JoinColumn(name = "categoriaCurso_id")
-    private CategoriaCurso categoriaCurso;
-
-   @ManyToMany(cascade = CascadeType.ALL, fetch = FetchType.EAGER)
-    @JoinTable(name="curso_pessoa",
-    joinColumns={@JoinColumn(name="curso_id")},
-    inverseJoinColumns={@JoinColumn(name="pessoa_id")})
+    @ManyToMany(cascade = CascadeType.ALL, fetch = FetchType.EAGER)
+    @JoinTable(name = "Curso_Pessoa", joinColumns = {
+            @JoinColumn(name = "Curso_ID") }, inverseJoinColumns = {
+                    @JoinColumn(name = "Pessoa_ID") })
     private List<Pessoa> pessoas;
 
     public void addPessoa(Pessoa p) {
         pessoas.add(p);
     }
-    
-    public List<Pessoa> getPessoa() {
-        return pessoas;
-    }
 
-    public void setPessoa(List<Pessoa> pessoa) {
-        this.pessoas = pessoa;
-    }
+    @ManyToOne
+    @JoinColumn(name = "categoriaCurso_id")
+    private CategoriaCurso categoriaCurso;
 
     public Curso(Long id, String nome, Integer cargaHoraria) {
         this.id = id;
@@ -64,28 +53,31 @@ public class Curso {
     public Long getId() {
         return id;
     }
+
     public void setId(Long id) {
         this.id = id;
     }
+
     public String getNome() {
         return nome;
     }
+
     public void setNome(String nome) {
         this.nome = nome;
     }
+
     public Integer getCargaHoraria() {
         return cargaHoraria;
     }
+
     public void setCargaHoraria(Integer cargaHoraria) {
         this.cargaHoraria = cargaHoraria;
     }
 
     @Override
     public String toString() {
-    return "Curso [id=" + id + ", nome=" + nome + ", cargaHoraria=" + cargaHoraria + 
-           ", pessoas=" + (pessoas != null ? pessoas.stream().map(Pessoa::getNome).toList() : "[]") + "]";
+        return "Curso [id=" + id + ", nome=" + nome + ", cargaHoraria=" + cargaHoraria + "]";
     }
-
 
     public CategoriaCurso getCategoriaCurso() {
         return categoriaCurso;
@@ -94,7 +86,4 @@ public class Curso {
     public void setCategoriaCurso(CategoriaCurso categoriaCurso) {
         this.categoriaCurso = categoriaCurso;
     }
-
-
 }
-

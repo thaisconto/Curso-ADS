@@ -16,21 +16,20 @@ import com.example.projetoescola.dto.ApiErrorDTO;
 @ResponseStatus(HttpStatus.BAD_REQUEST)
 public class ApplicationControllerAdvice {
     @ExceptionHandler(RegraNegocioException.class)
-   
     public ApiErrorDTO handleRegraNegocioException(RegraNegocioException ex) {
         String msg = ex.getMessage();
         return new ApiErrorDTO(msg);
-        }
+    }
 
+    @ExceptionHandler(jakarta.validation.ConstraintViolationException.class)
+    @ResponseStatus(HttpStatus.BAD_REQUEST)
+    public ApiErrorDTO handlerMethodValidException(jakarta.validation.ConstraintViolationException ex) {
+        List<String> erros = ex.getConstraintViolations()
+                .stream()
+                .map(erro -> erro.getMessage())
+                .collect(
+                        Collectors.toList());
+        return new ApiErrorDTO(erros);
+    }
 
-@ExceptionHandler(MethodArgumentNotValidException.class)
-@ResponseStatus(HttpStatus.BAD_REQUEST)
-@ResponseBody
-public ApiErrorDTO validationError(MethodArgumentNotValidException ex) {
-List<String> erros = ex.getBindingResult().getFieldErrors().stream()
-.map(erro -> erro.getDefaultMessage())
-.collect(
-Collectors.toList());
-return new ApiErrorDTO(erros);
-}}
-
+}
